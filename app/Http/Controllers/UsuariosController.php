@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
@@ -13,7 +14,7 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuario::all();
     }
 
     /**
@@ -34,7 +35,8 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Usuario::create($request->all());
+        return Usuario::latest()->get()->id_usuario;
     }
 
     /**
@@ -45,7 +47,7 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
     }
 
     /**
@@ -56,7 +58,7 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
     }
 
     /**
@@ -69,6 +71,8 @@ class UsuariosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->update($request->all());
     }
 
     /**
@@ -79,6 +83,7 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
     }
 }
