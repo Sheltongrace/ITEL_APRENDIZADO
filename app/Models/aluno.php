@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class aluno extends Model
 {
     use HasFactory;  
-protected $filleble=[
-    '_token',
-    'nome',
-    'n_processo',
-    'ano_lectivo',
-];
+    protected $filleble=[
+        '_token',
+        'nome',
+        'n_processo',
+        'ano_lectivo',
+    ];
 }
