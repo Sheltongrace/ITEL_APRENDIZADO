@@ -36,7 +36,7 @@ class UsuariosController extends Controller
     public function store(Request $request)
     {
         Usuario::create($request->all());
-        return Usuario::latest()->get()->id_usuario;
+        return Usuario::latest()->first()->id_usuario;
     }
 
     /**

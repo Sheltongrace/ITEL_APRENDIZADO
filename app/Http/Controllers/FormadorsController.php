@@ -15,19 +15,25 @@ class FormadorsController extends Controller
 
     public function create()
     {
-        return view('formadors.create');
+        return view('be_traner');
     }
 
     public function store(Request $request)
     {
         $Usuario = new UsuariosController();
         $id_usuario = $Usuario->store($request);
-        Formador::create([
+        $novo_formador=Formador::create([
             'id_usuario'=>$id_usuario,
             'nivel_academico'=>$request->input("nivel_academico"),
             'genero'=>$request->input("genero"),
             'tempo_disponivel'=>$request->input("tempo_disponivel"),
         ]);
+
+        if($novo_formador){
+            return back()->with('success', 'Formador cadastrado com sucesso!');
+        }else{
+            return back()->with('error', 'Erro ao cadastrar Formador');
+        }
      
     }
 

@@ -25,6 +25,17 @@
   <img  width="100%" src="{{asset('site/assets/img/betrane.jpg')}}" >
 
   -->
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
     <div class="">
 
         <div class="row" style="border-left: 10px solid grey;">
@@ -32,9 +43,11 @@
 
                 <img style="margin-top: 50px;height: 500px; border-radius: 5px; margin-left: 5px" width="103%" src="{{asset('site/assets/img/betrane.jpg')}}">
             </div>
+               
+
             <div style="height:500px; margin-top: 50px; border-radius : 8px; right: 14px; border-left: 18px solid white" class=" col-7 bg-white ">
                 <h3 class="text-center text-dark">Cadastrar-se como Formador</h3>
-                <form action="{{ route('add_formadores') }}" method="post">
+                <form action="{{ route('formador.save') }}" method="post">
                     @csrf
                     <!-- Bloco de input 6 grid por 6 Grid -->
                     <div class="d-flex justify-content-center">
@@ -75,8 +88,8 @@
                         <div class="col-6 form-group">
                             <label style="font-size: 0.8rem" for="genero" class="form-label text-dark">Genero<span class="text-danger">*</span> </label>
                             <select name="genero" id="genero" class="form-control form-control-sm">
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
                             </select>
                         </div>
                         <div class="col-6 form-group">
