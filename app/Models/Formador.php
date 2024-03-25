@@ -14,5 +14,4 @@ class Formador extends Model
         'genero',
         'tempo_disponivel',
     ];
-    
 }

@@ -10,11 +10,10 @@ class Usuario extends Model
     use HasFactory;
     protected $fillable = [
         'user_name',
-        'nome',
         'N_telemovel',
         'email',
         'identificador_fiscal',
-        'nivel_acesso',
+        'categoria',
     ];
     
 }
