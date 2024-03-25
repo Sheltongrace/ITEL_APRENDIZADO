@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormadorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,6 +52,15 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::delete('/{id}','inicioController@destroy_aluno')->name('destroy_aluno');
 //rotas formadores
   Route::post('/add_formadores','FormadorsController@store')->name('add_formadores');
-
 }); 
+
+Route::group(['prefix'=>'formador'],function(){
+    Route::get('/formador', [FormadorsController::class, 'index'])->name('formador.index');
+    Route::get('/create', [FormadorsController::class, 'create'])->name('formador.create');
+    Route::post('/save', [FormadorsController::class, 'store'])->name('formador.save');
+    Route::get('/show/{id}', [FormadorsController::class, 'show'])->name('formador.show');
+    Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
+    Route::put('/update/{id}', [FormadorsController::class, 'update'])->name('formador.update');
+    Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
+});
 

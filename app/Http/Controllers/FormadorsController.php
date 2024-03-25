@@ -20,13 +20,14 @@ class FormadorsController extends Controller
 
     public function store(Request $request)
     {
-      //  var_dump($request->input());die;
-        try {
-            DB::table('formadores')->insert($request->input());
-            echo "Salvo";die;
-        } catch (\Throwable $th) {
-            echo $th;
-        }
+        $Usuario = new UsuariosController();
+        $id_usuario = $Usuario->store($request);
+        Formador::create([
+            'id_usuario'=>$id_usuario,
+            'nivel_academico'=>$request->input("nivel_academico"),
+            'genero'=>$request->input("genero"),
+            'tempo_disponivel'=>$request->input("tempo_disponivel"),
+        ]);
      
     }
 
