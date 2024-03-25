@@ -1,92 +1,118 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Query , esse so funciona com internet.  deve se colocar para funcionar local-->
+ 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Be_traning</title>
-    
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <style>
 
-  <!-- Google Fonts {{ asset('site/assets/css/style.css') }} -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('site/assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-  <link href="{{ asset('site/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+body{
 
-  <!-- Template Main CSS File -->
-  <link href="{{ asset('site/assets/css/style.css') }}" rel="stylesheet">
+   color: white;
+    background: grey;
+
+}
+
+
+
+
+
+    </style>
 
 </head>
 <body>
-  
-<div>
-<form class="row g-3">
-  <div class="col-md-4">
-    <label for="validationDefault01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
-  </div>
-  <div class="col-md-4">
-    <label for="validationDefault02" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
-  </div>
-  <div class="col-md-4">
-    <label for="validationDefaultUsername" class="form-label">Username</label>
-    <div class="input-group">
-      <span class="input-group-text" id="inputGroupPrepend2">@</span>
-      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <label for="validationDefault03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationDefault03" required>
-  </div>
-  <div class="col-md-3">
-    <label for="validationDefault04" class="form-label">State</label>
-    <select class="form-select" id="validationDefault04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-3">
-    <label for="validationDefault05" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="validationDefault05" required>
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-        Agree to terms and conditions
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
-</div>
+  <!--
+  <img  width="100%" src="{{asset('site/assets/img/betrane.jpg')}}" >
+
+  -->
+  <div class="">
    
+      <div class="row" style="border-left: 10px solid grey;">
+          <div class="col-5">
+              
+                <img style="margin-top: 50px;height: 500px; border-radius: 5px; margin-left: 5px"  width="103%" src="{{asset('site/assets/img/betrane.jpg')}}" >
+          </div>
+          <div style="height:500px; margin-top: 50px; border-radius : 8px; right: 14px; border-left: 18px solid white" class=" col-7 bg-white ">
+                <h3 class="text-center text-dark">Cadastrar-se como Formador</h3>
+                <form action="{{ route('add_formadores') }}" method="post">
+                    @csrf
+                <!-- Bloco de input 6 grid por 6 Grid -->
+                <div class="d-flex justify-content-center">
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="nome" class="form-label text-dark">Nome Completo <span class="text-danger">*</span> </label>
+                        <input type="text" name="nome" id="nome" class="form-control form-control-sm" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="email" class="form-label text-dark">E-mail<span class="text-danger">*</span></label>
+                        <input type="email" name="email" id="email"  class="form-control form-control-sm" placeholder="Exemplo@teste.com" required>
+                    </div>
+                </div>
+                <!-- End Bloco de input 6 grid por 6 Grid -->
+                 <!-- Bloco de input 6 grid por 6 Grid -->
+                 <div class="d-flex justify-content-center">
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="Identificador Fiscal" class="form-label text-dark">Identificador Fiscal<span class="text-danger">*</span> </label>
+                        <input type="text" name="Identificador_Fiscal" id="Identificador_Fiscal" class="form-control form-control-sm" placeholder="xxxxxxLAxx" required>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="number" class="form-label text-dark">N_telemovel<span class="text-danger">*</span> </label>
+                        <input type="numer" name="numero" id="numero" class="form-control form-control-sm" placeholder="9xx xxx xxx" required>
+                    </div>
+                </div>
+                <!-- End Bloco de input 6 grid por 6 Grid  está duplicado-->
+                <div class="d-flex justify-content-center">
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="nivel_acesso" class="form-label text-dark">Nivel_Acesso<span class="text-danger">*</span> </label>
+                        <input type="text" name="nivel_acesso" id="nivel_acesso" class="form-control form-control-sm" placeholder="Nível de Acesso" required>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="nivel_academico" class="form-label text-dark">Nivel_academico<span class="text-danger">*</span></label>
+                        <input type="text" name="" class="form-control form-control-sm" placeholder="Informe seu nível" disabled>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="genero" class="form-label text-dark">Genero<span class="text-danger">*</span> </label>
+                        <select name="genero" id="genero" class="form-control form-control-sm">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col-6 form-group">
+                        <label style="font-size: 0.8rem" for="tempo_disponível" class="form-label text-dark">Tempo_disponivel<span class="text-danger">*</span> </label>
+                        <select name="tempo_disponível" id="tempo_disponível" class="form-control form-control-sm">
+                            <option value="Masculino">Manhã</option>
+                            <option value="Feminino">Tarde</option>
+                            <option value="Feminino">Noite</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mb-3">
+                    <button id="btnEnviar" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+          </div>
+</form>
+      </div>
+  </div>
+ 
 </body>
-
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
- <!-- Vendor JS Files  {{ asset('site/assets/js/main.js') }} -->
- <script src="{{ asset('site/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-  <script src="{{ asset('site/assets/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('site/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('site/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('site/assets/vendor/php-email-form/validate.js') }}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{{ asset('site/assets/js/main.js') }}"></script>
+<script>
+  $("#btnSalvar").click(function(){
+    validar()
+  })  
+ function validar() {
+     if($("#nome").val()== ''){ // se o campo nome for vazio, tambrm podemos validar o tipo de dados ou caracter
+        console.log("nome vazio")
+     }
+ }
+</script>
 
 </html>
 

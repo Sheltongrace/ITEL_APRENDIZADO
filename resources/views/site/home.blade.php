@@ -127,7 +127,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
@@ -588,3 +588,154 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem ;
+}
+.input-box input{
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem; 
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #00000016;
+}         
+.input-box input:hover{
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+  outline: 1px solid #6c63ff;
+}
+.input-box label,
+.gender-tittle  h6{
+  font-size: 0,75rem;
+  font-weight: 60 0;
+  color: #000000c0;
+}
+.input-box input::placeholder{
+  color: #000000be;
+}
+.gender-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.62rem;
+  padding: 0 0.5rem;
+}
+
+.gender-unput{
+  display: flex;
+  align-items: center;
+}
+
+.gender-i nput input{
+  margin-right: 0.35rem;
+}
+
+.gender-input label{
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+@media screen and ( max-width: 1330){
+  .form-image{
+    display: none;
+  }
+  .container{
+    width: 50%;
+  }
+  .form{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1064px){
+  .container{
+    width: 90%;
+    height: auto;
+  }
+}
+  .input-group{
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding: 5rem;
+  }
+  .gender-inputs{
+    margin-top: 2rem;
+  }
+  .gender-group{
+    flex-direction: column;
+  }
+  .gender-input{
+    margin-top: 0.5rem;
+  }

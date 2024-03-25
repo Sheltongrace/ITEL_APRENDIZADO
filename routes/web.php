@@ -49,7 +49,8 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::put('/{id}','inicioController@update_aluno')->name('update_aluno');
 
     Route::delete('/{id}','inicioController@destroy_aluno')->name('destroy_aluno');
-
+//rotas formadores
+  Route::post('/add_formadores','FormadorsController@store')->name('add_formadores');
 
 }); 
 

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Formador;
-
+use Illuminate\Support\Facades\DB;
+ 
 class FormadorsController extends Controller
 {
     public function index()
@@ -19,12 +20,14 @@ class FormadorsController extends Controller
 
     public function store(Request $request)
     {
-        Formador::create([
-            'id_usuario' => $request->input('id_usuario'),
-            'nivel_academico' => $request->input('nivel_academico'),
-            'genero' => $request->input('genero'),
-            'tempo_disponivel' => $request->input('tempo_disponivel'),
-        ]);
+      //  var_dump($request->input());die;
+        try {
+            DB::table('formadores')->insert($request->input());
+            echo "Salvo";die;
+        } catch (\Throwable $th) {
+            echo $th;
+        }
+     
     }
 
     public function show($id)
