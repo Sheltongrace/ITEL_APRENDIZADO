@@ -79,9 +79,15 @@
                             <input type="text" readonly name="categoria" value="Formador" id="categoria" class="form-control form-control-sm" placeholder="Nível de Acesso" required>
                         </div>
                         <div class="col-6 form-group">
-                            <label style="font-size: 0.8rem" for="nivel_academico" class="form-label text-dark">Nivel_academico<span class="text-danger">*</span></label>
-                            <input type="text" name="nivel_academico" class="form-control form-control-sm" placeholder="Informe seu nível" required>
-                        </div>
+                        <label style="font-size: 0.8rem" for="nivel_academico" class="form-label text-dark">Nivel_academico<span class="text-danger">*</span></label>
+                            
+
+                        <select id="nivel_academico" name="nivel_academico" class="form-control form-control-sm" >
+                            <option value="ensino_medio">Ensino Médio</option>
+                            <option value="ensino_superior">Ensino Superior</option>
+                            <option value="pos_graduacao">Pós-Graduação</option>
+                        </select>
+                                                   </div>
                     </div>
 
                     <div class="d-flex justify-content-center">

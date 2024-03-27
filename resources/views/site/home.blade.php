@@ -43,55 +43,40 @@
           <li><a class="active" href="sites">Home</a></li>
           <li data-bs-toggle="modal" data-bs-target="#teste"><a href="#">Formador</a></li>
 
-          <li><a href="teste">Aluno</a></li>
+          <li><a href="#">Aluno</a></li>
 
           <li class="dropdown"><a href="Disciplinas.html"><span>Disciplinas</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
 
             <li class="dropdown"><a href="#"><span>10 Classe</span></a>
                 <ul>                
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Informática Multimídia</a></li>
+                  <li><a href="#">Telecomunicações</a></li>
+                  <li><a href="#">Informática</a></li>
                 </ul>            
               </li>
 
               <li class="dropdown"><a href="#"><span>11 Classe</span></a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                  <li><a href="#">Deep Drop Down 6</a></li>
-                  <li><a href="#">Deep Drop Down 7</a></li>
-                  <li><a href="#">Deep Drop Down 8</a></li>
-                  <li><a href="#">Deep Drop Down 9</a></li>
-                  <li><a href="#">Deep Drop Down 10</a></li>
-                  <li><a href="#">Deep Drop Down 11</a></li>
-                  <li><a href="#">Deep Drop Down 12</a></li>
+                 <div> <li><a href="#">Informática Multimídia</a></li>
+                  <li><a href="#">Telecomunicações</a></li>
+                  <li><a href="#">Informática</a></li>
                 </ul>
               </li>
 
               <li class="dropdown"><a href="#"><span>12 Classe</span></a>
                 <ul>                
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Informática Multimídia</a></li>
+                  <li><a href="#">Telecomunicações</a></li>
+                  <li><a href="#">Informática</a></li>
                 </ul>            
               </li>
 
               <li class="dropdown"><a href="#"><span>13 Classe</span></a>
                 <ul>                
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Informática Multimídia</a></li>
+                  <li><a href="#">Telecomunicações</a></li>
+                  <li><a href="#">Informática</a></li>
                 </ul>            
               </li>
               </ul>

@@ -28,12 +28,13 @@ class FormadorsController extends Controller
             'genero'=>$request->input("genero"),
             'tempo_disponivel'=>$request->input("tempo_disponivel"),
         ]);
-
-        if($novo_formador){
+ 
+        if ($novo_formador){
             return back()->with('success', 'Formador cadastrado com sucesso!');
         }else{
             return back()->with('error', 'Erro ao cadastrar Formador');
         }
+        
      
     }
 
