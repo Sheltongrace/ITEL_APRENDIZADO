@@ -10,12 +10,13 @@ class FormadorsController extends Controller
 {
     public function index()
     {
-        $formadors = Formador::all();
+       // $formadors = Formador::all();
+        return view('admin.formadores.index');
     }
 
     public function create()
     {
-        return view('be_traner');
+        return view('admin.formadores.create');
     }
 
     public function store(Request $request)
@@ -40,7 +41,8 @@ class FormadorsController extends Controller
 
     public function show($id)
     {
-        $formador = Formador::findOrFail($id);
+       // $formador = Formador::findOrFail($id);
+       return view('admin.formadores.detalhes');
     }
 
     public function edit($id)
