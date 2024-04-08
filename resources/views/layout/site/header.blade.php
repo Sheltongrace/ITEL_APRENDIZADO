@@ -8,10 +8,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="#" class="active">Início</a></li>
           <li><a href="{{ route('site.sobre.nos') }}">Sobre nós</a></li>
           <li><a href="{{ route('site.disciplina') }}">Disciplinas</a></li>
           <li><a href="{{ route('site.aluno') }}">Alunos</a></li>
+          <li><a href="{{ route('site.formador') }}">Formadores</a></li>
           <li><a href="{{ route('site.contato') }}">Contacto</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

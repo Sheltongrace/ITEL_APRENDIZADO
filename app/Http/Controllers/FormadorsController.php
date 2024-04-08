@@ -13,6 +13,11 @@ class FormadorsController extends Controller
        // $formadors = Formador::all();
         return view('admin.formadores.index');
     }
+    public function index_site()
+    {
+       // $formadors = Formador::all();
+        return view('site.formador');
+    }
 
     public function create()
     {
