@@ -8,7 +8,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="{{ route('site') }}" class="active">Início</a></li>
           <li><a href="{{ route('site.sobre.nos') }}">Sobre nós</a></li>
           <li><a href="{{ route('site.disciplina') }}">Disciplinas</a></li>
           <li><a href="{{ route('site.aluno') }}">Alunos</a></li>

@@ -24,7 +24,7 @@ Route::namespace('App\Http\Controllers')->group(function(){
 
     Route::get('/rais','inicioController@index')->name('/rais');
 
-    Route::get('/sites','inicioController@site' ); /* redireciona para backend */
+    Route::get('/sites','inicioController@site' )->name('site');
 
     Route::get('/','inicioController@site'); /* se não redirecionarmos nenhuma rota automaticamente vai para rota predefinida anteriormente*/
 

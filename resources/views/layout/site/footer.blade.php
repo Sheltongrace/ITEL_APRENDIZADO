@@ -5,7 +5,7 @@
   <div class="row gy-4">
     <div class="col-lg-4 col-md-6 footer-about">
       <a href="index.html" class="logo d-flex align-items-center">
-        <span class="">GreenGrace</span>
+        <span class="">GruinGrace</span>
       </a>
       <div class="footer-contact pt-3">
         <p>KM CTT, Rangel</p>
@@ -54,7 +54,7 @@
 <div class="container copyright text-center mt-4">
   <p>© <span>Copyright 2024</span> <strong class="px-1">GreenGrace</strong> <span>Todos os direitos reservados</span></p>
   <div class="credits">
-       Designed by <a href="https://bootstrapmade.com/">Chelton</a>
+       Designed by <a href="https://bootstrapmade.com/">Shelton</a>
   </div>
 </div>
 
