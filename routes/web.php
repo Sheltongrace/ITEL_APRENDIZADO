@@ -72,8 +72,9 @@ NOVAS ROTAS PARA O SITE
 =================/*/
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
-Route::get('disciplina', [DisciplinaController::class, 'index'])->name('site.disciplina');
-Route::get('aluno', [AlunoController::class, 'index'])->name('site.aluno');
+Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
+Route::get('alunos', [AlunoController::class, 'index'])->name('site.aluno');
+Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 
 /*//==============
@@ -96,10 +97,12 @@ Route::prefix('admin')->group(function () {
   /*//==============
   NOVAS ROTAS PARA ALUNOS
   =================/*/
+  
   Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
   Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
- 
+  
+  Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
  
 });
 
