@@ -18,7 +18,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{{ route('auth.login') }}" target="_blank">Login</a>
+      <a class="btn-getstarted" href="{{ route('auth.login.aluno') }}" target="_blank">Login</a>
       <a class="btn-getstarted" id="btn-register" href="{{ route('auth.register') }}" target="_blank">Insecrever-se</a>
 
     </div>

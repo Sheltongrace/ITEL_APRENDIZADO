@@ -82,6 +82,7 @@ NOVAS ROTAS PARA AUTENTICAÇÃO
 =================/*/
 
 Route::get('login', [LoginController::class, 'index'])->name('auth.login');
+Route::get('login/aluno', [LoginController::class, 'index_aluno'])->name('auth.login.aluno');
 Route::post('login', [LoginController::class, 'authenticate'])->name('auth.login');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
