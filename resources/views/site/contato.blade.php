@@ -23,8 +23,7 @@
             <nav class="breadcrumbs">
               <div class="container">
                 <ol>
-                  <li><a href="index.html">Início</a></li>
-                  <li class="current">Contacto</li>
+                  <li><a href="index.html"><a href="index.html"><a href="{{ route('site') }}" class="active">Home</a></li>
                 </ol>
               </div>
             </nav>

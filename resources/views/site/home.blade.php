@@ -11,7 +11,7 @@
       <h2 data-aos="fade-up" data-aos-delay="100" class="">Aprendendo Hoje, <br> Liderando Amanhã</h2>
       <p data-aos="fade-up" data-aos-delay="200">Faça Parte da Revolução Educacional: <br> Aprenda com os Melhores e Seja um Líder em sua Área</p>
       <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-        <a href="courses.html" class="btn-get-started">Ver Cursos</a>
+        <a href="{{ route('auth.register') }}" class="btn-get-started">Inscrever-se</a>
       </div>
     </div>
 
