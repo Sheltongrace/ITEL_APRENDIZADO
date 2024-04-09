@@ -38,7 +38,7 @@
 	    </div><!--//auth-main-col-->
         
 	    <div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-		    <div class="auth-background-holder">
+		    <div class="auth-background-holder" style = "background: url({{asset('backOffice/assets/images/background/background-3.jpg')}})">
                 
 		    </div>
 		    <div class="auth-background-mask"></div>
