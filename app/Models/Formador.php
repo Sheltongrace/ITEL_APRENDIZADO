@@ -13,5 +13,6 @@ class Formador extends Model
         'nivel_academico',
         'genero',
         'tempo_disponivel',
+        'descricao',
     ];
 }

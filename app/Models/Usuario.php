@@ -15,6 +15,7 @@ class Usuario extends Model
         'email',
         'identificador_fiscal',
         'categoria',
+        'morada'
     ];
     
 }

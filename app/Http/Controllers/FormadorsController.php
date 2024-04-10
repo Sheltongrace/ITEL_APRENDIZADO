@@ -33,8 +33,9 @@ class FormadorsController extends Controller
             'nivel_academico'=>$request->input("nivel_academico"),
             'genero'=>$request->input("genero"),
             'tempo_disponivel'=>$request->input("tempo_disponivel"),
+            'descricao'=>$request->input("descricao")
         ]);
- 
+
         if ($novo_formador){
             return back()->with('success', 'Formador cadastrado com sucesso!');
         }else{
