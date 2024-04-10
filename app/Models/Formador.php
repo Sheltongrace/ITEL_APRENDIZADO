@@ -9,10 +9,12 @@ class Formador extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id_formador',
         'id_usuario',
         'nivel_academico',
         'genero',
         'tempo_disponivel',
         'descricao',
+        'imagem'
     ];
 }

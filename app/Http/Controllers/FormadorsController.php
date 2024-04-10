@@ -5,17 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Formador;
 use Illuminate\Support\Facades\DB;
- 
+
 class FormadorsController extends Controller
 {
     public function index()
     {
-       // $formadors = Formador::all();
+        // $formadors = Formador::all();
         return view('admin.formadores.index');
     }
     public function index_site()
     {
-       // $formadors = Formador::all();
+        // $formadors = Formador::all();
         return view('site.formador');
     }
 
@@ -28,27 +28,41 @@ class FormadorsController extends Controller
     {
         $Usuario = new UsuariosController();
         $id_usuario = $Usuario->store($request);
-        $novo_formador=Formador::create([
-            'id_usuario'=>$id_usuario,
-            'nivel_academico'=>$request->input("nivel_academico"),
-            'genero'=>$request->input("genero"),
-            'tempo_disponivel'=>$request->input("tempo_disponivel"),
-            'descricao'=>$request->input("descricao")
+
+        $caminhoImagem = public_path('imagemFormador');
+        if ($request->hasFile('imagem')) {
+            $imagem = $request->file('imagem');
+            $imagem->move($caminhoImagem, $imagem->getClientOriginalName());
+        }
+
+
+        $novo_formador = Formador::create([
+            'id_usuario' => $id_usuario,
+            'nivel_academico' => $request->input("nivel_academico"),
+            'genero' => $request->input("genero"),
+            'tempo_disponivel' => $request->input("tempo_disponivel"),
+            'descricao' => $request->input("descricao"),
+            'imagem' => $imagem->getClientOriginalName()
         ]);
 
-        if ($novo_formador){
+
+
+
+
+
+        if ($novo_formador) {
             return back()->with('success', 'Formador cadastrado com sucesso!');
-        }else{
+        } else {
             return back()->with('error', 'Erro ao cadastrar Formador');
         }
-        
-     
     }
+
+
 
     public function show($id)
     {
-       // $formador = Formador::findOrFail($id);
-       return view('admin.formadores.detalhes');
+        // $formador = Formador::findOrFail($id);
+        return view('admin.formadores.detalhes');
     }
 
     public function edit($id)
