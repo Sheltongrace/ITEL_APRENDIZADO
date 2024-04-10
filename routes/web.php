@@ -69,7 +69,7 @@ Route::group(['prefix'=>'formador'],function(){
 
 /*//==============
 NOVAS ROTAS PARA O SITE
-=================/*/
+=================/*/ 
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
 Route::get('disciplina', [DisciplinaController::class, 'index'])->name('site.disciplina');
