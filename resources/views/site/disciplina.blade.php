@@ -3,26 +3,35 @@
 @section('content')
 <main class="main">
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+    <div id="hero" class="page-title hero section" data-aos="fade">
+      <img src="{{asset('site/assets/img/hero-bg.jpg')}}" alt="" data-aos="fade-in">
+ 
       <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Disciplinas</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Disciplinas</h1>
+                <p class="mb-0">
+                  Odio et unde deleniti. Deserunt numquam exercitationem.
+                  Officiis quo odio sint voluptas consequatur ut a odio
+                  voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
+                  ratione sint. Sit quaerat ipsum dolorem.
+                </p>
+              </div>
             </div>
+            <nav class="breadcrumbs mt-5">
+              <div class="container">
+                <ol>
+                  <li><a href="index.html"><a href="index.html"><a href="{{ route('site') }}" class="active">Home</a></li>
+                </ol>
+              </div>
+            </nav>
           </div>
+          
         </div>
+        
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Início</a></li>
-            <li class="current">Courses</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+      <!-- End Page Title -->
 
     <!-- Courses List Section -->
     <section id="courses-list" class="section courses-list">

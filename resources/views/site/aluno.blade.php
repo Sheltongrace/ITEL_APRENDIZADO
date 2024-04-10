@@ -4,8 +4,10 @@
 
 <main class="main">
       <!-- Page Title -->
-      <div class="page-title" data-aos="fade">
-        <div class="heading">
+      <div id="hero" class="page-title hero section" data-aos="fade">
+      <img src="{{asset('site/assets/img/hero-bg.jpg')}}" alt="" data-aos="fade-in">
+ 
+      <div class="heading">
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
@@ -18,16 +20,17 @@
                 </p>
               </div>
             </div>
+            <nav class="breadcrumbs mt-5">
+              <div class="container">
+                <ol>
+                  <li><a href="{{ route('site') }}" class="active">Home</a></li>
+                </ol>
+              </div>
+            </nav>
           </div>
+          
         </div>
-        <nav class="breadcrumbs">
-          <div class="container">
-            <ol>
-              <li><a href="index.html">Início</a></li>
-              <li class="current">Alunos</li>
-            </ol>
-          </div>
-        </nav>
+        
       </div>
       <!-- End Page Title -->
 
@@ -47,11 +50,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>Walter White</h4>
@@ -76,11 +79,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>Sarah Jhonson</h4>
@@ -105,11 +108,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>William Anderson</h4>
@@ -134,11 +137,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>Amanda Jepson</h4>
@@ -163,11 +166,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>Brian Doe</h4>
@@ -192,11 +195,11 @@
                   alt=""
                 />
                 <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  {{--<a href="#"><i class="bi bi-twitter"></i></a>
                   <a href="#"><i class="bi bi-facebook"></i></a>
                   <a href="#"><i class="bi bi-instagram"></i></a>
                   <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+                --}}</div>
               </div>
               <div class="member-info text-center">
                 <h4>Josepha Palas</h4>

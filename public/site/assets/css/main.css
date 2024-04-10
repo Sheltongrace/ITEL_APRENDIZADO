@@ -794,7 +794,7 @@ section,
   --background-color-rgb: 0, 0, 0;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: 80vh;
+  height: 60vh;
   position: relative;
   padding: 80px 0;
   display: flex;

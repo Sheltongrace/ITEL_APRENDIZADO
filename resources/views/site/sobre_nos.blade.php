@@ -15,11 +15,10 @@
           </div>
         </div>
       </div>
-      <nav class="breadcrumbs">
+      <nav class="breadcrumbs mt-5">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Sobre nós<br></li>
+            <li><a href="index.html"><a href="{{ route('site') }}" class="active">Home</a></li>
           </ol>
         </div>
       </nav>
@@ -79,14 +78,14 @@
 
           <div class=" col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="956319484" data-purecounter-duration="1" class="purecounter"></span>
               <p class="">Alunos</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class=" col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="1134254945" data-purecounter-duration="1" class="purecounter"></span>
               <p class="">Cursos</p>
             </div>
           </div><!-- End Stats Item -->

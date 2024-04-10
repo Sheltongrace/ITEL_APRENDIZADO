@@ -5,13 +5,13 @@
   <div class="row gy-4">
     <div class="col-lg-4 col-md-6 footer-about">
       <a href="index.html" class="logo d-flex align-items-center">
-        <span class="">GreenGrace</span>
+        <span class="">GuinGrace</span>
       </a>
       <div class="footer-contact pt-3">
         <p>KM CTT, Rangel</p>
         <p>Luanda, Angola</p>
         <p class="mt-3"><strong>Tel:</strong> <span>9xx xxx xxx</span></p>
-        <p><strong>Email:</strong> <span>garimpos@gmail.com</span></p>
+        <p><strong>Email:</strong> <span>GuinGrace@gmail.com</span></p>
       </div>
       <div class="social-links d-flex mt-4">
         <a href=""><i class="bi bi-twitter"></i></a>
@@ -52,9 +52,9 @@
 </div>
 
 <div class="container copyright text-center mt-4">
-  <p>© <span>Copyright 2024</span> <strong class="px-1">GreenGrace</strong> <span>Todos os direitos reservados</span></p>
+  <p>© <span>Copyright 2024</span> <strong class="px-1">GruinGrace</strong> <span>Todos os direitos reservados</span></p>
   <div class="credits">
-       Designed by <a href="https://bootstrapmade.com/">Chelton</a>
+       Designed by <a href="https://bootstrapmade.com/">Shelton</a>
   </div>
 </div>
 

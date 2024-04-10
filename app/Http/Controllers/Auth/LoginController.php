@@ -11,6 +11,10 @@ class LoginController extends Controller
     {
      return view('auth.login');   
     }
+    public function index_aluno() 
+    {
+     return view('auth.login_aluno');   
+    }
     public function authenticate(Request $request) 
     {
         //TODO:: Implementar logica de login
