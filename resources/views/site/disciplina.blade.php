@@ -19,7 +19,7 @@
                 </p>
               </div>
             </div>
-            <nav class="breadcrumbs">
+            <nav class="breadcrumbs mt-5">
               <div class="container">
                 <ol>
                   <li><a href="index.html"><a href="index.html"><a href="{{ route('site') }}" class="active">Home</a></li>
