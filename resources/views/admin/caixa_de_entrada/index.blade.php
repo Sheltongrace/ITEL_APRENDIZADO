@@ -1,5 +1,5 @@
 @extends('layout.admin.index')
-@section('title', 'Formadores')
+@section('title', 'login/aluno')
 @section('content')
 <div class="app-wrapper">
 	    

@@ -104,6 +104,9 @@ Route::prefix('admin')->group(function () {
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
   
   Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
+  Route::get('Cursos/admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.cursos');
+  Route::get('disciplinas/admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.disciplina');
+
  
 });
 
