@@ -3,7 +3,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="">GreenGrace</h1>
+        <h1 class="">GuinGrace</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">

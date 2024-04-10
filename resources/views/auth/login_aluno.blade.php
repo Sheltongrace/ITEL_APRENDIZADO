@@ -8,7 +8,7 @@
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"> <h1>QuinGrace</h1> </a></div>
 					<h2 class="auth-heading text-center mb-5">Logar como aluno</h2>
 			        <div class="auth-form-container text-start">
-						<form class="auth-form login-form" action = "{{ route('auth.login') }}" method = "post">         
+						<form class="auth-form login-form" action = "{{ route('site.aluno') }}" method = "post">         
 							@csrf
                             <div class="email mb-3">
 								<label class="form-label ps-2 mb-2 fw-semibold" for="signin-email">Nome</label>

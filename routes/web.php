@@ -73,7 +73,7 @@ NOVAS ROTAS PARA O SITE
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
 Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
-Route::get('alunos', [AlunoController::class, 'index'])->name('site.aluno');
+Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
 Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 
