@@ -9,6 +9,7 @@ use App\Http\Controllers\Site\AlunoController;
 use App\Http\Controllers\Site\DisciplinaController;
 use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
+use App\Http\Controllers\CursosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,11 +70,11 @@ Route::group(['prefix'=>'formador'],function(){
 
 /*//==============
 NOVAS ROTAS PARA O SITE
-=================/*/ 
+=================/*/
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
 Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
-Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
+Route::get('alunos', [AlunoController::class, 'index'])->name('site.aluno');
 Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 
@@ -84,6 +85,7 @@ NOVAS ROTAS PARA AUTENTICAÇÃO
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('login/aluno', [LoginController::class, 'index_aluno'])->name('auth.login.aluno');
 Route::post('login', [LoginController::class, 'authenticate'])->name('auth.login');
+Route::post('cursos', [CursosController::class, 'index'])->name('curso');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
@@ -104,9 +106,7 @@ Route::prefix('admin')->group(function () {
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
   
   Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
-  Route::get('Cursos/admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.cursos');
-  Route::get('disciplinas/admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.disciplina');
-
- 
+  Route::get('cursos_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.cursos');
+  Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.disciplina');
 });
 

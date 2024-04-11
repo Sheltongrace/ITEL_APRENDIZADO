@@ -1,5 +1,5 @@
 @extends('layout.auth.index')
-@section('title', 'auth.login.aluno')
+@section('title', 'admin.cursos')
 @section('content')
 <div class="row g-0 app-auth-wrapper">
 	    <div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
@@ -8,7 +8,7 @@
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"> <h1>QuinGrace</h1> </a></div>
 					<h2 class="auth-heading text-center mb-5">Criar Cursos</h2>
 			        <div class="auth-form-container text-start">
-						<form class="auth-form login-form" action = "{{ route('') }}" method = "#">           
+						<form class="auth-form login-form" action = "{{ route('') }}" method = "post">           
 							@csrf
                             <div class="email mb-3">
 								<label class="form-label ps-2 mb-2 fw-semibold" for="signin-email">Nome do Curso</label>
