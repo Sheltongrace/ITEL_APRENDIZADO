@@ -10,8 +10,9 @@ class FormadorsController extends Controller
 {
     public function index()
     {
-        // $formadors = Formador::all();
-        return view('admin.formadores.index');
+        $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
+        select("formadors.*","usuarios.*")->get();
+        return view('admin.formadores.index',compact('professores'));
     }
     public function index_site()
     {
