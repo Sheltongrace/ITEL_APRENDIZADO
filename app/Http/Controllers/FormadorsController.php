@@ -46,7 +46,8 @@ class FormadorsController extends Controller
             'genero' => $request->input("genero"),
             'tempo_disponivel' => $request->input("tempo_disponivel"),
             'descricao' => $request->input("descricao"),
-            'imagem' => $imagem->getClientOriginalName()
+            'imagem' => $imagem->getClientOriginalName(),
+            'disciplina'=>$request->input("disciplina")
         ]);
 
         if ($novo_formador) {

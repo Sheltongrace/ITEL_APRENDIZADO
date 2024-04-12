@@ -39,25 +39,27 @@
     <div class="container">
       <div class="row gy-5">
         @foreach($professores as $prof)
-        <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-          <div class="member-img">
-            <img src="{{asset('imagemFormador')}}/{{$prof->imagem}}" class="img-fluid" alt="" />
-            <div class="social">
-              {{--<a href="#"><i class="bi bi-twitter"></i></a>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
-                    --}}
-            </div>
-          </div>
-          <div class="member-info text-center">
-            <h4>{{ $prof->user_name}}</h4>
-            <span class="">{{$prof->nivel_acesso}}</span>
-            <p>
-              {{$prof->descricao}}
-            </p>
-          </div>
-        </div>
+          @if($prof->estado==="aprovado")
+              <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img src="{{asset('imagemFormador')}}/{{$prof->imagem}}" class="img-fluid" alt="" />
+                  <div class="social">
+                    {{--<a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                          --}}
+                  </div>
+                </div>
+                <div class="member-info text-center">
+                  <h4>{{ $prof->user_name}}</h4>
+                  <span class="">{{$prof->nivel_acesso}}</span>
+                  <p>
+                    {{$prof->disciplina}}
+                  </p>
+                </div>
+              </div>
+          @endif
         @endforeach
 
 
@@ -201,8 +203,8 @@
 
                   <div class="col-md-6">
                     <div class="password mb-3">
-                      <label class="form-label fw-semibold" for="signup-password">Senha</label>
-                      <input id="signup-password" name="signup-password" type="password" class="form-control signup-password" placeholder="xxxxxxxxxxx" required="required">
+                      <label class="form-label fw-semibold" for="signup-password">Disciplina</label>
+                      <input id="signup-password" name="disciplina" type="text" class="form-control signup-password" placeholder="Diciplina" required="required">
                     </div>
                   </div>
 

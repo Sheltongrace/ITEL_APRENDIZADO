@@ -15,6 +15,7 @@ class Formador extends Model
         'genero',
         'tempo_disponivel',
         'descricao',
-        'imagem'
+        'imagem',
+        'disciplina'
     ];
 }

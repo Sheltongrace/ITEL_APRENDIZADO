@@ -133,8 +133,8 @@
 
                                 <div class="col-md-6">
                                     <div class="password mb-3">
-                                        <label class="form-label fw-semibold" for="signup-password">Senha</label>
-                                        <input id="signup-password" name="signup-password" type="password" class="form-control signup-password" placeholder="xxxxxxxxxxx" required="required">
+                                        <label class="form-label fw-semibold" for="signup-password">Disciplina</label>
+                                        <input id="signup-password" name="disciplina" type="text" class="form-control signup-password" placeholder="Disciplina" required="required">
                                     </div>
                                 </div>
 
