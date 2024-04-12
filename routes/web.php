@@ -61,6 +61,10 @@ Route::namespace('App\Http\Controllers')->group(function(){
 Route::group(['prefix'=>'formador'],function(){
     Route::get('/formador', [FormadorsController::class, 'index'])->name('formador.index');
     Route::get('/create', [FormadorsController::class, 'create'])->name('formador.create');
+    
+    Route::get('/aprovar/{id}', [FormadorsController::class, 'aprovar'])->name('formador.aprovar');
+
+    Route::get('/reprovar/{id}', [FormadorsController::class, 'reprovar'])->name('formador.reprovar');
     Route::post('/save', [FormadorsController::class, 'store'])->name('formador.save');
     Route::get('/show/{id}', [FormadorsController::class, 'show'])->name('formador.show');
     Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');

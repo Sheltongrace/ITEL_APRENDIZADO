@@ -16,11 +16,25 @@ class FormadorsController extends Controller
     }
     public function index_site()
     {
-
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
         // $formadors = Formador::all();
         return view('site.formador',compact('professores'));
+    }
+
+
+    public function aprovar($id){
+        $professor= Formador::where('id_formador',$id)->first();
+        $professor->estado="aprovado";
+        $professor->save();
+        return $this->show($id);
+    }
+
+    public function reprovar($id){
+        $professor= Formador::where('id_formador',$id)->first();
+        $professor->estado="cancelado";
+        $professor->save();
+        return $this->show($id);
     }
 
     public function create()
@@ -60,8 +74,10 @@ class FormadorsController extends Controller
 
     public function show($id)
     {
-        // $formador = Formador::findOrFail($id);
-        return view('admin.formadores.detalhes');
+        $professor= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
+        select("formadors.*","usuarios.*")->where("id_formador",$id)->first();
+
+        return view('admin.formadores.detalhes',compact('professor'));
     }
 
     public function edit($id)

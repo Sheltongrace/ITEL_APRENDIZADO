@@ -81,7 +81,7 @@
 											@elseif($prof->estado==="aprovado")
 											<td class="cell"><span class="badge bg-success">{{$prof->estado}}</span></td>
 											@else
-											<td class="cell"><span class="badge bg-success">{{$prof->estado}}</span></td>
+											<td class="cell"><span class="badge bg-danger">{{$prof->estado}}</span></td>
 											@endif
 											<td class="cell"><a class="btn-sm app-btn-secondary" href="{{ route('formador.show',$prof->id_formador) }}">Ver</a></td>
 										</tr>

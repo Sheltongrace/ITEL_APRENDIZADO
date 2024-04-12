@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Formador extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'id_formador';
+
     protected $fillable = [
         'id_formador',
         'id_usuario',
