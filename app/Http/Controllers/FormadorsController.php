@@ -15,8 +15,11 @@ class FormadorsController extends Controller
     }
     public function index_site()
     {
+
+        $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
+        select("formadors.*","usuarios.*")->get();
         // $formadors = Formador::all();
-        return view('site.formador');
+        return view('site.formador',compact('professores'));
     }
 
     public function create()
@@ -45,18 +48,12 @@ class FormadorsController extends Controller
             'imagem' => $imagem->getClientOriginalName()
         ]);
 
-
-
-
-
-
         if ($novo_formador) {
             return back()->with('success', 'Formador cadastrado com sucesso!');
         } else {
             return back()->with('error', 'Erro ao cadastrar Formador');
         }
     }
-
 
 
     public function show($id)

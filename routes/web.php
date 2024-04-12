@@ -67,6 +67,8 @@ Route::group(['prefix'=>'formador'],function(){
     Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
 });
 
+
+
 /*//==============
 NOVAS ROTAS PARA O SITE
 =================/*/ 
