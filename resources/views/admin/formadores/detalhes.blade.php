@@ -73,8 +73,9 @@
 							    </div><!--//item-->
 						    </div><!--//app-card-body-->
 						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="./listTeachers.html">Voltar</a>
-                               <button class="btn app-btn-secondary" href="#">Aprovar</button>
+							   <a class="btn btn-info" href="./listTeachers.html">Voltar</a>
+                               <button class="btn btn-primary" href="#">Aprovar</button>
+							   <button class="btn btn-danger" href="#">Reprovar</button>
 						    </div><!--//app-card-footer-->
 						   
 						</div><!--//app-card-->
