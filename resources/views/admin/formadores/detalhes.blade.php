@@ -82,9 +82,9 @@
 							</div><!--//item-->
 						</div><!--//app-card-body-->
 						<div class="app-card-footer p-4 mt-auto">
-							<a class="btn btn-info" href="">Voltar</a>
+							<a class="btn btn-info" href="##">Voltar</a>
 							<a class="btn btn-primary" href="{{ route('formador.aprovar',$professor->id_formador) }}">Aprovar</a>
-							<a class="btn btn-danger" href="{{ route('formador.reprovar',$professor->id_formador) }}">Reprovar</a>
+							<a class="btn btn-danger" href="{{ route('formador.reprovar',$professor->id_formador) }}">Canselar Requisitos</a>
 						</div><!--//app-card-footer-->
 
 					</div><!--//app-card-->

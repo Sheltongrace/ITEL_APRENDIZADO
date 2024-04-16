@@ -1,6 +1,7 @@
 @extends('layout.site.index')
 @section('title', 'Disciplinas')
 @section('content')
+
 <main class="main">
     <!-- Page Title -->
     <div id="hero" class="page-title hero section" data-aos="fade">

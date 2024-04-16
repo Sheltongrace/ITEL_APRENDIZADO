@@ -11,6 +11,10 @@ class LoginController extends Controller
     {
      return view('auth.login');   
     }
+    public function index_listacurso() 
+    {
+        return view("admin.cursos_admin.listacurso");
+    }
     public function index_aluno() 
     {
      return view('auth.login_aluno');   

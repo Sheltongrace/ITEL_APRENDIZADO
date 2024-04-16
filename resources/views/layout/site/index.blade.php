@@ -34,7 +34,7 @@
 
 <body>
   @include('layout.site.header')
-  @yield('content')
+  @yield('content')      
   @include('layout.site.footer')
 </body>
 

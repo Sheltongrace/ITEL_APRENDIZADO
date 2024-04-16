@@ -338,8 +338,8 @@
               </li>
               
               
-              <!--//nav-item-->
-              <li class="nav-item has-submenu">
+               <!--//nav-item-->
+               <li class="nav-item has-submenu">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 <a
                   class="nav-link submenu-toggle"
@@ -352,7 +352,8 @@
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-
+                      .001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                     </svg>
                   </span>
                   <span class="nav-link-text">Formadores</span>
@@ -366,27 +367,29 @@
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         fill-rule="evenodd"
-                        d="M1.646 4.646a.5.5 0 0 1                              
-                         .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 
-                         .708.708l-6 6a.5.5 0 0 1-
-                         .708 0l-6-6a.5.5 0 0 1 0-.708z" />
- 
+                        d="M1.646 4.646a.5.5 0 0 1 .
+                        708 0L8 10.293l5.646-5.647a.
+                        5.5 0 0 1 .708.708l-6 6a.5.5
+                         0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                     </svg> 
-                    <!--//submenu-arrow--> 
-                  <!--//nav-link-->
-
-                <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+                  </span
+                  ><!--//submenu-arrow--> </a
+                ><!--//nav-link-->
+                <div
+                  id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
                   <ul class="submenu-list list-unstyled">
                     <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('formador.create') }}">Registrar</a >
+                      <a class="submenu-link" href="{{ route('formador.create') }}">Registrar</a>
                     </li>
                     <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('formador.index') }}">listar</a>
+                      <a class="submenu-link" href="{{ route('formador.index') }}">Listar</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <!--//nav-item-->
+              
+              
+              <!--//nav-item--> <!--//nav-item-->
               <li class="nav-item has-submenu">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 <a
@@ -471,7 +474,7 @@
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 
 
-                <a class="nav-link" href="{{ route('admin.caixa.entrada') }}">
+                <a class="nav-link" href="{{ route('disciplina.admin') }}">
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">

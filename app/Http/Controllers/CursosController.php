@@ -10,6 +10,7 @@ class CursosController extends Controller
     public function index()
     {
         $cursos = Curso::all();
+        echo  view("admin.cursos_admin.index_cursos");
     }
 
     public function create()

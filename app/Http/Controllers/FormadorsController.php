@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class FormadorsController extends Controller
 {
     public function index()
-    {
+    { 
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
         return view('admin.formadores.index',compact('professores'));

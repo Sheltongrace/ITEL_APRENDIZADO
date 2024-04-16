@@ -10,6 +10,7 @@ use App\Http\Controllers\Site\DisciplinaController;
 use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\CursosController;
+use App\Http\Controllers\DisciplinasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,9 +51,7 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::post('/store_aluno','inicioController@store_aluno')->name('store_aluno');
 
     Route::get('/edit/{id}','inicioController@edit_aluno')->name('edit_aluno');
-
-    Route::put('/{id}','inicioController@update_aluno')->name('update_aluno');
-
+     Route::put('/{id}','inicioController@update_aluno')->name('update_aluno');
     Route::delete('/{id}','inicioController@destroy_aluno')->name('destroy_aluno');
 //rotas formadores
   Route::post('/add_formadores','FormadorsController@store')->name('add_formadores');
@@ -61,9 +60,7 @@ Route::namespace('App\Http\Controllers')->group(function(){
 Route::group(['prefix'=>'formador'],function(){
     Route::get('/formador', [FormadorsController::class, 'index'])->name('formador.index');
     Route::get('/create', [FormadorsController::class, 'create'])->name('formador.create');
-    
     Route::get('/aprovar/{id}', [FormadorsController::class, 'aprovar'])->name('formador.aprovar');
-
     Route::get('/reprovar/{id}', [FormadorsController::class, 'reprovar'])->name('formador.reprovar');
     Route::post('/save', [FormadorsController::class, 'store'])->name('formador.save');
     Route::get('/show/{id}', [FormadorsController::class, 'show'])->name('formador.show');
@@ -80,7 +77,7 @@ NOVAS ROTAS PARA O SITE
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
 Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
-Route::get('alunos', [AlunoController::class, 'index'])->name('site.aluno');
+Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
 Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 
@@ -91,7 +88,9 @@ NOVAS ROTAS PARA AUTENTICAÇÃO
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('login/aluno', [LoginController::class, 'index_aluno'])->name('auth.login.aluno');
 Route::post('login', [LoginController::class, 'authenticate'])->name('auth.login');
-Route::post('cursos', [CursosController::class, 'index'])->name('curso');
+Route::get('cursos', [CursosController::class, 'index'])->name('curso');
+ Route::post('lista/cursos', [LoginController::class, 'index_listacurso'])->name('lista.curso');
+Route::get('disciplina.admin', [DisciplinasController::class, 'index'])->name('disciplina.admin');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
@@ -103,6 +102,8 @@ NOVAS ROTAS PARA O ADMIN
 Route::prefix('admin')->group(function () {
   Route::get('painel', [PainelController::class, 'index'])->name('admin.painel');
 
+
+
   /*//==============
   NOVAS ROTAS PARA ALUNOS
   =================/*/
@@ -110,7 +111,6 @@ Route::prefix('admin')->group(function () {
   Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
   Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
-  
   Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
   Route::get('cursos_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.cursos');
   Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.disciplina');

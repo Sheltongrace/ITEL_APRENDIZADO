@@ -10,6 +10,8 @@ class DisciplinasController extends Controller
     public function index()
     {
         $disciplinas = Disciplina::all();
+        echo view("admin.disciplinas_admin.index_disciplinas");
+
     }
 
     public function create()
