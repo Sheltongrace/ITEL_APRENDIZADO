@@ -112,7 +112,7 @@ Route::prefix('admin')->group(function () {
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
   
   Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
-  Route::get('cursos_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.cursos');
-  Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.disciplina');
+  Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursoController::class, 'index'])->name('admin.cursos');
+  Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\DisciplinaController::class, 'index'])->name('admin.disciplina');
 });
 
