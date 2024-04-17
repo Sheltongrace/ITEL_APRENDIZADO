@@ -447,7 +447,7 @@
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 
 
-                <a class="nav-link" href="{{ route('curso') }}" >
+                <a class="nav-link" href="{{ route('admin.cursos') }}" >
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -474,7 +474,11 @@
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 
 
+<<<<<<< HEAD
                 <a class="nav-link" href="{{ route('disciplina.admin') }}">
+=======
+                <a class="nav-link" href="{{ route('admin.disciplina') }}">
+>>>>>>> e13f9462dcc8a22e1608fa1115d8f64b52052640
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
