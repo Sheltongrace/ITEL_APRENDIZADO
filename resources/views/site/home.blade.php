@@ -5,7 +5,7 @@
   <!-- Hero Section -->
   <section id="hero" class="hero section">
 
-    <img src="{{asset('site/assets/img/hero-bg.jpg')}}" alt="" data-aos="fade-in">
+    <img src="{{asset('site/assets/img/IMG-20240418-WA0023.jpg')}}" alt="" data-aos="fade-in">
 
     <div class="container">
       <h2 data-aos="fade-up" data-aos-delay="100" class="">Aprendendo Hoje, <br> Liderando Amanhã</h2>

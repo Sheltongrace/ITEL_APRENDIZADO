@@ -62,6 +62,11 @@
 
                             <div class="d-flex justify-content-between mt-3">
                                 <div>
+                                    <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(2)" >
+                                    <a class="dropdown-item" href="{{ route('site') }}"> Voltar</a>
+                                    </button>
+                                </div>
+                                <div>
                                     <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
                                         Próximo
                                     </button>
@@ -159,7 +164,6 @@
                             </div>
                         </div>
                     </form>
-                    <div class="auth-option text-center pt-5">Já tens uma conta ?<a class="text-link" href="./index.html">faça o log in</a></div>
                 </div><!--//auth-form-container-->
             </div><!--//auth-body-->
         </div><!--//flex-column-->
