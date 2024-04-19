@@ -33,11 +33,11 @@
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Classe</label>
 
                                     <select id="signup-tel" name="classe" class="form-control signup-email">
-                                        <option value="1">Escolha uma opção</option>
-                                        <option value="2">10ª</option>
-                                        <option value="3">11ª</option>
-                                        <option value="3">12ª</option>
-                                        <option value="3">13ª</option>
+                                        <option value="">Escolha uma opção</option>
+                                        <option value="10">10ª</option>
+                                        <option value="11">11ª</option>
+                                        <option value="12">12ª</option>
+                                        <option value="13">13ª</option>
                                     </select>
 
                                 </div>
