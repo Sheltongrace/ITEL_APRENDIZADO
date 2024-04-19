@@ -1,18 +1,23 @@
 @extends('layout.admin.index')
 @section('title', 'Cadastrar Alunos')
 @section('content')
-<div class="app-wrapper">
+
+<main class="main">
+  <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
           <h2 class="app-page-title">Registrar Alunos</h2>
-          <!--//row-->
-          <div class="row bg-white" id="regForm">
-            <div class="col-lg-12">
-                <form>
-                    <ul id="stepList" class="my-4">
-                      <li class="step">1</li>
-                      <li class="step">2</li>
-                    </ul>
+          </div>
+
+            <div class="col-lg-10">
+              <form>
+                <ul id="stepList" class="my-5">
+                  <li class="step">1</li>
+                  <li class="step">2</li>
+                  <li class="step">3</li>
+                </ul>
+                <!-- step 1 -->
+                </ul>
                     <!-- step 1 -->
                     <div class="tab">
                       <div class="row">
@@ -33,26 +38,30 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Género</label
+                              >Classe</label
                             >
+                             
                             <select
                           id="signup-tel"
                           name=""
                           class="form-control signup-email"
                         >
                           <option value="1">Escolha uma opção</option>
-                          <option value="2">Mascolino</option>
-                          <option value="3">Femenino</option>
+                          <option value="2">10ª</option>
+                          <option value="3">11ª</option>
+                          <option value="3">12ª</option>
+                          <option value="3">13ª</option>
                         </select>
+
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -70,7 +79,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -92,21 +101,22 @@
                         </div>
                       </div>
     
-                      <div class="d-flex justify-content-between mt-3">
-                        <div>
-                          <button
-                            type="button"
-                            class="btn-primary btn nextBtn fw-bold"
-                            onclick="nextPrev(1)"
-                          >
-                            Próximo
-                          </button>
-                        </div>
-                      </div>
+
+                  <div class="d-flex justify-content-between mt-3">
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn nextBtn fw-bold"
+                        onclick="nextPrev(1)"
+                      >
+                        Próximo
+                      </button>
                     </div>
-    
-                    <!-- Step 2 -->
-                    <div class="tab">
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="tab">
                       <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
@@ -126,7 +136,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -144,7 +154,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -162,8 +172,8 @@
                             />
                           </div>
                         </div>
-    
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
                               class="form-label my-2 fw-semibold"
@@ -181,41 +191,158 @@
                           </div>
                         </div>
                       </div>
-    
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-3"
+
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn prevBtn fw-bold"
+                        onclick="nextPrev(1)"
                       >
-                        <div>
-                          <button
-                            type="button"
-                            class="btn-primary btn prevBtn fw-bold"
-                            onclick="nextPrev(1)"
-                          >
-                            Voltar
-                          </button>
-                        </div>
-    
-                        <div>
-                          <button
-                            type="button"
-                            class="btn-primary btn nextBtn fw-bold"
-                            onclick="nextPrev(1)"
-                          >
-                            Finalizar
-                          </button>
-                        </div>
-                      </div>
+                        Voltar
+                      </button>
                     </div>
-    
-                 </div>
-                  </form>
-              </div>
+
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn nextBtn fw-bold"
+                        onclick="nextPrev(1)"
+                      >
+                        Próximo
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- step 3 -->
+
+                
+                <div class="tab">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                          <div class="email mb-3">
+                            <label
+                              class="form-label my-2 fw-semibold"
+                              for="signup-email"
+                              >Género</label
+                            >
+                            <select
+                          id="signup-tel"
+                          name=""
+                          class="form-control signup-email"
+                        >
+                          <option value="1">Escolha uma opção</option>
+                          <option value="2">Mascolino</option>
+                          <option value="3">Femenino</option>
+                        </select>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                          <div class="email mb-3">
+                            <label
+                              class="form-label my-2 fw-semibold"
+                              for="signup-email"
+                              >Senha</label
+                            >
+                            <input
+                              id="signup-tel"
+                              name="signup-idententy"
+                              type="password"
+                              class="form-control signup-email valid"
+                              placeholder="****"
+                              required="required"
+                            />
+                          </div>
+                        </div>
+
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn prevBtn fw-bold"
+                        onclick="nextPrev(n)"
+                      >
+                        Voltar
+                      </button>
+                    </div>
+
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn nextBtn fw-bold"
+                        onclick="nextPrev(1)"
+                      >
+                        Finalizar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <!--//container-fluid-->
-      </div>
-      
-    </div>
-    <!--//app-wrapper-->
-
+      </section>
+</main>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
