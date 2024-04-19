@@ -9,10 +9,9 @@
           <div class="row bg-white" id="regForm">
             <div class="col-lg-12">
                 <form>
-                    <ul id="stepList" class="my-5">
+                    <ul id="stepList" class="my-4">
                       <li class="step">1</li>
                       <li class="step">2</li>
-                      <li class="step">3</li>
                     </ul>
                     <!-- step 1 -->
                     <div class="tab">
@@ -22,14 +21,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Primeiro nome</label
+                              >Nome do Aluno</label
                             >
                             <input
                               id="signup-name"
                               name="signup-name"
                               type="text"
                               class="form-control signup-name"
-                              placeholder="Primeiro nome"
+                              placeholder="Nome"
                               required="required"
                             />
                           </div>
@@ -40,14 +39,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Último nome</label
+                              >Género</label
                             >
                             <input
                               id="signup-email"
                               name="signup-email"
                               type="text"
                               class="form-control signup-email"
-                              placeholder="Último nome"
+                              placeholder="Género"
                               required="required"
                             />
                           </div>
@@ -58,14 +57,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Classe</label
+                              >Número de Processo</label
                             >
                             <input
                               id="signup-email"
                               name="signup-email"
                               type="text"
                               class="form-control signup-email valid"
-                              placeholder="Classe"
+                              placeholder="Processo"
                               required="required"
                             />
                           </div>
@@ -81,9 +80,9 @@
                             <input
                               id="signup-date"
                               name="signup-dateBirthday"
-                              type="date"
+                              type="text"
                               class="form-control signup-email"
-                              placeholder="Nível académico"
+                              placeholder="Curso"
                               required="required"
                             />
                           </div>
@@ -199,95 +198,13 @@
                             class="btn-primary btn nextBtn fw-bold"
                             onclick="nextPrev(1)"
                           >
-                            Próximo
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-    
-                    <!-- step 3 -->
-    
-                    <div class="tab">
-                      <div class="row flex-row-reverse">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                          <div class="email mb-3">
-                            <label
-                              class="form-label my-1 fw-semibold"
-                              for="signup-email"
-                              >Carga horária</label
-                            >
-                            <select
-                              id="signup-tel"
-                              name=""
-                              class="form-control signup-email"
-                            >
-                              <option value="manha">Manhã</option>
-                              <option value="tarde">Tarde</option>
-                              <option value="noite">Noite</option>
-                            </select>
-                          </div>
-                        </div>
-    
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                          <div class="email mb-3">
-                            <label
-                              class="form-label my-1 fw-semibold"
-                              for="signup-email"
-                              >Trimestre</label
-                            >
-                            <select
-                              id="signup-tel"
-                              name=""
-                              class="form-control signup-email"
-                            >
-                              <option value="" disabled selected>
-                                Quantos trimestre farás ?
-                              </option>
-                              <option value="manha">1</option>
-                              <option value="tarde">2</option>
-                              <option value="noite">3</option>
-                              <option value="noite">4</option>
-                            </select>
-                          </div>
-                        </div>
-    
-                        <div class="col-sm-12 col-md-12">
-                          <label for="" class="label-form my-2">Assunto ?</label>
-                          <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            class="form-control"
-                            placeholder="Qual assunto a ser tratado?"
-                          ></textarea>
-                        </div>
-                      </div>
-    
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-3"
-                      >
-                        <div>
-                          <button
-                            type="button"
-                            class="btn-primary btn prevBtn fw-bold"
-                            onclick="nextPrev(n)"
-                          >
-                            Voltar
-                          </button>
-                        </div>
-    
-                        <div>
-                          <button
-                            type="button"
-                            class="btn-primary btn nextBtn fw-bold"
-                            onclick="nextPrev(1)"
-                          >
                             Finalizar
                           </button>
                         </div>
                       </div>
                     </div>
+    
+                 </div>
                   </form>
               </div>
           </div>
