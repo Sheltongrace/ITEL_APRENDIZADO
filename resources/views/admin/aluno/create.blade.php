@@ -2,12 +2,12 @@
 @section('title', 'Cadastrar Alunos')
 @section('content')
 
-<main class="main">
   <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
           <h2 class="app-page-title">Registrar Alunos</h2>
-          </div>
+          <div class="row bg-white" id="regForm">
+                <div class="col-lg-12">
 
             <div class="col-lg-10">
               <form>
@@ -15,8 +15,6 @@
                   <li class="step">1</li>
                   <li class="step">2</li>
                   <li class="step">3</li>
-                </ul>
-                <!-- step 1 -->
                 </ul>
                     <!-- step 1 -->
                     <div class="tab">
@@ -31,7 +29,7 @@
                             <input
                               id="signup-name"
                               name="signup-name"
-                              type="text"
+                              type="text"        
                               class="form-control signup-name"
                               placeholder="Nome"
                               required="required"

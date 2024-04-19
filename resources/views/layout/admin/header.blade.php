@@ -449,9 +449,9 @@
                   class="nav-link submenu-toggle"
                   href="#"
                   data-bs-toggle="collapse"
-                  data-bs-target="#submenu-1"
+                  data-bs-target="#submenu-3"
                   aria-expanded="false"
-                  aria-controls="submenu-1">
+                  aria-controls="submenu-3">
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -479,13 +479,13 @@
                   ><!--//submenu-arrow--> </a
                 ><!--//nav-link-->
                 <div
-                  id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
+                  id="submenu-3" class="collapse submenu submenu-3" data-bs-parent="#menu-accordion">
                   <ul class="submenu-list list-unstyled">
                     <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('formador.create') }}">Registrar</a>
+                      <a class="submenu-link" href="{{ route('curso') }}">Registrar</a>
                     </li>
                     <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('formador.index') }}">Listar</a>
+                      <a class="submenu-link" href="{{ route('admin.cursos') }}">Listar</a>
                     </li>
                   </ul>
                 </div>
