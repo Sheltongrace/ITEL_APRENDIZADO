@@ -7,11 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class aluno extends Model
 {
-    use HasFactory;  
+    use HasFactory;
+    protected $primaryKey = 'id_aluno';
     protected $filleble=[
-        '_token',
-        'nome',
-        'n_processo',
-        'ano_lectivo',
+        'id_curso',
+        'processo',
+        'classe',
+        'genero',
+        'id_usuario'
     ];
 }
+
+
+
+
+
+
+

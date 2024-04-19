@@ -9,8 +9,10 @@ use App\Http\Controllers\Site\AlunoController;
 use App\Http\Controllers\Site\DisciplinaController;
 use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
+use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\DisciplinasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,7 @@ use App\Http\Controllers\DisciplinasController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/ 
+*/
 Route::namespace('App\Http\Controllers')->group(function(){
 
     Route::get('/rais','inicioController@index')->name('/rais');
@@ -55,7 +57,7 @@ Route::namespace('App\Http\Controllers')->group(function(){
     Route::delete('/{id}','inicioController@destroy_aluno')->name('destroy_aluno');
 //rotas formadores
   Route::post('/add_formadores','FormadorsController@store')->name('add_formadores');
-}); 
+});
 
 Route::group(['prefix'=>'formador'],function(){
     Route::get('/formador', [FormadorsController::class, 'index'])->name('formador.index');
@@ -67,6 +69,19 @@ Route::group(['prefix'=>'formador'],function(){
     Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
     Route::put('/update/{id}', [FormadorsController::class, 'update'])->name('formador.update');
     Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
+});
+
+
+Route::group(['prefix'=>'aluno'],function(){
+    Route::get('/formador', [AlunosController::class, 'index'])->name('aluno.index');
+    Route::get('/create', [AlunosController::class, 'create'])->name('aluno.create');
+    Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
+    Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
+    Route::post('/save', [AlunosController::class, 'store'])->name('aluno.save');
+    Route::get('/show/{id}', [AlunosController::class, 'show'])->name('aluno.show');
+    Route::get('/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
+    Route::put('/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
+    Route::delete('/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
 });
 
 
@@ -107,7 +122,7 @@ Route::prefix('admin')->group(function () {
   /*//==============
   NOVAS ROTAS PARA ALUNOS
   =================/*/
-  
+
   Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
   Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
