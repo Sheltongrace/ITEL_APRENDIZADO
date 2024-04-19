@@ -2,40 +2,31 @@
 @section('title', 'Cadastrar Alunos')
 @section('content')
 
-  <div class="app-wrapper">
-      <div class="app-content pt-3 p-md-3 p-lg-4">
-        <div class="container-xl">
-          <h2 class="app-page-title">Registrar Alunos</h2>
-          <div class="row bg-white" id="regForm">
-                <div class="col-lg-12">
+<main class="main">
+    <div class="app-wrapper">
+        <div class="app-content pt-3 p-md-3 p-lg-4">
+            <div class="container-xl">
+                <h2 class="app-page-title">Registrar Alunos</h2>
+            </div>
 
             <div class="col-lg-10">
-              <form>
-                <ul id="stepList" class="my-5">
-                  <li class="step">1</li>
-                  <li class="step">2</li>
-                  <li class="step">3</li>
-                </ul>
+                <form action="{{route('aluno.save')}}" method="post">
+                    <ul id="stepList" class="my-5">
+                        <li class="step">1</li>
+                        <li class="step">2</li>
+                        <li class="step">3</li>
+                    </ul>
+                    <!-- step 1 -->
+                    </ul>
                     <!-- step 1 -->
                     <div class="tab">
-                      <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                          <div class="email mb-3">
-                            <label
-                              class="form-label my-2 fw-semibold"
-                              for="signup-email"
-                              >Nome do Aluno</label
-                            >
-                            <input
-                              id="signup-name"
-                              name="signup-name"
-                              type="text"
-                              class="form-control signup-name"
-                              placeholder="Nome"
-                              required="required"
-                            />
-                          </div>
-                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="email mb-3">
+                                    <label class="form-label my-2 fw-semibold" for="signup-email">Nome do Aluno</label>
+                                    <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" required="required" />
+                                </div>
+                            </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
