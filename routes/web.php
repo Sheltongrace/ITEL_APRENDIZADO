@@ -84,6 +84,10 @@ Route::group(['prefix'=>'aluno'],function(){
     Route::delete('/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
 });
 
+Route::group(['prefix'=>'cursoAdmin'],function(){
+    Route::post('/store', [CursosController::class, 'store'])->name('cursoAdmin.store');
+});
+
 
 
 /*//==============

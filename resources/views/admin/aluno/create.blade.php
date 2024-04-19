@@ -11,6 +11,7 @@
 
             <div class="col-lg-10">
                 <form action="{{route('aluno.save')}}" method="post">
+                    @crsf
                     <ul id="stepList" class="my-5">
                         <li class="step">1</li>
                         <li class="step">2</li>
