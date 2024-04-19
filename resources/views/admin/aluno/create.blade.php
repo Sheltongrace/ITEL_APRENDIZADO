@@ -34,7 +34,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -52,7 +52,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -70,7 +70,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -89,7 +89,7 @@
                           </div>
                         </div>
                       </div>
-    
+
                       <div class="d-flex justify-content-between mt-3">
                         <div>
                           <button
@@ -102,7 +102,7 @@
                         </div>
                       </div>
                     </div>
-    
+
                     <!-- Step 2 -->
                     <div class="tab">
                       <div class="row">
@@ -124,7 +124,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -142,7 +142,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -160,7 +160,7 @@
                             />
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -179,7 +179,7 @@
                           </div>
                         </div>
                       </div>
-    
+
                       <div
                         class="d-flex justify-content-between align-items-center mt-3"
                       >
@@ -192,7 +192,7 @@
                             Voltar
                           </button>
                         </div>
-    
+
                         <div>
                           <button
                             type="button"
@@ -204,9 +204,9 @@
                         </div>
                       </div>
                     </div>
-    
+
                     <!-- step 3 -->
-    
+
                     <div class="tab">
                       <div class="row flex-row-reverse">
                         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -227,7 +227,7 @@
                             </select>
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-6 col-lg-6">
                           <div class="email mb-3">
                             <label
@@ -250,7 +250,7 @@
                             </select>
                           </div>
                         </div>
-    
+
                         <div class="col-sm-12 col-md-12">
                           <label for="" class="label-form my-2">Assunto ?</label>
                           <textarea
@@ -263,7 +263,7 @@
                           ></textarea>
                         </div>
                       </div>
-    
+
                       <div
                         class="d-flex justify-content-between align-items-center mt-3"
                       >
@@ -276,7 +276,7 @@
                             Voltar
                           </button>
                         </div>
-    
+
                         <div>
                           <button
                             type="button"
@@ -294,7 +294,7 @@
         </div>
         <!--//container-fluid-->
       </div>
-      
+
     </div>
     <!--//app-wrapper-->
 
