@@ -9,10 +9,9 @@
           <div class="row bg-white" id="regForm">
             <div class="col-lg-12">
                 <form>
-                    <ul id="stepList" class="my-5">
+                    <ul id="stepList" class="my-4">
                       <li class="step">1</li>
                       <li class="step">2</li>
-                      <li class="step">3</li>
                     </ul>
                     <!-- step 1 -->
                     <div class="tab">
@@ -22,14 +21,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Primeiro nome</label
+                              >Nome do Aluno</label
                             >
                             <input
                               id="signup-name"
                               name="signup-name"
                               type="text"
                               class="form-control signup-name"
-                              placeholder="Primeiro nome"
+                              placeholder="Nome"
                               required="required"
                             />
                           </div>
@@ -40,14 +39,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Último nome</label
+                              >Género</label
                             >
                             <input
                               id="signup-email"
                               name="signup-email"
                               type="text"
                               class="form-control signup-email"
-                              placeholder="Último nome"
+                              placeholder="Género"
                               required="required"
                             />
                           </div>
@@ -58,14 +57,14 @@
                             <label
                               class="form-label my-2 fw-semibold"
                               for="signup-email"
-                              >Classe</label
+                              >Número de Processo</label
                             >
                             <input
                               id="signup-email"
                               name="signup-email"
                               type="text"
                               class="form-control signup-email valid"
-                              placeholder="Classe"
+                              placeholder="Processo"
                               required="required"
                             />
                           </div>
@@ -81,9 +80,9 @@
                             <input
                               id="signup-date"
                               name="signup-dateBirthday"
-                              type="date"
+                              type="text"
                               class="form-control signup-email"
-                              placeholder="Nível académico"
+                              placeholder="Curso"
                               required="required"
                             />
                           </div>
@@ -288,6 +287,8 @@
                         </div>
                       </div>
                     </div>
+
+                 </div>
                   </form>
               </div>
           </div>

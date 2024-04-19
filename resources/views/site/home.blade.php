@@ -3,7 +3,7 @@
 @section('content')
 <main class="main">
   <!-- Hero Section -->
-  <section id="hero" class="hero section">
+  <section id="jpg" class="hero section">
 
     <img src="{{asset('site/assets/img/IMG-20240418-WA0023.jpg')}}" alt="" data-aos="fade-in">
 
