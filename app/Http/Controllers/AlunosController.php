@@ -19,7 +19,16 @@ class AlunosController extends Controller
 
     public function store(Request $request)
     {
-        Aluno::create($request->all());
+        $usuario = new UsuariosController();
+        $idUser=  $usuario->store($request);
+        Aluno::create([
+            'id_curso'=>$request->input('id_curso'),
+            'processo'=>$request->input('processo'),
+            'classe'=>$request->input('classe'),
+            'genero'=>$request->input('genero'),
+            'id_usuario'=>$idUser
+        ]);
+
     }
 
     public function show($id)
