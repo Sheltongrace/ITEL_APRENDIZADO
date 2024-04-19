@@ -39,7 +39,7 @@
       <div class="container">
         <div class="row g-5">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="course-item">
               <img src="{{asset('site/assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
               <div class="course-content">
