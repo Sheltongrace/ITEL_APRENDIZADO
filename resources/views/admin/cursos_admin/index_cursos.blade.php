@@ -1,8 +1,8 @@
 @extends('layout.admin.index')
-@section('title', 'Cadastrar Alunos')
+@section('title', 'Cadastrar Disciplinas')
 @section('content')
 
-<main class="main">
+
   <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
@@ -50,5 +50,5 @@
           </div>
         </div>
       </section>
-</main>
+
 @endsection

@@ -1,44 +1,56 @@
-@extends('layout.auth.index')
-@section('title', 'Criar Cursos')
+@extends('layout.admin.index')
+@section('title', 'Cadastrar disciplinas')
 @section('content')
-<div class="row g-0 app-auth-wrapper">
-	    <div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
-		    <div class="d-flex flex-column align-content-end">
-			    <div class="app-auth-body mx-auto">	
-				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"> <h1>QuinGrace</h1> </a></div>
-					<h2 class="auth-heading text-center mb-5">Criar Disciplina</h2>
-			        <div class="auth-form-container text-start">
-						<form class="auth-form login-form" action = "###" method = "post">           
-							@csrf
-                            <div class="email mb-3">
-								<label class="form-label ps-2 mb-2 fw-semibold" for="signin-email">Nome da Disciplina</label>
-								<input id="nome" name="nome" type="text" class="form-control signin-email" placeholder="Nome da Disciplina" required="required">
-							</div><!--//form-group-->
-							<div class="text-center">
-								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Criar</button><br>
-							</div>
-						</form>
-					</div><!--//auth-form-container-->	
 
-			    </div><!--//auth-body-->
-		    </div><!--//flex-column-->   
-	    </div><!--//auth-main-col-->
-	    <div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-		    <div class="auth-background-holder">
-		    </div>
-		    <div class="auth-background-mask"></div>
-		    <div class="auth-background-overlay p-3 p-lg-5">
-			    <div class="d-flex flex-column align-content-end h-100">
-				    <div class="h-100"></div>
-				    <div class="overlay-content p-3 p-lg-4 rounded">
-					    <h5 class="mb-3 overlay-title fs-3">Aprendendo Hoje,
-							Liderando Amanhã</h5>
-							<p class="fs-4">Faça Parte da Revolução Educacional:
-								Aprenda com os Melhores e Seja um Líder em sua Área</p></div>
-				    </div>
-				</div>
-		    </div><!--//auth-background-overlay-->
-	    </div><!--//auth-background-col-->
-    
-    </div><!--//row-->
+  <div class="app-wrapper">
+      <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">
+          <h2 class="app-page-title">Criar Disciplinas</h2>
+          <div class="row bg-white" id="regForm">
+            <div class="col-lg-10">
+              
+                <ul id="stepList" style="text-align: center;" class="my-5">
+                  <li class="step" >1</li>
+                </ul>
+                    <!-- step 1 -->
+                    <div class="tab">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                          <div class="email mb-3">
+                            <label
+                              class="form-label my-2 fw-semibold"
+                              for="signup-email">Nome da Disciplina</label>
+                            <input
+                              id="signup-name"
+                              name="signup-disciplina"
+                              type="text"        
+                              class="form-control signup-name"
+                              placeholder="Nome da Disciplina"
+                              required="required"
+                            />
+                          </div>
+                        </div>
+
+						<div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="email mb-3">
+                      <label class="form-label my-2 fw-semibold" for="signup-email">imagem</label>
+                      <input id="signup-email" name="imagem" type="file" class="form-control signup-email valid" placeholder="Nível académico" required="required">
+                    </div>
+                  </div>
+				  
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-primary btn nextBtn fw-bold"
+                        onclick="nextPrev(1)"
+                      >
+                        Criar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+        
+            </div>
+          </div>
+        </div>
 @endsection
