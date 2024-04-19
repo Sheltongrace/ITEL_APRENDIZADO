@@ -10,24 +10,35 @@ class DisciplinasController extends Controller
     public function index()
     {
         $disciplinas = Disciplina::all();
-        echo view("admin.disciplinas_admin.index_disciplinas");
-
+        return view("admin.disciplinas_admin.index_disciplinas");
     }
 
     public function create()
     {
-
     }
 
     public function store(Request $request)
     {
-        Disciplina::create($request->all());
+        $caminhoImagem = public_path('imagemDisciplina');
+        if ($request->hasFile('imagem')) {
+            $imagem = $request->file('imagem');
+            $imagem->move($caminhoImagem, $imagem->getClientOriginalName());
+        }
+        Disciplina::create([
+            'nome_disciplina'=>$request->input('nome_disciplina'),
+            'imagem'=>$imagem->getClientOriginalName(),
+        ]);
+
+        $todasDiscipliona = Disciplina::all();
+        return view('admin.disciplinas.index',compact('todasDiscipliona'));
     }
 
     public function show($id)
     {
         $disciplina = Disciplina::findOrFail($id);
     }
+
+
 
     public function edit($id)
     {

@@ -110,6 +110,7 @@ Route::post('login', [LoginController::class, 'authenticate'])->name('auth.login
 Route::get('cursos', [CursosController::class, 'index'])->name('curso');
  Route::post('lista/cursos', [LoginController::class, 'index_listacurso'])->name('lista.curso');
 Route::get('disciplina.admin', [DisciplinasController::class, 'index'])->name('disciplina.admin');
+Route::post('disciplina.store', [DisciplinasController::class, 'store'])->name('disciplina.store');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
