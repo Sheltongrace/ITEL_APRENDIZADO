@@ -118,7 +118,7 @@
                       <label class="form-label my-2 fw-semibold" for="signup-email">Nível académico</label>
                       <input id="signup-email" name="nivel_academico" type="text" class="form-control signup-email valid" placeholder="Nível académico" required="required">
                     </div>
-                  </div>
+                  </div> 
 
                   <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="email mb-3">

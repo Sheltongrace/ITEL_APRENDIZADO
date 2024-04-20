@@ -228,6 +228,7 @@
               </div>
               <!-- End Section Title -->
             </div>
+            
             <div class="col-lg-10">
               <form>
                 <ul id="stepList" class="my-5">
@@ -297,7 +298,7 @@
                         <label
                           class="form-label my-2 fw-semibold"
                           for="signup-email"
-                          >Curso</label
+                          >Curso</label  
                         >
                         <select
                           id="signup-tel"

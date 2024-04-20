@@ -20,7 +20,7 @@
       @auth
       @else
       <a class="btn-getstarted" href="{{ route('login') }}" target="_blank">Login</a>
-      <a class="btn-getstarted" id="btn-register" href="{{ route('auth.register') }}" target="_blank">Inscrever-se</a>
+      <a class="btn-getstarted"  href="{{ route('auth.register') }}" target="_blank">Inscrever-se</a>
       @endauth
     </div>
   </header>

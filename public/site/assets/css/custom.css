@@ -67,9 +67,10 @@ input.invalid {
   background-color:transparent;
   color: var(--default-color) !important;
   border: 2px solid var(--accent-color);
-}
+} 
 
 #btn-register:hover{
-  background-color: var(--accent-color);
+  background-color: rgb(9, 218, 255);
   color: white !important;
+  border: 2px solid  rgb(9, 218, 255);
 }
