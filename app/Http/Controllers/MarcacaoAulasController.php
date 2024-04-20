@@ -18,6 +18,23 @@ class MarcacaoAulasController extends Controller
     {
     }
 
+
+    public function aprovar($id)
+    {
+        $marcacaoAula = MarcacaoAula::find($id);
+        $marcacaoAula->estado = "aprovado";
+        $marcacaoAula->update();
+        return redirect()->back();
+    }
+
+    public function reprovar($id)
+    {
+        $marcacaoAula = MarcacaoAula::find($id);
+        $marcacaoAula->estado = "cancelado";
+        $marcacaoAula->update();
+        return redirect()->back();
+    }
+
     public function store(Request $request)
     {
         MarcacaoAula::create($request->all());
