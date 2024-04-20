@@ -11,7 +11,7 @@
 
             <div class="col-lg-10">
                 <form action="{{route('aluno.save')}}" method="post">
-                    @crsf
+                    @csrf
                     <ul id="stepList" class="my-5">
                         <li class="step">1</li>
                         <li class="step">2</li>
@@ -28,6 +28,7 @@
                                     <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" required="required" />
                                 </div>
                             </div>
+                            <input type="text"  value="estudante" name="categoria" style="display: none;">
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
@@ -154,8 +155,8 @@
                                 </div>
 
                                 <div>
-                                    <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
-                                        Finalizar
+                                    <button type="submit" class="btn-primary btn nextBtn fw-bold" >
+                                        Salvar
                                     </button>
                                 </div>
                             </div>
