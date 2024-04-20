@@ -10,7 +10,7 @@ class CursosController extends Controller
     public function index()
     {
         $cursos = Curso::all();
-        echo  view("admin.cursos_admin.index_cursos");
+        return view("admin.cursos_admin.index_cursos");
     }
 
     public function create()
@@ -21,6 +21,8 @@ class CursosController extends Controller
     public function store(Request $request)
     {
         Curso::create($request->all());
+        $todosCursos=Curso::all();
+        return view('admin.cursos.index',compact('todosCursos'));
     }
 
     public function show($id)

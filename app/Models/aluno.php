@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class aluno extends Model
+class Aluno extends Model
 {
     use HasFactory;
+
     protected $primaryKey = 'id_aluno';
-    protected $filleble=[
+
+    protected $fillable = [
         'id_curso',
         'processo',
         'classe',
@@ -17,10 +19,3 @@ class aluno extends Model
         'id_usuario'
     ];
 }
-
-
-
-
-
-
-

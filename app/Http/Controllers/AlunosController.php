@@ -28,6 +28,7 @@ class AlunosController extends Controller
             'genero'=>$request->input('genero'),
             'id_usuario'=>$idUser
         ]);
+        return view('admin.aluno.index');
 
     }
 

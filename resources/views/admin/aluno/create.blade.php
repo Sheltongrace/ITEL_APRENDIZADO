@@ -11,6 +11,7 @@
 
             <div class="col-lg-10">
                 <form action="{{route('aluno.save')}}" method="post">
+                    @csrf
                     <ul id="stepList" class="my-5">
                         <li class="step">1</li>
                         <li class="step">2</li>
@@ -27,17 +28,18 @@
                                     <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" required="required" />
                                 </div>
                             </div>
+                            <input type="text"  value="estudante" name="categoria" style="display: none;">
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Classe</label>
 
                                     <select id="signup-tel" name="classe" class="form-control signup-email">
-                                        <option value="1">Escolha uma opção</option>
-                                        <option value="2">10ª</option>
-                                        <option value="3">11ª</option>
-                                        <option value="3">12ª</option>
-                                        <option value="3">13ª</option>
+                                        <option value="">Escolha uma opção</option>
+                                        <option value="10">10ª</option>
+                                        <option value="11">11ª</option>
+                                        <option value="12">12ª</option>
+                                        <option value="13">13ª</option>
                                     </select>
 
                                 </div>
@@ -153,8 +155,8 @@
                                 </div>
 
                                 <div>
-                                    <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
-                                        Finalizar
+                                    <button type="submit" class="btn-primary btn nextBtn fw-bold" >
+                                        Salvar
                                     </button>
                                 </div>
                             </div>

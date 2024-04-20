@@ -9,7 +9,7 @@
             <!--//row-->
             <div class="row bg-white" id="regForm">
                 <div class="col-lg-12">
-                    <form method="post" action="{{route('formador.save')}}">
+                    <form method="post" action="{{route('formador.save')}}" enctype="multipart/form-data">
                         @csrf
                         <ul id="stepList" class="my-5">
                             <li class="step">1</li>
@@ -42,6 +42,13 @@
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nível académico</label>
                                         <input id="signup-email" name="nivel_academico" type="text" class="form-control signup-email valid" placeholder="Nível académico" required="required">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="email mb-3">
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Imagem</label>
+                                        <input id="signup-email" name="imagem" type="file" class="form-control signup-email valid" placeholder="Nível académico" required="required">
                                     </div>
                                 </div>
 
@@ -121,8 +128,12 @@
 
                                 <div class="col-md-6">
                                     <div class="password mb-3">
-                                        <label class="form-label fw-semibold" for="signup-password">Senha</label>
-                                        <input id="signup-password" name="signup-password" type="password" class="form-control signup-password" placeholder="xxxxxxxxxxx" required="required">
+                                        <label class="form-label fw-semibold" for="signup-password">Disciplina a lecionar</label>
+                                        <select id="signup-tel" name="disciplina" class="form-control signup-email">
+                                            @foreach($todasDisciplina as $disciplina)
+                                                 <option>{{$disciplina->nome_disciplina}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 

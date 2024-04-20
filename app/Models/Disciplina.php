@@ -10,6 +10,7 @@ class Disciplina extends Model
     use HasFactory;
     protected $fillable = [
         'nome_disciplina',
+        'imagem',
     ];
-    
+
 }
