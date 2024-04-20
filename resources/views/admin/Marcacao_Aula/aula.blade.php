@@ -69,7 +69,12 @@
                                             <td>{{$marcacao->nome_disciplina}}</td>
                                             <td>{{$marcacao->marcacao_created_at}}</td>
                                             <td>{{$marcacao->estado}}</td>
-
+                                            <td>
+                                                @if ($marcacao->estado == 'pendente')
+                                                <a href="{{ route('marcacao.aprovar', $marcacao->id_marcacao_aula) }}" class="btn btn-success">Aprovar</a>
+                                                <a href="{{ route('marcacao.reprovar', $marcacao->id_marcacao_aula) }}" class="btn btn-danger">Cancelar</a>
+                                                @endif
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -163,7 +168,7 @@
                                             <th class="cell">Estado</th>
                                         </tr>
                                     </thead>
-                                    @if($marcacao->estado==="cancelados")
+                                    @if($marcacao->estado==="cancelado")
                                     <tr>
                                         <td>{{ $marcacao->user_name}}</td>
                                         <td>{{$marcacao->N_telemovel}}</td>

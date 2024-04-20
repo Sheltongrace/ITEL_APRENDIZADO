@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class MarcacaoAula extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'id_marcacao_aula';
+
     protected $fillable = [
         'id_aluno',
         'id_disciplina',
         'preco_disciplina',
+        'periodo',
+        'estado'
     ];
-    
+
 }
