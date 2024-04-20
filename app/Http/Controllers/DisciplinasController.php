@@ -27,6 +27,7 @@ class DisciplinasController extends Controller
         Disciplina::create([
             'nome_disciplina'=>$request->input('nome_disciplina'),
             'imagem'=>$imagem->getClientOriginalName(),
+            'preco'=>$request->input('preco')
         ]);
 
         $todasDiscipliona = Disciplina::all();

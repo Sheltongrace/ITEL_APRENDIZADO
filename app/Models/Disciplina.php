@@ -11,6 +11,7 @@ class Disciplina extends Model
     protected $fillable = [
         'nome_disciplina',
         'imagem',
+        'preco'
     ];
 
 }
