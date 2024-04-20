@@ -43,12 +43,14 @@
                                     <thead>
                                         <tr>
                                             <th class="cell">Disciplinas</th>
+                                            <th class="cell">Preco</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($todasDiscipliona as $disc)
                                             <tr>
                                                 <td class="cell">{{$disc->nome_disciplina}}</td>
+                                                <td class="cell">{{$disc->preco}}</td>
                                             </tr>
                                         @endforeach
 
