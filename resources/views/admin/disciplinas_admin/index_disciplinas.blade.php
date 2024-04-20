@@ -29,6 +29,13 @@
                                     </div>
                                 </div>
 
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="email mb-3">
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Preço da Disciplina</label>
+                                        <input id="signup-name" name="Preço_disciplina" type="number" class="form-control signup-name" placeholder="Preço" required="required" />
+                                    </div>
+                                </div>
+
                                 <div>
                                     <button type="submit" class="btn-primary btn nextBtn fw-bold">
                                         Criar

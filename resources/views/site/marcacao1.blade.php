@@ -15,11 +15,10 @@
 						<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
 						</div><!--//row-->
 
-                        <form class="table-search-form row gx-1 align-items-center">
-									<div class="col-auto">
-										<button type="submit" class="btn btn-secondary"><a href="{{ route('site') }}" class="active">Voltar</a></button>
-									</div>
-								</form>
+						<div class="container">
+          <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Voltar</a></button>
+          </div>
+    
 					</div><!--//table-utilities-->
 				</div><!--//col-auto-->
 			</div><!--//row-->

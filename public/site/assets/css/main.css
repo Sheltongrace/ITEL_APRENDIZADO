@@ -9,7 +9,7 @@
   --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors #15b7a8 */
+/* Global Colors #032723    hover: #349186*/
 :root {
   --background-color: #ffffff;
   --background-color-rgb: 255, 255, 255;
@@ -17,7 +17,7 @@
   --default-color-rgb: 68, 68, 68;
   --heading-color: #37423b;
   --heading-color-rgb: 55, 66, 59;
-  --accent-color: #15b7a8 ;
+  --accent-color: #032723;
   --accent-color-rgb: 95, 207, 128;
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
@@ -110,7 +110,7 @@ h6 {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
-  background: rgb(9, 218, 255);
+  background: #032723;  
 }
 
 @media (max-width: 1200px) {

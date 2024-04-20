@@ -20,13 +20,10 @@
                 </p>
               </div>
             </div>
-            <nav class="breadcrumbs mt-5">
-              <div class="container">
-                <ol>
-                  <li><a href="{{ route('site') }}" class="active">Home</a></li>
-                </ol>
-              </div>
-            </nav>
+            <div class="container">
+          <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Home</a></button>
+          </div>
+    
           </div>
           
         </div>
@@ -411,7 +408,7 @@
                       <button
                         type="button"
                         class="btn-primary btn prevBtn fw-bold"
-                        onclick="nextPrev(1)"
+                        onclick="nextPrev(-1)"
                       >
                         Voltar
                       </button>
@@ -495,7 +492,7 @@
                       <button
                         type="button"
                         class="btn-primary btn prevBtn fw-bold"
-                        onclick="nextPrev(n)"
+                        onclick="nextPrev(-1)"
                       >
                         Voltar
                       </button>
