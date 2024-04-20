@@ -15,8 +15,9 @@
           </div>
         </div>
       </div>
-      <div class="container">
-          <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Home</a></button>
+    <div class="container">
+
+    <button type="button" class="btn btn-light"><a href="{{ route('site') }}" class="active">Home</a></button>
           </div>
     
     </div><!-- End Page Title -->
