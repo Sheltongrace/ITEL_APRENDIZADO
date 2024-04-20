@@ -13,12 +13,7 @@
         <p class="mt-3"><strong>Tel:</strong> <span>9xx xxx xxx</span></p>
         <p><strong>Email:</strong> <span>GuinGrace@gmail.com</span></p>
       </div>
-      <div class="social-links d-flex mt-4">
-        <a href=""><i class="bi bi-twitter"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
+      
     </div>
 
     <div class="col-lg-2 col-md-3 footer-links">

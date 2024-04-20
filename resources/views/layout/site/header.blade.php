@@ -6,12 +6,13 @@
         <h1 class="">GuinGrace</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu"> 
         <ul>
           <li><a href="{{ route('site') }}" class="active">Início</a></li>
           <li><a href="{{ route('site.sobre.nos') }}">Sobre nós</a></li>
           <li><a href="{{ route('site.disciplina') }}">Disciplinas</a></li>
           <li><a href="{{ route('auth.login.aluno') }}">Alunos</a></li>
+          <li><a href="{{ route('minha.marcacao') }}">Marcações</a></li>         
           <li><a href="{{ route('site.formador') }}">Formadores</a></li>
           <li><a href="{{ route('site.contato') }}">Contacto</a></li>
         </ul>

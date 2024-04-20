@@ -10,6 +10,8 @@ class MarcacaoAulasController extends Controller
     public function index()
     {
         $marcacoesAula = MarcacaoAula::all();
+
+        return view("site.marcacao1");
     }
 
     public function create()

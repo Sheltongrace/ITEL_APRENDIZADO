@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\DisciplinasController;
-
+use App\Http\Controllers\MarcacaoAulasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +97,7 @@ Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
 Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
 Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
+Route::get('aula', [MarcacaoAulasController::class, 'index'])->name('minha.marcacao');
 Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 
@@ -132,6 +133,7 @@ Route::prefix('admin')->group(function () {
   Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
   Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
   Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
+  Route::get('marcacao/aula', [\App\Http\Controllers\Admin\marcacaoAulaController::class, 'index'])->name('admin.macacao.aula');
   Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursoController::class, 'index'])->name('admin.cursos');
   Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\DisciplinaController::class, 'index'])->name('admin.disciplina');
 });
