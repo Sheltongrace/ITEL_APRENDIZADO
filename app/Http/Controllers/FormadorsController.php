@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Disciplina;
 use Illuminate\Http\Request;
 use App\Models\Formador;
 use Illuminate\Support\Facades\DB;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class FormadorsController extends Controller
 {
     public function index()
-    { 
+    {
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
         return view('admin.formadores.index',compact('professores'));
@@ -39,7 +40,8 @@ class FormadorsController extends Controller
 
     public function create()
     {
-        return view('admin.formadores.create');
+        $todasDisciplina = Disciplina::all();
+        return view('admin.formadores.create',compact('todasDisciplina'));
     }
 
     public function store(Request $request)
@@ -63,6 +65,7 @@ class FormadorsController extends Controller
             'imagem' => $imagem->getClientOriginalName(),
             'disciplina'=>$request->input("disciplina")
         ]);
+
 
         if ($novo_formador) {
             return back()->with('success', 'Formador cadastrado com sucesso!');
