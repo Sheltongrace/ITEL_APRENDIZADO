@@ -138,6 +138,7 @@
                                             <th class="cell">Estado</th>
                                         </tr>
                                     </thead>
+                                    @foreach($marcacaoAulas as $marcacao)
                                     @if($marcacao->estado==="pendente")
                                     <tr>
                                         <td>{{ $marcacao->user_name}}</td>
@@ -147,6 +148,7 @@
                                         <td>{{$marcacao->estado}}</td>
                                     </tr>
                                     @endif
+                                    @endforeach
                                 </table>
                             </div><!--//table-responsive-->
                         </div><!--//app-card-body-->
@@ -168,6 +170,7 @@
                                             <th class="cell">Estado</th>
                                         </tr>
                                     </thead>
+                                    @foreach($marcacaoAulas as $marcacao)
                                     @if($marcacao->estado==="cancelado")
                                     <tr>
                                         <td>{{ $marcacao->user_name}}</td>
@@ -177,6 +180,7 @@
                                         <td>{{$marcacao->estado}}</td>
                                     </tr>
                                     @endif
+                                    @endforeach
                                 </table>
                             </div><!--//table-responsive-->
                         </div><!--//app-card-body-->
