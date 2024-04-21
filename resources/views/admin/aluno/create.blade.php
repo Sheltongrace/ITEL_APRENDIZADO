@@ -3,6 +3,7 @@
 @section('content')
 
 <main class="main">
+
     <div class="app-wrapper">
         <div class="app-content pt-3 p-md-3 p-lg-4">
             <div class="container-xl">
@@ -12,6 +13,7 @@
             <div class="col-lg-10">
                 <form action="{{route('aluno.save')}}" method="post">
                     @csrf
+
                     <ul id="stepList" class="my-5">
                         <li class="step">1</li>
                         <li class="step">2</li>
@@ -24,11 +26,16 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
+                                    @php
+                                        print_r(Auth::user())
+                                    @endphp
+
+
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Nome do Aluno</label>
                                     <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" required="required" />
                                 </div>
                             </div>
-                            <input type="text"  value="estudante" name="categoria" style="display: none;">
+                            <input type="text" value="estudante" name="categoria" style="display: none;">
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
@@ -155,7 +162,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" class="btn-primary btn nextBtn fw-bold" >
+                                    <button type="submit" class="btn-primary btn nextBtn fw-bold">
                                         Salvar
                                     </button>
                                 </div>
@@ -163,7 +170,7 @@
                         </div>
                 </form>
             </div>
-          </div>
         </div>
-      </section>
-@endsection
+    </div>
+    </section>
+    @endsection

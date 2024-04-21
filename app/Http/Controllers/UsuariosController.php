@@ -36,10 +36,14 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
+
+
         if ($request->has('senha') && !empty($request->input('senha'))) {
             $request->merge(['senha' => Hash::make($request->input('senha'))]);
         }
+
         Usuario::create($request->all());
+
         return Usuario::latest()->first()->id_usuario;
     }
 
@@ -54,7 +58,7 @@ class UsuariosController extends Controller
         $usuario = Usuario::findOrFail($id);
     }
 
-   
+
 
     /**
      * Show the form for editing the specified resource.

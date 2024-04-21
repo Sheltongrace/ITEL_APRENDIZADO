@@ -14,22 +14,24 @@ class AlunosController extends Controller
 
     public function create()
     {
-
     }
 
     public function store(Request $request)
     {
         $usuario = new UsuariosController();
-        $idUser=  $usuario->store($request);
+        $idUser =  $usuario->store($request);
         Aluno::create([
-            'id_curso'=>$request->input('id_curso'),
-            'processo'=>$request->input('processo'),
-            'classe'=>$request->input('classe'),
-            'genero'=>$request->input('genero'),
-            'id_usuario'=>$idUser
+            'id_curso' => $request->input('id_curso'),
+            'processo' => $request->input('processo'),
+            'classe' => $request->input('classe'),
+            'genero' => $request->input('genero'),
+            'id_usuario' => $idUser
         ]);
-        return view('admin.aluno.index');
-
+        $alunos = Aluno::select('alunos.*', 'cursos.*', 'usuarios.*')
+            ->join('cursos', 'alunos.id_curso', '=', 'cursos.id_curso')
+            ->join('usuarios', 'alunos.id_usuario', '=', 'usuarios.id_usuario')
+            ->get();
+        return view('admin.aluno.index',compact('alunos'));
     }
 
     public function show($id)
