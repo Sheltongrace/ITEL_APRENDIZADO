@@ -5,7 +5,7 @@
 
     <!-- Page Title -->
     <div id="hero" class="page-title hero section" data-aos="fade">
-      <img src="{{asset('site/assets/img/hero-bg.jpg')}}" alt="" data-aos="fade-in">
+      <img src="{{asset('site/assets/img/IMG-20240418-WA0006.jpg')}}" alt="" data-aos="fade-in">
  
       <div class="heading">
           <div class="container">
