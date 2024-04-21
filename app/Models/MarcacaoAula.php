@@ -15,7 +15,10 @@ class MarcacaoAula extends Model
         'id_disciplina',
         'preco_disciplina',
         'periodo',
-        'estado'
+        'estado',
+        'QuantoTempo'
     ];
+
+
 
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\marcacaoAulaController;
 use App\Http\Controllers\FormadorsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\ContatoController;
@@ -82,13 +83,16 @@ Route::group(['prefix' => 'marcacao'], function () {
 Route::group(['prefix' => 'aluno'], function () {
     Route::get('/formador', [AlunosController::class, 'index'])->name('aluno.index');
     Route::get('/create', [AlunosController::class, 'create'])->name('aluno.create');
-    Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
-    Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
     Route::post('/save', [AlunosController::class, 'store'])->name('aluno.save');
     Route::get('/show/{id}', [AlunosController::class, 'show'])->name('aluno.show');
     Route::get('/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
     Route::put('/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
     Route::delete('/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
+});
+
+
+Route::group(['prefix' => 'marcacaoAula'], function () {
+    Route::post('/save', [MarcacaoAulasController::class, 'store'])->name('marcacaoAula.save');
 });
 
 Route::group(['prefix' => 'cursoAdmin'], function () {

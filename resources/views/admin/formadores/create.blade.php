@@ -21,8 +21,8 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Nome</label>
-                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Completo" required="required">
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Nome Completo</label>
+                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Primeiro nome" required="required">
                                     </div>
                                 </div>
 
@@ -41,7 +41,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nível académico</label>
-                                        <input id="signup-email" name="nivel_academico" type="text" class="form-control signup-email valid" placeholder="Informe seu nível" required="required">
+                                        <input id="signup-email" name="nivel_academico" type="text" class="form-control signup-email valid" placeholder="Nível académico" required="required">
                                     </div>
                                 </div>
 
@@ -77,31 +77,31 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
-                                        <input id="signup-tel" name="morada" type="text" class="form-control signup-email" placeholder="Localizaão" required="required">
+                                        <input id="signup-tel" name="morada" type="text" class="form-control signup-email" placeholder="Morada" required="required">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Identificador Fiscal BI</label>
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">BI ou Identificador Fiscal</label>
                                         <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control signup-email valid" placeholder="BI ou Identificador Fiscal" required="required">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">E-mail</label>
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
                                         <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com" required="required">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div>
-                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
-                      Voltar
-                    </button>
-                  </div>
+                                <div>
+                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(1)">
+                                        Voltar
+                                    </button>
+                                </div>
 
                                 <div>
                                     <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
@@ -117,9 +117,8 @@
                             <div class="row flex-row-reverse">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-1 fw-semibold" for="signup-email">Periúdo</label>
+                                        <label class="form-label my-1 fw-semibold" for="signup-email">Carga horária</label>
                                         <select id="signup-tel" name="tempo_disponivel" class="form-control signup-email">
-                                            <option>Define um periúdo</option>
                                             <option>Manhã</option>
                                             <option>Tarde</option>
                                             <option>Noite</option>
@@ -129,10 +128,9 @@
 
                                 <div class="col-md-6">
                                     <div class="password mb-3">
-                                        <label class="form-label fw-semibold" for="signup-password">Disciplina</label>
+                                        <label class="form-label fw-semibold" for="signup-password">Disciplina a lecionar</label>
                                         <select id="signup-tel" name="disciplina" class="form-control signup-email">
                                             @foreach($todasDisciplina as $disciplina)
-                                            <option>Selecione...</option>
                                                  <option>{{$disciplina->nome_disciplina}}</option>
                                             @endforeach
                                         </select>
@@ -140,17 +138,17 @@
                                 </div>
 
                                 <div class="col-sm-12 col-md-12">
-                                    <label for="" class="label-form my-2">Porque motivo escolheu a QuinGrace ?</label>
-                                    <textarea name="descricao" id="" cols="30" rows="10" class="form-control" placeholder="Seu texto"></textarea>
+                                    <label for="" class="label-form my-2">Porquê quer ser formador ?</label>
+                                    <textarea name="descricao" id="" cols="30" rows="10" class="form-control" placeholder="Descreva o porquê quer ser formador ?"></textarea>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div>
-                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
-                      Voltar
-                    </button>
-                  </div>
+                                <div>
+                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(n)">
+                                        Voltar
+                                    </button>
+                                </div>
 
                                 <div>
                                     <button type="submit" class="btn-primary btn nextBtn fw-bold">

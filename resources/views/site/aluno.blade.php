@@ -48,7 +48,8 @@
                 </div>
 
                 <div class="col-lg-10">
-                    <form>
+                    <form method="post" action="{{route('marcacaoAula.save')}}">
+                        @csrf
                         <ul id="stepList" class="my-5">
                             <li class="step">1</li>
                             <li class="step">2</li>
@@ -61,24 +62,25 @@
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Disciplina</label>
                                         <select id="signup-tel" name="id_disciplina" class="form-control signup-email">
-                                            @foreach($todasDisciplina as $disciplina)
-                                            <option>{{$disciplina->nome_disciplina}}</option>
+                                            @foreach($todasDisciplinas as $disciplina)
+                                            <option value="{{$disciplina->id_disciplina}}">{{$disciplina->nome_disciplina}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
+                                <input type="text" name="id_aluno" value="1" style="display: none;">
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Quanto tempo</label>
-                                        <select id="signup-tel" name="" class="form-control signup-email">
+                                        <select id="signup-tel" name="QuantoTempo" class="form-control signup-email">
                                             <option value="">Define um tempo</option>
-                                            <option value="1">Entre 24 à 72 Hora</option>
-                                            <option value="2">1 Semana</option>
-                                            <option value="3">2 semanas</option>
-                                            <option value="3">3 semanas</option>
-                                            <option value="3">1 Mês</option>
-                                            <option value="3"> Tempo indefinido</option>
+                                            <option value="Entre 24 à 72 Hora">Entre 24 à 72 Hora</option>
+                                            <option value="1 Semana">1 Semana</option>
+                                            <option value="2 semanas">2 semanas</option>
+                                            <option value="3 semanas">3 semanas</option>
+                                            <option value="1 Mês">1 Mês</option>
+                                            <option value="Tempo indefinido"> Tempo indefinido</option>
                                         </select>
                                     </div>
                                 </div>
@@ -99,22 +101,14 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-1 fw-semibold" for="signup-email">Periódo</label>
-                                        <select id="signup-tel" name="" class="form-control signup-email">
-                                            <option value="manha">Escolha um peródo</option>
+                                        <select id="signup-tel" name="periodo" class="form-control signup-email">
+                                            <option value="">Escolha um peródo</option>
                                             <option value="manha">Manhã</option>
                                             <option value="tarde">Tarde</option>
                                             <option value="noite">Noite</option>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Conteúdo Programático</label>
-                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="Conteúdo" required="required" />
-                                    </div>
-                                </div>
-
 
                             </div>
 
@@ -126,7 +120,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
+                                    <button type="submit" class="btn-primary btn nextBtn fw-bold">
                                         Finalizar
                                     </button>
                                 </div>

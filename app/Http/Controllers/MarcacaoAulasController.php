@@ -38,6 +38,7 @@ class MarcacaoAulasController extends Controller
     public function store(Request $request)
     {
         MarcacaoAula::create($request->all());
+        return redirect()->back();
     }
 
     public function show($id)
