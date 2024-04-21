@@ -29,7 +29,7 @@
 								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Acessar</button>
 							</div><br>
 							<div class="text-center">
-								<button type="submit" class="btn btn-light w-50 theme-btn mx-auto"><a href="{{ route('site') }}" class="ligth">Voltar</a></button>
+								<button type="submit" class="btn btn-light w-50 theme-btn mx-auto"><a href="{{ route('site.disciplina') }}" class="ligth">Voltar</a></button>
 							</div>
 						</form>
 					</div><!--//auth-form-container-->
