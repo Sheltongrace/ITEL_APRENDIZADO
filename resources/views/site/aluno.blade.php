@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Home</a></button>
+                    <button type="button" class="btn btn-dark" style="border-bottom-left-radius: 6%;"><a href="{{ route('site') }}" class="active">Home</a></button>
                 </div>
 
             </div>
@@ -100,15 +100,23 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Primeiro nome</label>
-                                        <input id="signup-name" name="signup-name" type="text" class="form-control signup-name" placeholder="Primeiro nome" required="required" />
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Disciplina</label>
+                                        <input id="signup-name" name="signup-name" type="text" class="form-control signup-name" placeholder="Disciplina" required="required" />
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Último nome</label>
-                                        <input id="signup-email" name="signup-email" type="text" class="form-control signup-email" placeholder="Último nome" required="required" />
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Quanto tempo</label>
+                                        <select id="signup-tel" name="" class="form-control signup-email">
+                                            <option value="">Define um tempo</option>
+                                            <option value="1">Entre 24 à 72 Hora</option>
+                                            <option value="2">1 Semana</option>
+                                            <option value="3">2 semanas</option>
+                                            <option value="3">3 semanas</option>
+                                            <option value="3">1 Mês</option>
+                                            <option value="3"> Tempo indefinido</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -153,15 +161,15 @@
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Localização</label>
                                         <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email" placeholder="Morada" required="required" />
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">BI</label>
-                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="BI ou Identificador Fiscal" required="required" />
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Identificador Fiscal </label>
+                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="BI" required="required" />
                                     </div>
                                 </div>
 
@@ -194,8 +202,9 @@
                             <div class="row flex-row-reverse">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-1 fw-semibold" for="signup-email">Carga horária</label>
+                                        <label class="form-label my-1 fw-semibold" for="signup-email">Periódo</label>
                                         <select id="signup-tel" name="" class="form-control signup-email">
+                                            <option value="manha">Escolha um peródo</option>
                                             <option value="manha">Manhã</option>
                                             <option value="tarde">Tarde</option>
                                             <option value="noite">Noite</option>
@@ -205,23 +214,12 @@
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
-                                        <label class="form-label my-1 fw-semibold" for="signup-email">Trimestre</label>
-                                        <select id="signup-tel" name="" class="form-control signup-email">
-                                            <option value="" disabled selected>
-                                                Quantos trimestre farás ?
-                                            </option>
-                                            <option value="manha">1</option>
-                                            <option value="tarde">2</option>
-                                            <option value="noite">3</option>
-                                            <option value="noite">4</option>
-                                        </select>
+                                        <label class="form-label my-2 fw-semibold" for="signup-email">Conteúdo Programático</label>
+                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="Conteúdo" required="required" />
                                     </div>
                                 </div>
-
-                                <div class="col-sm-12 col-md-12">
-                                    <label for="" class="label-form my-2">Assunto ?</label>
-                                    <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Qual assunto a ser tratado?"></textarea>
-                                </div>
+                        
+                            
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
