@@ -6,7 +6,7 @@
     <!-- Page Title -->
     <div id="hero" class="page-title hero section" data-aos="fade">
       <img src="{{asset('site/assets/img/IMG-20240418-WA0006.jpg')}}" alt="" data-aos="fade-in">
- 
+
       <div class="heading">
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
@@ -20,12 +20,12 @@
                 </p>
               </div>
             </div>
-           
-    
+
+
       </div>
-          
+
         </div>
-        
+
       </div>
       <!-- End Page Title -->
 
@@ -68,12 +68,13 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+            <form action="{{route('mensagem.store')}}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                @csrf
+            <div class="row gy-4">
 
                 <div class="col-md-6 fw-semibold">
                   <label for="name">Nome</label>
-                  <input type="text" name="name" id="name" class="form-control mt-2" placeholder="Coloque o seu nome" required="">
+                  <input type="text" name="nome" id="name" class="form-control mt-2" placeholder="Coloque o seu nome" required="">
                 </div>
 
                 <div class="col-md-6 fw-semibold">
@@ -83,12 +84,12 @@
 
                 <div class="col-md-12 fw-semibold">
                   <label for="subject">Assunto</label>
-                  <input type="text" class="form-control mt-2" id="subject" name="subject" placeholder="Coloque o assunto" required="">
+                  <input type="text" class="form-control mt-2" id="assunto" name="subject" placeholder="Coloque o assunto" required="">
                 </div>
 
                 <div class="col-md-12 fw-semibold">
                   <label for="message">Mensagem</label>
-                  <textarea class="form-control mt-2" name="message" id="message" rows="6" placeholder="Mensagem" required=""></textarea>
+                  <textarea class="form-control mt-2" name="message" id="mensagem" rows="6" placeholder="Mensagem" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 ">

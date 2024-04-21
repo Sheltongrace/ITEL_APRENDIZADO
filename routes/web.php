@@ -11,6 +11,7 @@ use App\Http\Controllers\Site\DisciplinaController;
 use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\AlunosController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\DisciplinasController;
 use App\Http\Controllers\MarcacaoAulasController;
@@ -73,6 +74,12 @@ Route::group(['prefix' => 'formador'], function () {
     Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
 });
 
+
+Route::group(['prefix' => 'mensagem'], function () {
+    Route::post('/store', [ContactoController::class, 'store'])->name('mensagem.store');
+});
+
+
 Route::group(['prefix' => 'marcacao'], function () {
     Route::get('/aprovar/{id}', [MarcacaoAulasController::class, 'aprovar'])->name('marcacao.aprovar');
     Route::get('/reprovar/{id}', [MarcacaoAulasController::class, 'reprovar'])->name('marcacao.reprovar');
@@ -98,6 +105,7 @@ Route::group(['prefix' => 'marcacaoAula'], function () {
 Route::group(['prefix' => 'cursoAdmin'], function () {
     Route::post('/store', [CursosController::class, 'store'])->name('cursoAdmin.store');
 });
+
 
 
 
