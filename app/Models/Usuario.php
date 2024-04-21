@@ -3,19 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
+
     protected $fillable = [
-        'id_usuario',
         'user_name',
         'N_telemovel',
         'email',
         'identificador_fiscal',
         'categoria',
-        'morada'
+        'morada',
+        'senha'
     ];
-    
+
+    // O método getPasswordAttribute retorna a senha criptografada
+    public function getAuthPassword()
+    {
+        return $this->senha;
+    }
 }

@@ -126,21 +126,20 @@ Route::get('registrar', [RegisterController::class, 'index'])->name('auth.regist
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
 
+
+
 /*//==============
 NOVAS ROTAS PARA O ADMIN
 =================/*/
 
 Route::prefix('admin')->group(function () {
-    Route::get('painel', [PainelController::class, 'index'])->name('admin.painel');
-
-
-
+    Route::get('painel', [PainelController::class, 'index'])->name('admin.painel')->middleware('auth');;
     /*//==============
   NOVAS ROTAS PARA ALUNOS
   =================/*/
 
     Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
-    Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
+    Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create')->middleware('auth');
     Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
     Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
     Route::get('marcacao/aula', [\App\Http\Controllers\Admin\marcacaoAulaController::class, 'index'])->name('admin.macacao.aula');
