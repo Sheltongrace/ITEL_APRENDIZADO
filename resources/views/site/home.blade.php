@@ -48,7 +48,71 @@
   </section><!-- /About Section -->
 
   <!-- Counts Section -->
-  <section id="counts" class="section counts">
+  
+  
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Disciplinas</h2>
+      <p class="">Disciplinas Populares</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="{{asset('site/assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
+            <div class="course-content">
+              
+
+              <h3><a href="course-details.html">Website Design</a></h3>
+              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="category">Agendar</p>
+                <p class="price">169 Kz</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="{{asset('site/assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
+            <div class="course-content">
+              
+
+              <h3><a href="course-details.html">Website Design</a></h3>
+              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="category">Agendar</p>
+                <p class="price">169 Kz</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="course-item">
+            <img src="{{asset('site/assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
+            <div class="course-content">
+              
+
+              <h3><a href="course-details.html">Website Design</a></h3>
+              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="category">Agendar</p>
+                <p class="price">169 Kz</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Course Item-->
+
+
+        <section id="counts" class="section counts">
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -74,79 +138,6 @@
     </div>
 
   </section><!-- /Counts Section -->
-  
-
-  <!-- Courses Section -->
-  <section id="courses" class="courses section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Disciplinas</h2>
-      <p class="">Cursos Populares</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-          <div class="course-item">
-            <img src="{{asset('site/assets/img/course-1.jpg')}}" class="img-fluid" alt="...">
-            <div class="course-content">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <p class="category">Desenvolvimento Web</p>
-                <p class="price">169 Kz</p>
-              </div>
-
-              <h3><a href="course-details.html">Website Design</a></h3>
-              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-              <div class="trainer d-flex justify-content-end align-items-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
-                  Ver mais
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> <!-- End Course Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="course-item">
-            <img src="{{asset('site/assets/img/course-2.jpg')}}" class="img-fluid" alt="...">
-            <div class="course-content">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <p class="category">Marketing</p>
-                <p class="price">250 Kz</p>
-              </div>
-
-              <h3><a href="course-details.html">Search Engine Optimization(SEO)</a></h3>
-              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-              <div class="trainer d-flex justify-content-end align-items-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
-                  Ver mais
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> <!-- End Course Item-->
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-          <div class="course-item">
-            <img src="{{asset('site/assets/img/course-3.jpg')}}" class="img-fluid" alt="...">
-            <div class="course-content">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <p class="category">Content</p>
-                <p class="price">180 Kz</p>
-              </div>
-
-              <h3><a href="course-details.html">Informática na ótica do usuário</a></h3>
-              <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-              <div class="trainer d-flex justify-content-end align-items-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
-                  Ver mais
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> <!-- End Course Item-->
 
         <!-- First Modal for first Card-->
         <div class="modal fade" id="modal1"aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">

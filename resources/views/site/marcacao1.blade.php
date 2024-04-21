@@ -3,30 +3,25 @@
 @section('content')
 <div class="app-wrapper">
 
-	<div class="app-content pt-3 p-md-3 p-lg-4">
-		<div class="container-xl">
 
-			<div class="row g-3 mb-4 align-items-center justify-content-between">
-				<div class="col-auto">
-					<h1 class="app-page-title mb-0">Minha marcação</h1>
-				</div>
-				<div class="col-auto">
-					<div class="page-utilities">
-						<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
-						</div><!--//row-->
+<section id="jpg" class="hero section">
+<img src="{{asset('site/assets/img/Imagem WhatsApp 2024-04-21 às 20.27.15_0c581b47.jpg')}}" alt="" data-aos="fade-in">
+<div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Minha marcação</h1>
+          </div>
+        </div>
+</div>
+</section><!-- /Hero Section -->
 
-						
-    
-					</div><!--//table-utilities-->
-				</div><!--//col-auto-->
-			</div><!--//row-->
-
-
+<br>
 			<div class="tab-content" id="orders-table-tab-content">
 				<!-- Listas de todos os formadores -->
 				<div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
 					<div class="app-card app-card-orders-table shadow-sm mb-5">
-						<div class="app-card-body" style="background-color: cyan;">
+						<div class="app-card-body">
 							<div class="table-responsive">
 								<table class="table app-table-hover mb-5 text-left">
 									<thead>
