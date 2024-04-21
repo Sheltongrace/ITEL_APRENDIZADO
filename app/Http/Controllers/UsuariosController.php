@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsuariosController extends Controller
 {
@@ -35,6 +36,9 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->has('senha') && !empty($request->input('senha'))) {
+            $request->merge(['senha' => Hash::make($request->input('senha'))]);
+        }
         Usuario::create($request->all());
         return Usuario::latest()->first()->id_usuario;
     }
