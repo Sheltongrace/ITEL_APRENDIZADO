@@ -5,24 +5,18 @@
 <main class="main">
     <!-- Page Title -->
     <div id="hero" class="page-title hero section" data-aos="fade">
-      <img src="{{asset('site/assets/img/hero-bg.jpg')}}" alt="" data-aos="fade-in">
+      
+      <img src="{{asset('site/assets/img/Imagem WhatsApp 2024-04-21 às 16.37.41_01cb3bc2.jpg')}}" alt="" data-aos="fade-in">
  
       <div class="heading">
+     
           <div class="container">
+            
             <div class="row d-flex justify-content-center text-center">
-              <div class="col-lg-8">
+            <div class="col-lg-8">
                 <h1>Disciplinas</h1>
-                <p class="mb-0">
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
-                  Officiis quo odio sint voluptas consequatur ut a odio
-                  voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
-                  ratione sint. Sit quaerat ipsum dolorem.
-                </p>
               </div>
             </div>
-            <div class="container">
-          <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Home</a></button>
-          </div>
     
           </div>
           

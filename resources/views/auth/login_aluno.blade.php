@@ -26,7 +26,10 @@
 								</div><!--//extra-->
 							</div><!--//form-group-->
 							<div class="text-center">
-								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Acessar </button>
+								<button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Acessar</button>
+							</div><br>
+							<div class="text-center">
+								<button type="submit" class="btn btn-light w-50 theme-btn mx-auto"><a href="{{ route('site') }}" class="ligth">Voltar</a></button>
 							</div>
 						</form>
 					</div><!--//auth-form-container-->
@@ -36,7 +39,7 @@
 	    </div><!--//auth-main-col-->
 
 	    <div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-		    <div class="auth-background-holder" style = "background: url({{asset('backOffice/assets/images/background/background-3.jpg')}})">
+		    <div class="auth-background-holder" style = "background: url({{asset('backOffice/assets/images/background/events-item-2.jpg')}})">
 
 		    </div>
 		    <div class="auth-background-mask"></div>

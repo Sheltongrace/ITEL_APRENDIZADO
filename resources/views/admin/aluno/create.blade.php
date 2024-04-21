@@ -109,12 +109,11 @@
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div>
-                                <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(1)">
-                                    Voltar
-                                </button>
-                            </div>
-
+                        <div>
+                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
+                      Voltar
+                    </button>
+                  </div>
                             <div>
                                 <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
                                     Próximo
@@ -148,11 +147,11 @@
 
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div>
-                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(n)">
-                                        Voltar
-                                    </button>
-                                </div>
+                            <div>
+                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
+                      Voltar
+                    </button>
+                  </div>
 
                                 <div>
                                     <button type="submit" class="btn-primary btn nextBtn fw-bold" >
