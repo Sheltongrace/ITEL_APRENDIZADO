@@ -35,43 +35,6 @@
 
 
 
-    <section id="trainers" class="section trainers">
-        <div class="container">
-            <h1>Alunos</h1>
-            <div class="row gy-5">
-                @foreach($professores as $prof)
-                @if($prof->estado==="aprovado")
-                <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                        <img src="{{asset('imagemFormador')}}/{{$prof->imagem}}" class="img-fluid" alt="" />
-                        <div class="social">
-                            {{--<a href="#"><i class="bi bi-twitter"></i></a>
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                          --}}
-                        </div>
-                    </div>
-                    <div class="member-info text-center">
-                        <h4>{{ $prof->user_name}}</h4>
-                        <span class="">{{$prof->nivel_acesso}}</span>
-                        <p>
-                            {{$prof->disciplina}}
-                        </p>
-                    </div>
-                </div>
-                @endif
-                @endforeach
-
-
-                <!-- End Team Member -->
-            </div>
-        </div>
-    </section>
-
-
-
-
 
     <!-- /Trainers Section -->
 
@@ -101,7 +64,11 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Disciplina</label>
-                                        <input id="signup-name" name="signup-name" type="text" class="form-control signup-name" placeholder="Disciplina" required="required" />
+                                        <select id="signup-tel" name="id_disciplina" class="form-control signup-email">
+                                            @foreach($todasDisciplina as $disciplina)
+                                            <option>{{$disciplina->nome_disciplina}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
@@ -119,25 +86,6 @@
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Classe</label>
-                                        <input id="signup-email" name="signup-email" type="text" class="form-control signup-email valid" placeholder="Classe" required="required" />
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Curso</label>
-                                        <select id="signup-tel" name="" class="form-control signup-email">
-                                            <option value="">Escolha um curso</option>
-                                            <option value="1">Eletronica</option>
-                                            <option value="2">Informática</option>
-                                            <option value="3">Multimedia</option>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="d-flex justify-content-between mt-3">
@@ -148,54 +96,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Step 2 -->
-                        <div class="tab">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Telefone</label>
-                                        <input id="signup-tel" name="signup-tel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" required="required" maxlength="9" />
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Localização</label>
-                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email" placeholder="Morada" required="required" />
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Identificador Fiscal </label>
-                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="BI" required="required" />
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <div class="email mb-3">
-                                        <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
-                                        <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email" placeholder="email@exemplo.com" required="required" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div>
-                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
-                                        Voltar
-                                    </button>
-                                </div>
-
-                                <div>
-                                    <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
-                                        Próximo
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- step 3 -->
 
                         <div class="tab">
@@ -218,8 +118,8 @@
                                         <input id="signup-tel" name="signup-idententy" type="text" class="form-control signup-email valid" placeholder="Conteúdo" required="required" />
                                     </div>
                                 </div>
-                        
-                            
+
+
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
