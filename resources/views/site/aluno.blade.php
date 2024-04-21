@@ -37,7 +37,7 @@
 
     <section id="trainers" class="section trainers">
         <div class="container">
-            <h1>Formadores</h1>
+            <h1>Alunos</h1>
             <div class="row gy-5">
                 @foreach($professores as $prof)
                 @if($prof->estado==="aprovado")
@@ -83,7 +83,7 @@
                     <!-- Section Title -->
                     <div class="container section-title" data-aos="fade-up">
                         <h2>registo para o garimpo</h2>
-                        <p class="">Inscreva-se já</p>
+                        <p class="">Marcar Aula</p>
                     </div>
                     <!-- End Section Title -->
                 </div>
