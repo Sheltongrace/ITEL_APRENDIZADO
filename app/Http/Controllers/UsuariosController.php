@@ -54,6 +54,8 @@ class UsuariosController extends Controller
         $usuario = Usuario::findOrFail($id);
     }
 
+   
+
     /**
      * Show the form for editing the specified resource.
      *
