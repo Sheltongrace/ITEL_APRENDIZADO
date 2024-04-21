@@ -84,12 +84,12 @@
 
                 <div class="col-md-12 fw-semibold">
                   <label for="subject">Assunto</label>
-                  <input type="text" class="form-control mt-2" id="assunto" name="subject" placeholder="Coloque o assunto" required="">
+                  <input type="text" class="form-control mt-2" id="assunto" name="assunto" placeholder="Coloque o assunto" required="">
                 </div>
 
                 <div class="col-md-12 fw-semibold">
                   <label for="message">Mensagem</label>
-                  <textarea class="form-control mt-2" name="message" id="mensagem" rows="6" placeholder="Mensagem" required=""></textarea>
+                  <textarea class="form-control mt-2" name="mensagem" id="mensagem" rows="6" placeholder="Mensagem" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 ">
