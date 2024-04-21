@@ -8,7 +8,7 @@
                 <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html">
                         <h1>QuinGrace</h1>
                     </a></div>
-                <h2 class="auth-heading text-center mb-5">Entrar</h2>
+                <h2 class="auth-heading text-center mb-5">Logar como Administrador</h2>
 
                 @if (session('erro'))
                 <div class="alert alert-danger">

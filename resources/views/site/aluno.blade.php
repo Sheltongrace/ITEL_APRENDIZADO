@@ -20,10 +20,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="container">
-                    <button type="button" class="btn btn-dark" style="border-bottom-left-radius: 6%;"><a href="{{ route('site') }}" class="active">Home</a></button>
-                </div>
-
             </div>
 
         </div>

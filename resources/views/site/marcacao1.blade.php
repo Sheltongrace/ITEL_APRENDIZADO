@@ -15,9 +15,7 @@
 						<div class="row g-2 justify-content-start justify-content-md-end align-items-center">
 						</div><!--//row-->
 
-						<div class="container">
-          <button type="button" class="btn btn-dark"><a href="{{ route('site') }}" class="active">Voltar</a></button>
-          </div>
+						
     
 					</div><!--//table-utilities-->
 				</div><!--//col-auto-->
