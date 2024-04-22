@@ -83,8 +83,8 @@
 						</div><!--//app-card-body-->
 						<div class="app-card-footer p-4 mt-auto">
 							<a class="btn btn-info" href="{{ route('formador.index') }}">Voltar</a>
-							<a class="btn btn-primary" href="{{ route('formador.aprovar',$professor->id_formador) }}">Aceitar Requisito</a>
-							<a class="btn btn-danger" href="{{ route('formador.reprovar',$professor->id_formador) }}">Canselar Requisitos</a>
+							<a class="btn btn-primary" href="{{ route('formador.aprovar',$professor->id_formador) }}">Aceitar</a>
+							<a class="btn btn-danger" href="{{ route('formador.reprovar',$professor->id_formador) }}">Canselar</a>
 						</div><!--//app-card-footer-->
 
 					</div><!--//app-card-->
@@ -116,6 +116,10 @@
 									</div><!--//col-->
 								</div><!--//row-->
 							</div><!--//item-->
+							<div class="app-card-footer p-4 mt-auto">
+							<a class="btn btn-primary" href="{{ route('formador.create') }}">Editar</a>
+							<a class="btn btn-danger" href="{{ route('formador.create') }}">Eliminar</a>
+						   </div>
 						</div><!--//app-card-body-->
 
 

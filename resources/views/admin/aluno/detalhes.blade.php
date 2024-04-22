@@ -45,10 +45,10 @@
                     <div class="row justify-content-between align-items-center">
                       <div class="col-auto">
                         <div class="item-label mb-2">
-                          <strong>Disciplina</strong>
+                          <strong>Nome do aluno</strong>
                         </div>
                         <div class="item-data">
-                            TREI
+                            Paulo
                         </div>
                       </div>
                       <!--//col-->
@@ -59,8 +59,8 @@
                   <div class="item border-bottom py-3">
                     <div class="row justify-content-between align-items-center">
                       <div class="col-auto">
-                        <div class="item-label"><strong>Nome</strong></div>
-                        <div class="item-data">James Doe</div>
+                        <div class="item-label"><strong>Disciplina</strong></div>
+                        <div class="item-data">TREI</div>
                       </div>
                       <!--//col-->
                     </div>
@@ -71,7 +71,7 @@
                     <div class="row justify-content-between align-items-center">
                       <div class="col-auto">
                         <div class="item-label"><strong>Email</strong></div>
-                        <div class="item-data">james.doe@website.com</div>
+                        <div class="item-data">Paulo.doe@website.com</div>
                       </div>
                       <!--//col-->
                     </div>
@@ -81,8 +81,8 @@
                   <div class="item border-bottom py-3">
                     <div class="row justify-content-between align-items-center">
                       <div class="col-auto">
-                        <div class="item-label"><strong>Website</strong></div>
-                        <div class="item-data"></div>
+                        <div class="item-label"><strong>Telefone</strong></div>
+                        <div class="item-data">923423126</div>
                       </div>
                       <!--//col-->
                     </div>
@@ -103,14 +103,10 @@
                 </div>
                 <!--//app-card-body-->
                 <div class="app-card-footer p-4 mt-auto">
-                  <a class="btn app-btn-secondary" href="./listTeachers.html"
-                    >Voltar</a
-                  >
-                  <button class="btn app-btn-secondary" href="#">
-                    Aprovar
-                  </button>
-                </div>
-                <!--//app-card-footer-->
+							<a class="btn btn-info" href="{{ route('admin.aluno') }}">Voltar</a>
+							<a class="btn btn-primary" href="##">Aceitar</a>
+							<a class="btn btn-danger" href="###">Canselar</a>
+						</div><!--//app-card-footer-->
               </div>
               <!--//app-card-->
             </div>
@@ -143,50 +139,27 @@
                 <div class="app-card-body px-4 w-100">
                   
                   <!--//item-->
-                  <div class="item border-bottom py-3">
-                    <div class="row justify-content-between align-items-center">
-                      <div class="col-auto">
-                        <div class="item-label"><strong>Assunto</strong></div>
-                        <div class="item-data">
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi cum modi repudiandae adipisci? Rerum, in!
-                        </div>
-                      </div>
-                      <!--//col-->
-                    </div>
-                    <!--//row-->
-                  </div>
+                 
 
                   <!--//item-->
-                  <div class="item border-bottom py-3">
-                    <div class="row justify-content-between align-items-center">
-                      <div
-                        class="col-auto d-flex justify-content-center flex-column"
-                      >
-                        <div class="item-label"><strong>Aceitar</strong></div>
-                        <div class="form-check form-switch mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            id="settings-switch-2"
-                          />
-                        </div>
-                      </div>
-                      <!--//col-->
-                    </div>
-                    <!--//row-->
-                  </div>
+                 
 
                   <div class="item border-bottom py-3">
                     <div class="row justify-content-between align-items-center">
                       <div class="col-auto">
                         <div class="item-label"><strong>Estado</strong></div>
-                        <div class="item-data">Aceite</div>
+                        <div class="item-data">pendente</div>
                       </div>
                       <!--//col-->
                     </div>
+                  
                     <!--//row-->
                   </div>
                   <!--//item-->
+                  <div class="app-card-footer p-4 mt-auto">
+							<a class="btn btn-primary" href="##">Editar</a>
+							<a class="btn btn-danger" href="##">Eliminar</a>
+						   </div>
                 </div>
                 <!--//app-card-body-->
               </div>
@@ -198,6 +171,7 @@
         </div>
         <!--//container-fluid-->
       </div>
+     
       <!--//app-content-->
     </div>
     <!--//app-wrapper-->
