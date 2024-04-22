@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\aluno;
+use App\Models\Disciplina;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Http\Controllers\Autenticar;
 use CreateAlunosTable;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -15,9 +14,9 @@ class inicioController extends Controller
 {
       public function index(Request $request)
     {
-    // die($request->session()->get('user')); 
+    // die($request->session()->get('user'));
       echo view('layout.silebar');
-      echo view('layout.header'); 
+      echo view('layout.header');
       echo view('painel.painel');
       echo view('layout.footer');
     }
@@ -30,14 +29,16 @@ class inicioController extends Controller
       }else {
         $sessao = true;
       }
-      echo view('site.home',['sessao',$sessao]);
+      $todasDisciplina = Disciplina::all();
+
+      echo view('site.home',compact("todasDisciplina"), ['sessao',$sessao]);
     }
 
     public function login(Request $request)
     {
       $sessao = false;
       if ($request->session()->get('n_processo')=='' || $request->session()->get('n_processo')==null) {
-       
+
       }else {
         $sessao = true;
         return Redirect::to('/aluno');
@@ -81,29 +82,29 @@ class inicioController extends Controller
         $request->session()->put('n_processo',$processo);
         $request->session()->put('ano_lectivo',$anolectivo);
         return Redirect::to('/aluno');
-       
+
       }else {
         echo 'Aluno nao aceite';
       }
-    
+
     }
     public function sair(Request $request)
     {
-      
+
       if ($request->session()->get('n_processo')!='') {
         $request->session()->put('nome',null);
         $request->session()->put('n_processo',null);
         $request->session()->put('ano_lectivo',null);
       }
       return Redirect::to('/');
-   
-    
+
+
     }
     public function validacao_Admin(Request $request)
     {
       $nome=$request->input('nome');
       $senha=$request->input('senha');
-     
+
     // var_dump($request->input());die;
      // DB::table('Admin')->insert(['nome'=>'Shelton','senha'=>'1234']);
 
@@ -122,19 +123,19 @@ class inicioController extends Controller
     {
       $sessao = false;
       if ($request->session()->get('senha')=='' || $request->session()->get('senha')==null) {
-       
+
       }else {
         $sessao = true;
         return Redirect::to('/');
       }
       echo view('/rais');
     }
-    
+
     public function login_Admin(Request $request)
     {
       $sessao = false;
       if ($request->session()->get('senha')=='' || $request->session()->get('senha')==null) {
-       
+
       }else {
         $sessao = true;
         return Redirect::to('/Admin');
@@ -143,7 +144,7 @@ class inicioController extends Controller
     }
 
     public function create_aluno(){
-                                
+
       return view("create_aluno");
   }
 
@@ -157,7 +158,7 @@ class inicioController extends Controller
   }
 
   public function edit_aluno($id){
-              $alunos = aluno:: where('id', $id) ->first();  
+              $alunos = aluno:: where('id', $id) ->first();
               if (!empty($alunos)){
                 echo view('edit_aluno',['alunos' => $alunos]);
                                    }
