@@ -15,6 +15,17 @@
                 </div>
             </div>
     </section><!-- /Hero Section -->
+<section id="jpg" class="hero section">
+<img src="{{asset('site/assets/img/Imagem WhatsApp 2024-04-22 às 03.48.56_aecbea99.jpg')}}" alt="" data-aos="fade-in">
+<div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Lista de Aquisições</h1>
+          </div>
+        </div>
+</div>
+</section><!-- /Hero Section -->
 
     <br>
     <div class="tab-content" id="orders-table-tab-content">
