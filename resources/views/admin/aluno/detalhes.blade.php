@@ -157,7 +157,7 @@
                   </div>
                   <!--//item-->
                   <div class="app-card-footer p-4 mt-auto">
-							<a class="btn btn-primary" href="##">Editar</a>
+							<a class="btn btn-primary" href="{{ route('admin.aluno.create') }}">Editar</a>
 							<a class="btn btn-danger" href="##">Eliminar</a>
 						   </div>
                 </div>
