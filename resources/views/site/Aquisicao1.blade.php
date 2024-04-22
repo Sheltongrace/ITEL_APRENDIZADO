@@ -5,7 +5,7 @@
 
 
 <section id="jpg" class="hero section">
-<img src="{{asset('site/assets/img/Imagem WhatsApp 2024-04-21 às 20.27.15_0c581b47.jpg')}}" alt="" data-aos="fade-in">
+<img src="{{asset('site/assets/img/Imagem WhatsApp 2024-04-22 às 03.48.56_aecbea99.jpg')}}" alt="" data-aos="fade-in">
 <div class="heading">
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
