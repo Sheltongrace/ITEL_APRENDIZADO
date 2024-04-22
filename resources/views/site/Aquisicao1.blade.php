@@ -33,13 +33,25 @@
 											<th class="cell">Estado</th>
 										</tr>
 									</thead>
-									
+
+                                    <tbody>
+                                        @foreach($professores as $prof)
+                                            <tr>
+                                                <td>{{$prof->user_name}}</td>
+                                                <td>{{$prof->N_telemovel}}</td>
+                                                <td>{{$prof->email}}</td>
+                                                <td>{{$prof->created_at}}</td>
+                                                <td>{{$prof->estado}}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+
 								</table>
 							</div><!--//table-responsive-->
 
 						</div><!--//app-card-body-->
 					</div><!--//app-card-->
-					
+
 
 				</div><!--//tab-pane-->
 
