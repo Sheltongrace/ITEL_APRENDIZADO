@@ -81,7 +81,7 @@
           <!-- End Section Title -->
         </div>
         <div>
-        <button type="button" class="btn btn-dark"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Ver Aquisição</a></button>
+        <button type="button" class="btn btn-dark"><a href="{{ route('minha.aquisicao') }}" style="color: bisque;">Ver Aquisição</a></button>
         </div>
         
         <!--//row-->
