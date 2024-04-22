@@ -28,6 +28,7 @@ use App\Http\Controllers\MarcacaoAulasController;
 */
 
 Route::namespace('App\Http\Controllers')->group(function () {
+       use App\Http\Controllers\Admin\AquisicaoController;
 
     Route::get('/rais', 'inicioController@index')->name('/rais');
 
@@ -117,6 +118,7 @@ Route::get('contato', [ContatoController::class, 'index'])->name('site.contato')
 Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
 Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
 Route::get('aula', [MarcacaoAulasController::class, 'index'])->name('minha.marcacao');
+Route::get('Aquisit', [AquisicaoController::class, 'index'])->name('minha.aquisicao');
 Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site.formador');
 
 

@@ -66,17 +66,24 @@
   <!-- /Trainers Section -->
 
   <!-- Section register of curses -->
-  <section id="trainerCourse">
-    <div class="container">
-      <div class="row justify-content-center">
+  
+  <section id="trainerCourse"> 
+    <div class="container">     
+      <div class="row justify-content-center">       
         <div class="col-lg-12">
+          
           <!-- Section Title -->
+          
           <div class="container section-title" data-aos="fade-up">
             <h2>Torne-se um formador</h2>
             <p class="">Inscreva-se já</p>
           </div>
           <!-- End Section Title -->
         </div>
+        <div>
+        <button type="button" class="btn btn-dark"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Ver Aquisição</a></button>
+        </div>
+        
         <!--//row-->
         <div class="row bg-white" id="regForm">
           <div class="col-lg-12">

@@ -43,7 +43,7 @@
                                     <img src="assets/img/trainers/trainer-1-2.jpg" class="img-fluid" alt="">
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <p class="category"><a href="{{ route('auth.login.aluno') }}">Agendar</a></p>
+                                    <p class="category"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Agendar</a></p>
                                     <p class="price">{{$disciplina->preco}}kz</p>
                                 </div>
                             </div>

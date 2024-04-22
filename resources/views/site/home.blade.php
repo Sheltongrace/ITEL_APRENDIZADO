@@ -72,7 +72,7 @@
               <h3><a href="course-details.html">Website Design</a></h3>
               <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
               <div class="d-flex justify-content-between align-items-center mb-3">
-              <p class="category"><a href="{{ route('auth.login.aluno') }}">Agendar</a></p>
+              <p class="category"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Agendar</a></p>
                 <p class="price">4.000kz Kz</p>
               </div>
             </div>
@@ -88,7 +88,7 @@
               <h3><a href="course-details.html">Website Design</a></h3>
               <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
               <div class="d-flex justify-content-between align-items-center mb-3">
-              <p class="category"><a href="{{ route('auth.login.aluno') }}">Agendar</a></p>
+              <p class="category"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Agendar</a></p>
                 <p class="price">4.000kz Kz</p>
               </div>
             </div>
@@ -104,7 +104,7 @@
               <h3><a href="course-details.html">Website Design</a></h3>
               <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
               <div class="d-flex justify-content-between align-items-center mb-3">
-              <p class="category"><a href="{{ route('auth.login.aluno') }}">Agendar</a></p>
+              <p class="category"><a href="{{ route('auth.login.aluno') }}" style="color: bisque;">Agendar</a></p>
                 <p class="price">4.000kz Kz</p>
               </div>
             </div>
