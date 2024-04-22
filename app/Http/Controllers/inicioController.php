@@ -29,6 +29,7 @@ class inicioController extends Controller
       }else {
         $sessao = true;
       }
+
       $todasDisciplina = Disciplina::all();
 
       echo view('site.home',compact("todasDisciplina"), ['sessao',$sessao]);

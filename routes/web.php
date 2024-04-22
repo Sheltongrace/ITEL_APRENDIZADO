@@ -15,6 +15,7 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\DisciplinasController;
 use App\Http\Controllers\MarcacaoAulasController;
+use App\Http\Controllers\Admin\AquisicaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ use App\Http\Controllers\MarcacaoAulasController;
 */
 
 Route::namespace('App\Http\Controllers')->group(function () {
-       use App\Http\Controllers\Admin\AquisicaoController;
+
 
     Route::get('/rais', 'inicioController@index')->name('/rais');
 
