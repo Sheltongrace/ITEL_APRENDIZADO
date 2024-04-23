@@ -10,7 +10,7 @@
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-lg-8">
                         <h1 class="">Sobre Nós<br></h1>
-                        <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                        <p class="mb-0"></p>
                     </div>
                 </div>
             </div>
@@ -33,13 +33,15 @@
                     <div>
                         <h3>Missão</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
+                        Acreditamos no poder da educação para impulsionar conquistas notáveis. Oferecemos
+                         programas abrangentes e especializados que vão além do convencional,
+                         preparando nossos alunos para os desafios dinâmicos do mercado de trabalho. Assim sendo
+                         oferecendo ajuda necessária, para o desenvolvimento académico dos alunos do Instituto de telecomunicações ITEL
                         </p>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                            <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                            <li><i class="bi bi-check-circle"></i> <span></span></li>
+                            <li><i class="bi bi-check-circle"></i> <span></span></li>
+                            <li><i class="bi bi-check-circle"></i> <span></span></li>
                         </ul>
                     </div>
 

@@ -93,6 +93,8 @@ Route::group(['prefix' => 'aluno'], function () {
     Route::get('/formador', [AlunosController::class, 'index'])->name('aluno.index');
     Route::get('/create', [AlunosController::class, 'create'])->name('aluno.create');
     Route::post('/save', [AlunosController::class, 'store'])->name('aluno.save');
+    Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
+    Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
     Route::get('/show/{id}', [AlunosController::class, 'show'])->name('aluno.show');
     Route::get('/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
     Route::put('/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');

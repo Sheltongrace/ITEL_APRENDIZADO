@@ -31,13 +31,14 @@
                 <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
                     <h3>Sobre nós</h3>
                     <p class="fst-italic">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quaerat dolorem architecto ducimus nostrum dolorum optio modi libero quibusdam maiores, suscipit culpa dolor ut id neque deserunt velit voluptatem tempora.
+                    Acreditamos no poder da educação para impulsionar conquistas notáveis. Oferecemos
+                         programas abrangentes e especializados que vão além do convencional,
+                         preparando nossos alunos para os desafios dinâmicos do mercado de trabalho. Assim sendo
+                         oferecendo ajuda necessária, para o desenvolvimento académico dos alunos do Instituto de telecomunicações ITEL
+                        </p>
                     </p>
                     <ul>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-                    </ul>
+                       </ul>
                     <a href="{{ route('site.sobre.nos') }}" class="read-more text-capitalize"><span>saber mais</span><i class="bi bi-arrow-right"></i></a>
                 </div>
 
@@ -62,7 +63,7 @@
                             </div>
 
                             <h3><a href="course-details.html">{{$disciplina->nome_disciplina}}</a></h3>
-                            <p class="description">Aproveite o garimpo em quanto cedo</p>
+                            <p class="description">Faça já a sua agenda</p>
                             <div class="trainer-profile d-flex align-items-center">
                                 <img src="assets/img/trainers/trainer-1-2.jpg" class="img-fluid" alt="">
                             </div>
