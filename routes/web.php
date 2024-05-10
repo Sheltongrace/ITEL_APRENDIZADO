@@ -30,12 +30,15 @@ use App\Http\Controllers\Admin\AquisicaoController;
 
 Route::namespace('App\Http\Controllers')->group(function () {
 
-
+/*inicio novas rotas */
+Route::get('/new.sites', 'inicioController@new_site')->name('new.sites');
+Route::get('/', 'inicioController@new_site')->name('/');
+/*fim novas rotas */
     Route::get('/rais', 'inicioController@index')->name('/rais');
 
     Route::get('/sites', 'inicioController@site')->name('site');
 
-    Route::get('/', 'inicioController@site'); /* se não redirecionarmos nenhuma rota automaticamente vai para rota predefinida anteriormente*/
+ //   Route::get('/', 'inicioController@site'); /* se não redirecionarmos nenhuma rota automaticamente vai para rota predefinida anteriormente*/
 
     Route::get('/login_aluno', 'inicioController@login');
 
@@ -74,6 +77,9 @@ Route::group(['prefix' => 'formador'], function () {
     Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
     Route::put('/update/{id}', [FormadorsController::class, 'update'])->name('formador.update');
     Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
+
+   Route::get('/verificar.formador', [FormadorsController::class, 'verificar'])->name('verificar.formador');
+   Route::post('/login.geral', [FormadorsController::class, 'logar'])->name('login.geral');
 });
 
 
@@ -126,15 +132,17 @@ Route::get('formadores', [FormadorsController::class, 'index_site'])->name('site
 
 
 /*//==============
-NOVAS ROTAS PARA AUTENTICAÇÃO
+NOVAS ROTAS PARA AUTENTICAÇÃO formador
 =================/*/
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 
 Route::post('efectuarLogin', [LoginController::class, 'efectuarLogin'])->name('efectuarLogin');
 
-Route::get('login/aluno', [LoginController::class, 'index_aluno'])->name('auth.login.aluno');
-Route::post('login', [LoginController::class, 'authenticate'])->name('auth.login');
+Route::get('auth.login.aluno', [LoginController::class, 'verifica_login'])->name('auth.login.aluno');
+Route::get('auth.login.formador', [LoginController::class, 'verifica_login_formador'])->name('auth.login.formador');
+
+Route::post('aluno_entrar', [LoginController::class, 'aluno_entrar'])->name('aluno_entrar');
 Route::get('cursos', [CursosController::class, 'index'])->name('curso');
 Route::post('lista/cursos', [LoginController::class, 'index_listacurso'])->name('lista.curso');
 Route::get('disciplina.admin', [DisciplinasController::class, 'index'])->name('disciplina.admin');
@@ -142,7 +150,7 @@ Route::post('disciplina.store', [DisciplinasController::class, 'store'])->name('
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
-
+Route::get('painel', [PainelController::class, 'index'])->name('painel');
 
 
 /*//==============
@@ -150,7 +158,7 @@ NOVAS ROTAS PARA O ADMIN
 =================/*/
 
 Route::prefix('admin')->group(function () {
-    Route::get('painel', [PainelController::class, 'index'])->name('admin.painel');
+   
     /*//==============
   NOVAS ROTAS PARA ALUNOS
   =================/*/
@@ -162,4 +170,8 @@ Route::prefix('admin')->group(function () {
     Route::get('marcacao/aula', [\App\Http\Controllers\Admin\marcacaoAulaController::class, 'index'])->name('admin.macacao.aula');
     Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursoController::class, 'index'])->name('admin.cursos');
     Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\DisciplinaController::class, 'index'])->name('admin.disciplina');
+
+
+
+    /* novas rotas*/
 });

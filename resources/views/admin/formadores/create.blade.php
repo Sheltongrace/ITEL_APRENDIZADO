@@ -22,7 +22,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nome Completo</label>
-                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Primeiro nome" required="required">
+                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Primeiro nome">
                                     </div>
                                 </div>
 
@@ -30,7 +30,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="gender mb-3">
                                         <label class="form-label my-2 fw-semibold" for="gender">Gênero</label>
-                                        <select id="gender" name="genero" class="form-control" required="required">
+                                        <select id="gender" name="genero" class="form-control">
                                             <option value="">Selecione o gênero</option>
                                             <option value="masculino">Masculino</option>
                                             <option value="feminino">Feminino</option>
@@ -41,14 +41,14 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nível académico</label>
-                                        <input id="signup-email" name="nivel_academico" type="text" class="form-control signup-email valid" placeholder="Nível académico" required="required">
+                                        <input  name="nivel_academico" type="text" class="form-control " placeholder="Nível académico">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Imagem</label>
-                                        <input id="signup-email" name="imagem" type="file" class="form-control signup-email valid" placeholder="Nível académico" required="required">
+                                        <input  name="imagem" type="file" class="form-control " placeholder="Nível académico">
                                     </div>
                                 </div>
 
@@ -70,35 +70,35 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Telefone</label>
-                                        <input id="signup-tel" name="N_telemovel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" required="required" maxlength="9">
+                                        <input id="signup-tel" name="N_telemovel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" maxlength="9">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
-                                        <input id="signup-tel" name="morada" type="text" class="form-control signup-email" placeholder="Morada" required="required">
+                                        <input id="signup-tel" name="morada" type="text" class="form-control " placeholder="Morada">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">BI ou Identificador Fiscal</label>
-                                        <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control signup-email valid" placeholder="BI ou Identificador Fiscal" required="required">
+                                        <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control " placeholder="BI ou Identificador Fiscal">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
-                                        <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com" required="required">
+                                        <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(1)">
+                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
                                         Voltar
                                     </button>
                                 </div>

@@ -5,11 +5,20 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\MarcacaoAula;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
 
 class marcacaoAulaController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        {
+            $data['nome'] = $request->session()->get('nome');
+            $data['nivel']= $request->session()->get('nivel');
+            $data['id'] =  $request->session()->get('id');
+            if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
+              return Redirect::to('/');
+            }
         $marcacaoAulas=MarcacaoAula::select(
             'marcacao_aulas.id_marcacao_aula',
             'marcacao_aulas.estado',
@@ -34,7 +43,7 @@ class marcacaoAulaController extends Controller
             'usuarios.email',
             'usuarios.identificador_fiscal',
             'usuarios.nivel_acesso',
-            'usuarios.categoria',
+         
             'usuarios.created_at as usuario_created_at',
             'usuarios.updated_at as usuario_updated_at',
             'usuarios.morada'
@@ -45,6 +54,7 @@ class marcacaoAulaController extends Controller
             ->get();
 
 
-        return view('admin.Marcacao_Aula.aula', compact("marcacaoAulas"));
+        return view('admin.Marcacao_Aula.aula',['data'=> $data],compact('marcacaoAulas'));
     }
+}
 }

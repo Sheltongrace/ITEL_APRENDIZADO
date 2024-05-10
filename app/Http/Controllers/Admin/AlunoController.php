@@ -6,25 +6,38 @@ use App\Http\Controllers\Controller;
 use App\Models\Aluno;
 use App\Models\Curso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class AlunoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $alunos = Aluno::select('alunos.*', 'cursos.*', 'usuarios.*')
-            ->join('cursos', 'alunos.id_curso', '=', 'cursos.id_curso')
+        $data['nome'] = $request->session()->get('nome');
+        $data['nivel']= $request->session()->get('nivel');
+        $data['id'] =  $request->session()->get('id');
+        if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
+          return Redirect::to('/');
+        }
+        $alunos = Aluno::select('alunos.*','usuarios.*')
+            //->join('cursos', 'alunos.id_curso', '=', 'cursos.id_curso')
             ->join('usuarios', 'alunos.id_usuario', '=', 'usuarios.id_usuario')
             ->get();
-
-        return view('admin.aluno.index',compact('alunos'));
+      
+        return view('admin.aluno.index',['data'=> $data],compact('alunos'));
     }
     public function create()
     {
         $todosCurso = Curso::all();
         return view('admin.aluno.create', compact("todosCurso"));
     }
-    public function show()
+    public function show(Request $request)
     {
-        return view('admin.aluno.detalhes');
+        $data['nome'] = $request->session()->get('nome');
+        $data['nivel']= $request->session()->get('nivel');
+        $data['id'] =  $request->session()->get('id');
+        if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
+          return Redirect::to('/');
+        }
+        return view('admin.aluno.detalhes',['data'=> $data]);
     }
 }

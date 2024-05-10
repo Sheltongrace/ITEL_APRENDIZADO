@@ -62,8 +62,8 @@
                                         @foreach($alunos as $aluno)
                                             <tr>
                                                 <td class="cell">{{ $aluno->user_name}}</td>
-                                                <td class="cell">{{$aluno->nome_curso}}</td>
-                                                <td class="cell">{{$aluno->N_telemovel}}</td>
+                                                <td class="cell">{{$aluno->user_name}}</td>
+                                                <td class="cell">{{$aluno->user_name}}</td>
                                                 <td class="cell"><a class="btn-sm app-btn-secondary" href="{{ route('admin.aluno.show', 1) }}">Ver</a></td>
                                             </tr>
                                         @endforeach

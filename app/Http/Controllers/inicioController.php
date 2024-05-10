@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Redirect;
 
 class inicioController extends Controller
 {
-      public function index(Request $request)
+      public function new_site(Request $request)
+    {
+    // die($request->session()->get('user'));
+      echo view('new_site.header');
+      echo view('new_site.index');
+      echo view('new_site.footer');
+    }
+    public function index(Request $request)
     {
     // die($request->session()->get('user'));
       echo view('layout.silebar');
@@ -20,7 +27,6 @@ class inicioController extends Controller
       echo view('painel.painel');
       echo view('layout.footer');
     }
-
     public function site(Request $request)
     {
       $sessao = false;

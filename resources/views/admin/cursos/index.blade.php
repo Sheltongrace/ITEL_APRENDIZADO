@@ -43,7 +43,7 @@
                                 <table class="table app-table-hover mb-0 text-left">
                                     <thead>
                                         <tr>
-                                            <th class="cell">Nome</th>
+                                            <th class="cell">Cursos</th>
                                         </tr>
                                     </thead>
                                     <tbody>
