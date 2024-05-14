@@ -8,6 +8,7 @@ use App\Models\Curso;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
+
 class AlunoController extends Controller
 {
     public function index(Request $request)

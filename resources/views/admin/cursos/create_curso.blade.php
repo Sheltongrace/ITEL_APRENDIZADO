@@ -10,7 +10,7 @@
             <div class="row bg-white" id="regForm">
 
                 <div class="col-lg-10">
-                    <form action="{{route('cursoAdmin.store')}}" method="post">
+                    <form action="{{route('cursosAdmin.store')}}" method="post">
                         @csrf
                         <!-- step 1 -->
                         <div class="tab">

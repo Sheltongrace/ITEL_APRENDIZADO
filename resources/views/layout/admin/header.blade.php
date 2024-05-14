@@ -327,7 +327,7 @@
                   <ul class="submenu-list list-unstyled">
                   <?php if ($data['nivel'] == '1') { ?>
                     <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('curso') }}">Registrar</a>
+                      <a class="submenu-link" href="{{ route('admin.cursos.create') }}">Registrar</a>
                     </li>
                     <?php } ?>
                     <li class="submenu-item">
