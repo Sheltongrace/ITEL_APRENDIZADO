@@ -32,7 +32,7 @@
 
 
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Nome do Aluno</label>
-                                    <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" required="required" />
+                                    <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" />
                                 </div>
                             </div>
                             <input type="text" value="estudante" name="categoria" style="display: none;">
@@ -55,7 +55,7 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Número de Processo</label>
-                                    <input id="signup-email" name="processo" type="text" class="form-control signup-email valid" placeholder="Processo" required="required" />
+                                    <input id="signup-email" name="processo" type="text" class="form-control" placeholder="Processo" />
                                 </div>
                             </div>
 
@@ -89,28 +89,28 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Telefone</label>
-                                    <input id="signup-tel" name="N_telemovel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" required="required" maxlength="9" />
+                                    <input id="signup-tel" name="N_telemovel" type="tel" class="form-control" placeholder="+244 xxxxxx"  maxlength="9" />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
-                                    <input id="signup-tel" name="morada" type="text" class="form-control signup-email" placeholder="Morada" required="required" />
+                                    <input id="signup-tel" name="morada" type="text" class="form-control" placeholder="Morada" />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">BI</label>
-                                    <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control signup-email valid" placeholder="BI ou Identificador Fiscal" required="required" />
+                                    <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control" placeholder="BI ou Identificador Fiscal"  />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
-                                    <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com" required="required" />
+                                    <input id="signup-tel" name="email" type="text" class="form-control" placeholder="email@exemplo.com" />
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Género</label>
-                                    <select id="signup-tel" name="genero" class="form-control signup-email">
+                                    <select id="signup-tel" name="genero" class="form-control">
                                         <option value="1">Escolha uma opção</option>
                                         <option value="2">Mascolino</option>
                                         <option value="3">Femenino</option>
@@ -148,7 +148,7 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Senha</label>
-                                    <input id="signup-tel" name="senha" type="password" class="form-control signup-email valid" placeholder="Password" required="required" />
+                                    <input id="signup-tel" name="senha" type="password" class="form-control" placeholder="Password" required="required" />
                                 </div>
                             </div>
 

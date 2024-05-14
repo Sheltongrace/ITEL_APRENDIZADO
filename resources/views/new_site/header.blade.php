@@ -44,11 +44,11 @@
   <div id="topbar" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">quingrace@gmail.com</a>
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">domiciolio@quingracelda.com</a>
         <i class="bi bi-phone-fill phone-icon"></i> +244 925 111 212
       </div>
       <div class="cta d-none d-md-block">
-        <a  class="scrollto" style="margin-right: 6px; cursor:pointer"  data-bs-toggle="modal" data-bs-target="#Modal_Entrar"  >Enttrar</a>
+        <a  class="scrollto" style="margin-right: 6px; cursor:pointer"  data-bs-toggle="modal" data-bs-target="#Modal_Entrar"  >Entrar</a>
         <a  style=" cursor:pointer"  class="scrollto ml-4" data-bs-toggle="modal" data-bs-target="#Modal_Candastrar">Cadastrar</a> 
       </div>
     </div>

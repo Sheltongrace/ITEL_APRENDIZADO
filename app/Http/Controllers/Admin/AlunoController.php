@@ -25,10 +25,16 @@ class AlunoController extends Controller
       
         return view('admin.aluno.index',['data'=> $data],compact('alunos'));
     }
-    public function create()
+    public function create(Request $request)
     {
+        $data['nome'] = $request->session()->get('nome');
+        $data['nivel']= $request->session()->get('nivel');
+        $data['id'] =  $request->session()->get('id');
+        if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
+          return Redirect::to('/');
+        }
         $todosCurso = Curso::all();
-        return view('admin.aluno.create', compact("todosCurso"));
+        return view('admin.aluno.create', ['data'=> $data],compact('todosCurso'));
     }
     public function show(Request $request)
     {

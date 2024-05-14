@@ -1,4 +1,4 @@
-@extends('layout.admin.index')
+@extends('layout.admin.index')  
 @section('title', 'Painel')
 @section('content')
 <div class="app-wrapper">
@@ -94,6 +94,7 @@
               </div>
               <!--//app-card-->
             </div>
+            
             <!--//col-->
             <div class="col-6 col-lg-3">
               <div class="app-card app-card-stat shadow-sm h-100">
