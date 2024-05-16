@@ -379,11 +379,19 @@
                   </ul>
                 </div>
               </li>
-                <li class="nav-item">
-                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                
 
-                <a class="nav-link" href="{{ route('admin.macacao.aula') }}">
+
+
+
+              <li class="nav-item has-submenu" >
+                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+                <a
+                  class="nav-link submenu-toggle"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#submenu-5"
+                  aria-expanded="false"
+                  aria-controls="submenu-5">
                   <span class="nav-icon">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack-overflow" viewBox="0 0 16 16">
@@ -391,15 +399,43 @@
   <path d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468z"/>
 </svg>
                   </span>
-                  
-                  <span class="nav-link-text">Marcações de Aulas</span>
-                  </a
+                  <span class="nav-link-text">Marcação de Aulas</span>
+                  <span class="submenu-arrow">
+                    <svg
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      class="bi bi-chevron-down"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .
+                        708 0L8 10.293l5.646-5.647a.
+                        5.5 0 0 1 .708.708l-6 6a.5.5
+                         0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg> 
+                  </span
+                  ><!--//submenu-arrow--> </a
                 ><!--//nav-link-->
                 <div
-                  id="submenu-3"
-                  class="collapse submenu submenu-3"
-                  data-bs-parent="#menu-accordion"
-                >
+                  id="submenu-5" class="collapse submenu submenu-5" data-bs-parent="#menu-accordion">
+                  <ul class="submenu-list list-unstyled">
+                    <li class="submenu-item ">
+                      <a class="submenu-link" href="{{ route('aula.create') }}">Agendar</a>
+                    </li>
+                    <li class="submenu-item ">
+                      <a class="submenu-link" href="{{ route('admin.macacao.aula') }}">Ver marcações</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+
+
+
+
+
 
                 <li class="nav-item">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -476,6 +512,9 @@
       <!--//app-sidepanel-->
     </header>
     <!--//app-header-->
+
+
+    
 
 
     

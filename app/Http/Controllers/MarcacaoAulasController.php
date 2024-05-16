@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Disciplina;
 use Illuminate\Http\Request;
 use App\Models\MarcacaoAula;
+
+use function PHPUnit\Framework\returnSelf;
 
 class MarcacaoAulasController extends Controller
 {
@@ -16,6 +19,9 @@ class MarcacaoAulasController extends Controller
 
     public function create()
     {
+        $todasDisciplinas = Disciplina::all();
+        $MarcacaoAula =MarcacaoAula::all();
+        return view("admin.Marcacao_Aula.marcacao_aula",compact("todasDisciplinas"));
     }
 
 

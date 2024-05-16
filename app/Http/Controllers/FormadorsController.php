@@ -21,6 +21,7 @@ class FormadorsController extends Controller
 
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
+        
         return view('admin.formadores.index',['data'=> $data],compact('professores'));
     }
 

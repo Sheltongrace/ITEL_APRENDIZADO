@@ -100,6 +100,9 @@ Route::group(['prefix' => 'marcacao'], function () {
 Route::group(['prefix' => 'aluno'], function () {
     Route::get('/formador', [AlunosController::class, 'index'])->name('aluno.index');
     Route::get('/create', [AlunosController::class, 'create'])->name('aluno.create');
+
+    Route::get('aulas/create', [MarcacaoAulasController::class, 'create'])->name('aula.create');
+
     Route::post('/save', [AlunosController::class, 'store'])->name('aluno.save');
     Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
     Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');

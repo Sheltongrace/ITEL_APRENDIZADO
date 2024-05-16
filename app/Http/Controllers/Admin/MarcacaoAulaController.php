@@ -57,4 +57,9 @@ class marcacaoAulaController extends Controller
         return view('admin.Marcacao_Aula.aula',['data'=> $data],compact('marcacaoAulas'));
     }
 }
+public function create()
+{
+    $marcacao = MarcacaoAula::all();
+    return view('admin.Marcacao_Aula.agendar_aula');
+}
 }
