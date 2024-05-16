@@ -15,26 +15,28 @@ class LoginController extends Controller
     public function efectuarLogin(Request $request)
     {
         $senha = md5($request->input("senha"));
+
         $email = $request->input("email");
-        $retorno=$this->verificarUsuario($email, $senha);
-        
+
         $users = DB::table('usuarios')
         ->where('email', $email)
         ->where('senha', $senha)
         ->where("nivel_acesso", '1')
         ->get();
-       
-      
+
+        
+
+
         if(count($users)>0){
-            $request->session()->put('id', $users[0]->id_usuario); 
+            $request->session()->put('id', $users[0]->id_usuario);
             $request->session()->put('nome', $users[0]->user_name);
             $request->session()->put('nivel', $users[0]->nivel_acesso);
             return redirect()->route('painel');
-     
-        }else {   
+
+        }else {
             return redirect()->route('login')->with('erro', 'Credenciais inválidas. Verifique o email e a senha.');
         }
-      
+
     }
 
 
@@ -72,21 +74,21 @@ class LoginController extends Controller
         ->where('email',$login)
         ->where('senha',$senha)
         ->get();
-       
+
         if (count( $dados)>0) {
-            $request->session()->put('id',  $dados[0]->id_usuario); 
+            $request->session()->put('id',  $dados[0]->id_usuario);
             $request->session()->put('nome', $dados[0]->user_name);
             $request->session()->put('nivel', $dados[0]->nivel_acesso);
             return redirect()->route('painel');
         }else {
             return redirect()->route('/');
         }
-       
+
     }
     public function verifica_login(Request $request)
     {
 
-       
+
         $senha = md5($request->input("senha"));
         $login = $request->input("login");
          $dados = DB::table('usuarios')
@@ -99,7 +101,7 @@ class LoginController extends Controller
             $data['estado'] = 1;
         }
         return $data;
-      
+
 
     }
 
@@ -120,7 +122,7 @@ class LoginController extends Controller
             $data['estado'] = 1;
         }
         return $data;
-      
+
 
     }
 }
