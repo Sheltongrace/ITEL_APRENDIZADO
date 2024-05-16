@@ -21,23 +21,23 @@ class AlunosController extends Controller
     public function store(Request $request)
     {
         //create user aluno
-        $user['user_name']=  $request->input("nome");
+        $user['user_name']=  $request->input("user_name");
         $user['email']=  $request->input("email");
-        $user['N_telemovel']=  $request->input("telefone");
+        $user['N_telemovel']=  $request->input("N_telemovel");
         $user['identificador_fiscal']=  $request->input("identificador_fiscal");
         $user['morada']=  $request->input("morada");
         $user['senha']=  md5($request->input("senha"));
-        $user['nivel_acesso']= '3';
-        $user['estado']= '0';
-       
-        
-       
+        $user['nivel_acesso']= '2';
+        $user['categoria']= 'aluno';
+
+
+
+
         DB::table('usuarios')->insert($user);
         $id_usuario= DB::table('usuarios')->orderBy('id_usuario','desc')->get()->first();
         //end
-      
+
         $novo_aluno = Aluno::create([
-           // 'id_curso' => $request->input('id_curso'),
             'processo' => $request->input('processo'),
             'classe' => $request->input('nivel_academico'),
             'genero' => $request->input('genero'),
@@ -47,7 +47,7 @@ class AlunosController extends Controller
             ->join('cursos', 'alunos.id_curso', '=', 'cursos.id_curso')
             ->join('usuarios', 'alunos.id_usuario', '=', 'usuarios.id_usuario')
             ->get();*/
-            $request->session()->put('id',  $id_usuario->id_usuario); 
+            $request->session()->put('id',  $id_usuario->id_usuario);
             $request->session()->put('nome', $user['user_name']);
             $request->session()->put('nivel', $user['nivel_acesso']);
             if ($novo_aluno) {
