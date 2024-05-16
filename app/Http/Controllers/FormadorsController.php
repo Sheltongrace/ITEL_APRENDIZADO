@@ -86,9 +86,9 @@ class FormadorsController extends Controller
         ->where('email',$email)
         ->where('senha',$senha)
         ->get();
-      
+
         if (count($usuario)>0) {
-            $request->session()->put('id',  $usuario[0]->id_usuario); 
+            $request->session()->put('id',  $usuario[0]->id_usuario);
             $request->session()->put('nome', $usuario[0]->user_name);
             $request->session()->put('nivel', $usuario[0]->nivel_acessos);
             return Redirect::route('painel');
@@ -99,23 +99,23 @@ class FormadorsController extends Controller
     }
     public function store(Request $request)
     {
-        $user['user_name']=  $request->input("nome");
+        $user['user_name']=  $request->input("user_name");
         $user['email']=  $request->input("email");
-        $user['N_telemovel']=  $request->input("telefone");
+        $user['N_telemovel']=  $request->input("N_telemovel");
         $user['identificador_fiscal']=  $request->input("identificador_fiscal");
         $user['morada']=  $request->input("morada");
         $user['senha']=  md5($request->input("senha"));
         $user['nivel_acesso']= '2';
-        $user['estado']= '0';
-       
-        
-       
+        $user['categoria']= 'formador';
+
+
+
+
+
         DB::table('usuarios')->insert($user);
         $id_usuario= DB::table('usuarios')->orderBy('id_usuario','desc')->get()->first();
-       
-       // var_dump( DB::table('usuarios')->get());die;
-        //$user['']
-      
+
+
         $imagem = '';
         $caminhoImagem = public_path('imagemFormador');
         if ($request->hasFile('imagem')) {
@@ -131,10 +131,12 @@ class FormadorsController extends Controller
             'tempo_disponivel' => $request->input("tempo_disponivel"),
             'descricao' => '',
           //  'imagem' => $imagem->getClientOriginalName(), admin.painel
-            'disciplina'=>$request->input("disciplina")
+            'disciplina'=>$request->input("disciplina"),
+            'estado'=>0
         ]);
 
-        $request->session()->put('id',  $id_usuario->id_usuario); 
+
+        $request->session()->put('id',  $id_usuario->id_usuario);
         $request->session()->put('nome', $user['user_name']);
         $request->session()->put('nivel', $user['nivel_acesso']);
         if ($novo_formador) {
