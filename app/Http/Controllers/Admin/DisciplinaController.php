@@ -56,7 +56,8 @@ public function show($id)
 
 public function edit($id)
 {
-    $disciplinaClasseCurso = DisciplinaClasseCurso::findOrFail($id);
+    $disciplina = Disciplina::all();
+    return view("admin.disciplinas.Edit_disciplinas", compact("disciplina"));
 }
 
 public function update(Request $request, $id)

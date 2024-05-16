@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Aluno;
+use App\Models\Curso;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
@@ -66,7 +67,8 @@ class AlunosController extends Controller
 
     public function edit($id)
     {
-        $aluno = Aluno::findOrFail($id);
+        $todosCurso = Curso::all();
+        return view("admin.aluno.edit_aluno",compact('todosCurso'));
     }
 
     public function update(Request $request, $id)

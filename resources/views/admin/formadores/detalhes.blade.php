@@ -117,7 +117,7 @@
 								</div><!--//row-->
 							</div><!--//item-->
 							<div class="app-card-footer p-4 mt-auto">
-							<a class="btn btn-primary" href="{{ route('formador.create') }}">Editar</a>
+							<a class="btn btn-primary" href="{{ route('formador.edit','1') }}">Editar</a>
 							<a class="btn btn-danger" href="{{ route('formador.create') }}">Eliminar</a>
 						   </div>
 						</div><!--//app-card-body-->

@@ -45,7 +45,9 @@ class CursosController extends Controller
 
     public function edit($id)
     {
-        $curso = Curso::findOrFail($id);
+       // $curso = Curso::findOrFail($id);
+       $todosCursos = Curso::all();
+       return view("admin.cursos.edit_curso",compact('todosCursos'));
     }
 
     public function update(Request $request, $id)

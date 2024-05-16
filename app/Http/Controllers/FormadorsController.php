@@ -160,7 +160,9 @@ class FormadorsController extends Controller
 
     public function edit($id)
     {
-        $formador = Formador::findOrFail($id);
+       // $formador = Formador::findOrFail($id);
+       $todasDisciplina = Disciplina::all();
+        return view("admin.formadores.edit_formador",compact('todasDisciplina'));
     }
 
     public function update(Request $request, $id)

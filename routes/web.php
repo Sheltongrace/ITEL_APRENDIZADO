@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\marcacaoAulaController;
 use App\Http\Controllers\FormadorsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\ContatoController;
@@ -11,9 +10,10 @@ use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\ContactoController;
-use App\Http\Controllers\Admin\CursosController;
+
 use App\Http\Controllers\MarcacaoAulasController;
 use App\Http\Controllers\Admin\AquisicaoController;
+use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\Admin\DisciplinaController;
 use App\Http\Controllers\CursosController as ControllersCursosController;
 use App\Http\Controllers\DisciplinasController;
@@ -72,6 +72,7 @@ Route::get('/', 'inicioController@new_site')->name('/');
 Route::group(['prefix' => 'formador'], function () {
     Route::get('/formador', [FormadorsController::class, 'index'])->name('formador.index');
     Route::get('/create', [FormadorsController::class, 'create'])->name('formador.create');
+    Route::get('formador/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
     Route::get('/aprovar/{id}', [FormadorsController::class, 'aprovar'])->name('formador.aprovar');
     Route::get('/reprovar/{id}', [FormadorsController::class, 'reprovar'])->name('formador.reprovar');
     Route::post('/save', [FormadorsController::class, 'store'])->name('formador.save');
@@ -94,15 +95,19 @@ Route::group(['prefix' => 'marcacao'], function () {
     Route::get('/aprovar/{id}', [MarcacaoAulasController::class, 'aprovar'])->name('marcacao.aprovar');
     Route::get('/reprovar/{id}', [MarcacaoAulasController::class, 'reprovar'])->name('marcacao.reprovar');
     Route::post('/save', [MarcacaoAulasController::class, 'store'])->name('marcacao.save');
+
+
 });
+
+Route::get('curso/edit/{id}', [CursosController::class, 'edit'])->name('curso.edit');
+
+
 
 
 Route::group(['prefix' => 'aluno'], function () {
     Route::get('/formador', [AlunosController::class, 'index'])->name('aluno.index');
     Route::get('/create', [AlunosController::class, 'create'])->name('aluno.create');
-
     Route::get('aulas/create', [MarcacaoAulasController::class, 'create'])->name('aula.create');
-
     Route::post('/save', [AlunosController::class, 'store'])->name('aluno.save');
     Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
     Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
@@ -169,8 +174,9 @@ Route::prefix('admin')->group(function () {
     Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
     Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
     Route::get('curso/registrar', [\App\Http\Controllers\Admin\CursosController::class, 'create'])->name('admin.cursos.create');
-
     Route::get('disci/registrar', [\App\Http\Controllers\Admin\DisciplinaController::class, 'create'])->name('admin.disci.create');
+
+    Route::get('disciplina/edit/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'edit'])->name('disciplina.edit');
 
     Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
     Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');

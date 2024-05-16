@@ -47,4 +47,6 @@ class AlunoController extends Controller
         }
         return view('admin.aluno.detalhes',['data'=> $data]);
     }
+   
+   
 }
