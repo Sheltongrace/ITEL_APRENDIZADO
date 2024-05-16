@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\MarcacaoAulasController;
 use App\Http\Controllers\Admin\AquisicaoController;
 use App\Http\Controllers\Admin\DisciplinaController;
+use App\Http\Controllers\CursosController as ControllersCursosController;
 use App\Http\Controllers\DisciplinasController;
 use App\Models\Curso;
 
@@ -114,7 +115,7 @@ Route::group(['prefix' => 'marcacaoAula'], function () {
 });
 
 Route::group(['prefix' => 'cursoAdmin'], function () {
-    Route::post('/store', [CursosController::class, 'store'])->name('cursosAdmin.store');
+    Route::post('/store', [ControllersCursosController::class, 'store'])->name('cursosAdmin.store');
 });
 
 
@@ -148,7 +149,7 @@ Route::get('disciplina.admin', [DisciplinaController::class, 'index'])->name('di
 Route::post('disci.store', [DisciplinasController::class, 'store'])->name('disciplina.store');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
-imagem
+
 Route::get('painel', [PainelController::class, 'index'])->name('painel');
 
 

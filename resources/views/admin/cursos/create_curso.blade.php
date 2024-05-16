@@ -12,7 +12,6 @@
                 <div class="col-lg-10">
                     <form action="{{route('cursosAdmin.store')}}" method="post">
                         @csrf
-                        <!-- step 1 -->
                         <div class="tab">
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">

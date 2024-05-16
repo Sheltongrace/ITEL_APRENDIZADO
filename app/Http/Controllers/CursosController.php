@@ -22,7 +22,7 @@ class CursosController extends Controller
     {
         Curso::create($request->all());
         $todosCursos=Curso::all();
-        return view('admin.cursos.index',compact('todosCursos'));
+        return redirect()->route('admin.cursos',compact('todosCursos'));
     }
 
     public function show($id)

@@ -26,13 +26,13 @@ class DisciplinasController extends Controller
         }
 
         Disciplina::create([
-            'nome_disciplina'=>$request->input('nome_disciplina'),
+            'nome_disciplina' => $request->input('nome_disciplina'),
             //'imagem'=>$imagem->getClientOriginalName(),
-            'preco'=>$request->input('preco')
+            'preco' => $request->input('preco')
         ]);
 
         $todasDiscipliona = Disciplina::all();
-        return view('admin.disciplinas.index',compact('todasDiscipliona'));
+        return view('admin.disciplinas.index', compact('todasDiscipliona'));
     }
 
     public function show($id)
