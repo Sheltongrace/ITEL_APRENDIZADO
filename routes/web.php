@@ -15,6 +15,8 @@ use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\MarcacaoAulasController;
 use App\Http\Controllers\Admin\AquisicaoController;
 use App\Http\Controllers\Admin\DisciplinaController;
+use App\Http\Controllers\CursosController as ControllersCursosController;
+use App\Http\Controllers\DisciplinasController;
 use App\Models\Curso;
 
 /*
@@ -48,7 +50,7 @@ Route::get('/', 'inicioController@new_site')->name('/');
 
     Route::get('/be_traner', 'inicioController@be_traner');
 
-    Route::get('/aluno', 'inicioController@aluno')->name('aluno'); 
+    Route::get('/aluno', 'inicioController@aluno')->name('aluno');
 
     Route::get('/sair', 'inicioController@sair')->name('sair');
 
@@ -113,7 +115,7 @@ Route::group(['prefix' => 'marcacaoAula'], function () {
 });
 
 Route::group(['prefix' => 'cursoAdmin'], function () {
-    Route::post('/store', [CursosController::class, 'store'])->name('cursosAdmin.store');
+    Route::post('/store', [ControllersCursosController::class, 'store'])->name('cursosAdmin.store');
 });
 
 
@@ -144,7 +146,7 @@ Route::get('auth.login.formador', [LoginController::class, 'verifica_login_forma
 Route::post('aluno_entrar', [LoginController::class, 'aluno_entrar'])->name('aluno_entrar');
 Route::post('lista/cursos', [LoginController::class, 'index_listacurso'])->name('lista.curso');
 Route::get('disciplina.admin', [DisciplinaController::class, 'index'])->name('disciplina.admin');
-Route::post('disci.store', [DisciplinaController::class, 'store'])->name('disciplina.store');
+Route::post('disci.store', [DisciplinasController::class, 'store'])->name('disciplina.store');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
@@ -156,7 +158,7 @@ NOVAS ROTAS PARA O ADMIN
 =================/*/
 
 Route::prefix('admin')->group(function () {
-   
+
     /*//==============
   NOVAS ROTAS PARA TELA ADMIN
   =================/*/
