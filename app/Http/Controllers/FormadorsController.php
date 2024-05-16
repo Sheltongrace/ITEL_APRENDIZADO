@@ -132,7 +132,7 @@ class FormadorsController extends Controller
             'descricao' => '',
           //  'imagem' => $imagem->getClientOriginalName(), admin.painel
             'disciplina'=>$request->input("disciplina"),
-            'estado'=>0
+            'estado'=>"pendente"
         ]);
 
 
