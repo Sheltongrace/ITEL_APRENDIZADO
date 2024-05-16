@@ -27,28 +27,19 @@ class CursosController extends Controller
         
             public function create(Request $request)
             {
-        $data['nome'] = $request->session()->get('nome');
-        $data['nivel']= $request->session()->get('nivel');
-        $data['id'] =  $request->session()->get('id');
-         if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
-           return Redirect::to('/');
-         }
+                Curso::create($request->all());
                 $todosCurso=Curso::all();
-                return view('admin.cursos.create_curso',['data'=> $data],compact('todosCurso'));
+                return view('admin.cursos.create_curso',compact('todosCurso'));
 
             }
         
             public function store(Request $request)
             {
-        $data['nome'] = $request->session()->get('nome');
-        $data['nivel']= $request->session()->get('nivel');
-        $data['id'] =  $request->session()->get('id');
-         if ($request->session()->get('nome')== null || $request->session()->get('nome')== '') {
-           return Redirect::to('/');
-         }
-                $Curso=Curso::all();
-                return view('admin.cursos.index',['data'=> $data],compact('Curso'));
-            }
+        
+                Curso::create($request->all);
+                $todosCurso=Curso::all();
+                return view('admin.cursos.create_curso',compact('todosCurso'));
+          }
         
             public function show($id)
             {

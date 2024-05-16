@@ -172,7 +172,7 @@
                 ><!--//nav-link-->
               </li>
               
-              <?php if ($data['nivel'] == '1') { ?>
+             
                <!--//nav-item-->
                <li class="nav-item has-submenu">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -227,8 +227,7 @@
                 </div>
               </li>
               
-              <?php } ?>
-              <?php if ($data['nivel'] == '1' || $data['nivel'] == '2') { ?>
+              
               <!--//nav-item--> <!--//nav-item-->
               <li class="nav-item has-submenu">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -270,24 +269,19 @@
                 ><!--//nav-link-->
                 <div
                   id="submenu-2" class="collapse submenu submenu-2" data-bs-parent="#menu-accordion">
-                  <ul class="submenu-list list-unstyled">
-                  <?php if ($data['nivel'] == '1' ) { ?>
+                  <ul class="submenu-list list-unstyled ">
                     <li class="submenu-item">
                       <a class="submenu-link" href="{{ route('admin.aluno.create') }}">Registrar</a>
                     </li>
-                    <?php } ?>
-                    <li class="submenu-item">
+                    <li class="submenu-item ">
                       <a class="submenu-link" href="{{ route('admin.aluno') }}">Listar</a>
                     </li>
                   </ul>
                 </div>
               </li>
               
-              <?php } ?>
-              <!--//nav-item-->
-              <!--//nav-item-->
-               <?php if ($data['nivel'] == '1' || $data['nivel'] == '2') { ?>
-              <li class="nav-item has-submenu">
+              
+              <li class="nav-item has-submenu ">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 <a
                   class="nav-link submenu-toggle"
@@ -325,11 +319,11 @@
                 <div
                   id="submenu-3" class="collapse submenu submenu-3" data-bs-parent="#menu-accordion">
                   <ul class="submenu-list list-unstyled">
-                  <?php if ($data['nivel'] == '1') { ?>
+
                     <li class="submenu-item">
                       <a class="submenu-link" href="{{ route('admin.cursos.create') }}">Registrar</a>
                     </li>
-                    <?php } ?>
+
                     <li class="submenu-item">
                       <a class="submenu-link" href="{{ route('admin.cursos') }}">Listar</a>
                     </li>
@@ -338,9 +332,7 @@
               </li>
               
               
-              <?php } ?>
-              <?php if ($data['nivel'] == '1' || $data['nivel'] == '2') { ?>
-              <li class="nav-item has-submenu">
+              <li class="nav-item has-submenu" >
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 <a
                   class="nav-link submenu-toggle"
@@ -378,19 +370,16 @@
                 <div
                   id="submenu-4" class="collapse submenu submenu-4" data-bs-parent="#menu-accordion">
                   <ul class="submenu-list list-unstyled">
-                  <?php if ($data['nivel'] == '1') { ?>
-                    <li class="submenu-item">
-                      <a class="submenu-link" href="{{ route('disciplina.admin') }}">Registrar</a>
+                    <li class="submenu-item ">
+                      <a class="submenu-link" href="{{ route('admin.disci.create') }}">Registrar</a>
                     </li>
-                    <?php } ?>
-                    <li class="submenu-item">
+                    <li class="submenu-item ">
                       <a class="submenu-link" href="{{ route('admin.disciplina') }}">Listar</a>
                     </li>
                   </ul>
                 </div>
               </li>
-              <?php } ?>
-                <li class="nav-item ">
+                <li class="nav-item">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 
 
@@ -412,8 +401,7 @@
                   data-bs-parent="#menu-accordion"
                 >
 
-                <?php if ($data['nivel'] == '1') { ?>
-                <li class="nav-item ">
+                <li class="nav-item">
                 <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                 
               
@@ -437,7 +425,7 @@
                 >
                   
                 </div>
-              </li>   <?php } ?>
+              </li>   
               <!--//nav-item-->
             </ul>
             <!--//app-menu-->

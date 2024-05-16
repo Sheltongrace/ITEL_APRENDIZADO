@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 
 class DisciplinaController extends Controller
-{
+{ 
 
   public function index(Request $request)
   {
@@ -34,7 +34,7 @@ public function create(Request $request)
       return Redirect::to('/');
     }
     $disciplinas = Disciplina::all();
-    return view("admin.disciplinas.create_disciplinas",['data'=> $data],compact('Disciplinas'));
+    return view("admin.disciplinas.create_disciplinas",['data'=> $data],compact('disciplinas'));
 }
 
 public function store(Request $request)

@@ -15,7 +15,7 @@
                 <h3 class="mb-3">Shelton</h3>
                 <div class="row gx-5 gy-3">
                   <div class="col-12 col-lg-9">
-                    <p>
+                    <p id="teste" data-bs-toggle="modal" data-bs-target="#bg_modal">
                        Bem vindo a tela do administrador  
                     </p>
                   </div>
@@ -130,4 +130,28 @@
       
     </div>
     <!--//app-wrapper-->
+    <!-- Modal -->
+<div class="modal fade" id="bg_modal" tabindex="-1" role="dialog" aria-labelledby="bg_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header " >
+         <h4 style="margin-left: auto; margin-right: auto;"  class="modal-title " id="myModalLabel">Aviso!</h4>
+      </div>
+      <div class="modal-body">
+       A sua conta encontra-se inativa, por favor aguarde até a sua aprovação!
+      </div>
+    
+    </div>
+
+  </div>
+</div>
+
+<script src=" {{asset('new_site/js/jquery.js')}}"></script>
+<script>
+  $(document).ready(function() {
+    //alert("pagina totalmente carregada")
+    $('#bd_modal').modal('show');
+  });
+</script>
 @endsection
+

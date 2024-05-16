@@ -6,16 +6,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\ContatoController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Site\AlunoController;
-use App\Http\Controllers\Site\DisciplinaController;
+use App\Http\Controllers\Admin\AlunoController;
 use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\Admin\CursosController;
-use App\Http\Controllers\DisciplinasController;
 use App\Http\Controllers\MarcacaoAulasController;
 use App\Http\Controllers\Admin\AquisicaoController;
+use App\Http\Controllers\Admin\DisciplinaController;
 use App\Models\Curso;
 
 /*
@@ -125,7 +124,6 @@ NOVAS ROTAS PARA O SITE
 =================/*/
 Route::get('sobre/nos', [SobreNosController::class, 'index'])->name('site.sobre.nos');
 Route::get('contato', [ContatoController::class, 'index'])->name('site.contato');
-Route::get('disciplinas', [DisciplinaController::class, 'index'])->name('site.disciplina');
 Route::post('alunos', [AlunoController::class, 'index'])->name('site.aluno');
 Route::get('aula', [MarcacaoAulasController::class, 'index'])->name('minha.marcacao');
 Route::get('Aquisit', [AquisicaoController::class, 'index'])->name('minha.aquisicao');
@@ -145,8 +143,8 @@ Route::get('auth.login.formador', [LoginController::class, 'verifica_login_forma
 
 Route::post('aluno_entrar', [LoginController::class, 'aluno_entrar'])->name('aluno_entrar');
 Route::post('lista/cursos', [LoginController::class, 'index_listacurso'])->name('lista.curso');
-Route::get('disciplina.admin', [DisciplinasController::class, 'index'])->name('disciplina.admin');
-Route::post('disciplina.store', [DisciplinasController::class, 'store'])->name('disciplina.store');
+Route::get('disciplina.admin', [DisciplinaController::class, 'index'])->name('disciplina.admin');
+Route::post('disci.store', [DisciplinaController::class, 'store'])->name('disciplina.store');
 Route::get('registrar', [RegisterController::class, 'index'])->name('auth.register');
 Route::post('registrar', [RegisterController::class, 'register'])->name('auth.register');
 
@@ -160,13 +158,14 @@ NOVAS ROTAS PARA O ADMIN
 Route::prefix('admin')->group(function () {
    
     /*//==============
-  NOVAS ROTAS PARA ALUNOS
+  NOVAS ROTAS PARA TELA ADMIN
   =================/*/
 
     Route::get('aluno', [\App\Http\Controllers\Admin\AlunoController::class, 'index'])->name('admin.aluno');
     Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
-
     Route::get('curso/registrar', [\App\Http\Controllers\Admin\CursosController::class, 'create'])->name('admin.cursos.create');
+
+    Route::get('disci/registrar', [\App\Http\Controllers\Admin\DisciplinaController::class, 'create'])->name('admin.disci.create');
 
     Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
     Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');

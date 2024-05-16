@@ -328,9 +328,9 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
             <div class="portfolio-info">
-              <h4>Vamos colocar Imagens</h4>
+            <div><img src="assets/images/Nova pasta/Imagem WhatsApp 2024-04-25 às 12.55.15_01e6a072.jpg"></div>
               <p>Vamos colocar Imagens</p>
               <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
