@@ -124,6 +124,9 @@ Route::group(['prefix' => 'marcacaoAula'], function () {
 
 Route::group(['prefix' => 'cursoAdmin'], function () {
     Route::post('/store', [ControllersCursosController::class, 'store'])->name('cursosAdmin.store');
+    Route::post('/update/{id}', [ControllersCursosController::class, 'update'])->name('cursosAdmin.update');
+    Route::get('/destroy/{id}', [ControllersCursosController::class, 'destroy'])->name('cursosAdmin.destroy');
+
 });
 
 

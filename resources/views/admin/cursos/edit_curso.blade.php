@@ -10,14 +10,14 @@
             <div class="row bg-white" id="regForm">
 
                 <div class="col-lg-10">
-                    <form action="{{route('cursosAdmin.store')}}" method="post">
+                    <form action="{{route('cursosAdmin.update',['id'=>$curso->id_curso])}}" method="post">
                         @csrf
                         <div class="tab">
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nome do Curso</label>
-                                        <input id="signup-name" name="nome_curso" type="text" class="form-control signup-name" placeholder="Nome do Curso" required="required" />
+                                        <input id="signup-name" name="nome_curso" type="text" class="form-control signup-name" placeholder="Nome do Curso" required="required" value="{{$curso->nome_curso}}" />
                                     </div>
                                 </div>
                                 <div>
