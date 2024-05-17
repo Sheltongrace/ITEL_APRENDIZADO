@@ -173,17 +173,19 @@ class FormadorsController extends Controller
         $formador = Formador::findOrFail($id_professor);
         $usuario->update($request->all());
         $formador->update($request->all());
-
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
-
         return view('admin.formadores.index',compact('professores'));
-
     }
 
-    public function destroy($id)
+    public function destroy($id_user , $id_professor)
     {
-        $formador = Formador::findOrFail($id);
+        $usuario = Usuario::findOrFail($id_user);
+        $formador = Formador::findOrFail($id_professor);
         $formador->delete();
+        $usuario->delete();
+        $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
+        select("formadors.*","usuarios.*")->get();
+        return view('admin.formadores.index',compact('professores'));
     }
 }

@@ -42,11 +42,11 @@
       text-align: center;
       }
      </style>
-  
+
   </head>
   <body class="app">
      <div class="els"  disabled>
-          
+
      </div>
      <!-- Button trigger modal -->
 
@@ -71,11 +71,14 @@
 
     @include('layout.admin.header')
     @yield('content')
-    @include('layout.admin.footer') 
+    @include('layout.admin.footer')
 
   </body>
 
   <script>
-      $('#modal_obs').modal('show');
+     // $('#modal_obs').modal('show');
   </script>
+
+
+
 </html>
