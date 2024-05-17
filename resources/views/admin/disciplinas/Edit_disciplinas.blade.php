@@ -11,21 +11,21 @@
 
                     <!-- step 1 -->
 
-                    <form action="{{route('disciplina.store')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('admin.disciplina.update',['id'=>$disciplina->id_disciplina])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="tab">
                             <div class="row">
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nome da Disciplina</label>
-                                        <input id="signup-name" name="nome_disciplina" type="text" class="form-control signup-name" placeholder="Nome da Disciplina" required="required" />
+                                        <input id="signup-name" name="nome_disciplina" type="text" class="form-control signup-name" placeholder="Nome da Disciplina" required="required"  value="{{$disciplina->nome_disciplina}}"/>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Preço da Disciplina</label>
-                                        <input id="signup-name" name="preco" type="number" class="form-control signup-name" placeholder="Preço" required="required" />
+                                        <input id="signup-name" name="preco" type="number" class="form-control signup-name" placeholder="Preço" required="required"   value="{{$disciplina->preco}}"/>
                                     </div>
                                 </div>
 

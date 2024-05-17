@@ -187,6 +187,9 @@ Route::prefix('admin')->group(function () {
     Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursosController::class, 'index'])->name('admin.cursos');
     Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\DisciplinaController::class, 'index'])->name('admin.disciplina');
 
+    Route::post('admin/disciplina/update/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'update'])->name('admin.disciplina.update');
+    Route::get('admin/disciplina/destroy/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'destroy'])->name('admin.disciplina.destroy');
+
 
 
     /* novas rotas*/

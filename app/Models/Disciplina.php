@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Disciplina extends Model
 {
     use HasFactory;
+
+
+    protected $primaryKey = 'id_disciplina';
+
     protected $fillable = [
         'nome_disciplina',
         'imagem',
