@@ -181,7 +181,7 @@ Route::prefix('admin')->group(function () {
 
     Route::get('disciplina/edit/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'edit'])->name('disciplina.edit');
 
-    Route::get('aluno/detalhes{id?}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
+    Route::get('aluno/detalhes/{id}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
     Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
     Route::get('marcacao/aula', [\App\Http\Controllers\Admin\marcacaoAulaController::class, 'index'])->name('admin.macacao.aula');
     Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursosController::class, 'index'])->name('admin.cursos');
