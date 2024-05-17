@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Disciplina;
 use Illuminate\Http\Request;
 use App\Models\Formador;
+use App\Models\Usuario;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
@@ -21,7 +22,7 @@ class FormadorsController extends Controller
 
         $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
         select("formadors.*","usuarios.*")->get();
-        
+
         return view('admin.formadores.index',['data'=> $data],compact('professores'));
     }
 
@@ -160,15 +161,24 @@ class FormadorsController extends Controller
 
     public function edit($id)
     {
-       // $formador = Formador::findOrFail($id);
+       $formador = Formador::findOrFail($id);
+       $usuario= Usuario::findOrFail($formador->id_usuario);
        $todasDisciplina = Disciplina::all();
-        return view("admin.formadores.edit_formador",compact('todasDisciplina'));
+        return view("admin.formadores.edit_formador",compact('todasDisciplina','formador','usuario'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_user , $id_professor)
     {
-        $formador = Formador::findOrFail($id);
+        $usuario = Usuario::findOrFail($id_user);
+        $formador = Formador::findOrFail($id_professor);
+        $usuario->update($request->all());
         $formador->update($request->all());
+
+        $professores= Formador::join("usuarios","formadors.id_usuario","usuarios.id_usuario")->
+        select("formadors.*","usuarios.*")->get();
+
+        return view('admin.formadores.index',compact('professores'));
+
     }
 
     public function destroy($id)

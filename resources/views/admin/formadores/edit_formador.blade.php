@@ -9,7 +9,7 @@
             <!--//row-->
             <div class="row bg-white" id="regForm">
                 <div class="col-lg-12">
-                    <form method="post" action="{{route('formador.save')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('formador.update',['id_user'=> $usuario->id_usuario, 'id_professor'=>$formador->id_formador])}}" enctype="multipart/form-data">
                         @csrf
                         <ul id="stepList" class="my-5">
                             <li class="step">1</li>
@@ -22,7 +22,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nome Completo</label>
-                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Primeiro nome">
+                                        <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Primeiro nome" value="{{$usuario->user_name}}">
                                     </div>
                                 </div>
 
@@ -31,6 +31,7 @@
                                     <div class="gender mb-3">
                                         <label class="form-label my-2 fw-semibold" for="gender">Gênero</label>
                                         <select id="gender" name="genero" class="form-control">
+                                            <option value="{{$formador->genero}}" selected>{{$formador->genero}}</option>
                                             <option value="">Selecione o gênero</option>
                                             <option value="masculino">Masculino</option>
                                             <option value="feminino">Feminino</option>
@@ -41,7 +42,7 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Nível académico</label>
-                                        <input  name="nivel_academico" type="text" class="form-control " placeholder="Nível académico">
+                                        <input  name="nivel_academico" type="text" class="form-control " placeholder="Nível académico" value="{{$formador->nivel_academico}}">
                                     </div>
                                 </div>
 
@@ -70,28 +71,28 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Telefone</label>
-                                        <input id="signup-tel" name="N_telemovel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" maxlength="9">
+                                        <input id="signup-tel" name="N_telemovel" type="tel" class="form-control signup-email" placeholder="+244 xxxxxx" maxlength="9" value="{{$usuario->N_telemovel}}">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
-                                        <input id="signup-tel" name="morada" type="text" class="form-control " placeholder="Morada">
+                                        <input id="signup-tel" name="morada" type="text" class="form-control " placeholder="Morada" value="{{$usuario->morada}}">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">BI ou Identificador Fiscal</label>
-                                        <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control " placeholder="BI ou Identificador Fiscal">
+                                        <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control " placeholder="BI ou Identificador Fiscal" value="{{$usuario->identificador_fiscal}}">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
-                                        <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com">
+                                        <input id="signup-tel" name="email" type="text" class="form-control signup-email" placeholder="email@exemplo.com" value="{{$usuario->email}}">
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +140,7 @@
 
                                 <div class="col-sm-12 col-md-12">
                                     <label for="" class="label-form my-2">Porquê quer ser formador ?</label>
-                                    <textarea name="descricao" id="" cols="30" rows="10" class="form-control" placeholder="Descreva o porquê quer ser formador ?"></textarea>
+                                    <textarea name="descricao" id="" cols="30" rows="10" class="form-control" placeholder="Descreva o porquê quer ser formador ?">{{$formador->descricao}}</textarea>
                                 </div>
                             </div>
 

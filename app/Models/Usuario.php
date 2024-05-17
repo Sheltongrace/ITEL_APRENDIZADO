@@ -10,6 +10,8 @@ class Usuario extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $primaryKey = 'id_usuario';
+
     protected $fillable = [
         'user_name',
         'N_telemovel',

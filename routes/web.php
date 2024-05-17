@@ -78,7 +78,7 @@ Route::group(['prefix' => 'formador'], function () {
     Route::post('/save', [FormadorsController::class, 'store'])->name('formador.save');
     Route::get('/show/{id}', [FormadorsController::class, 'show'])->name('formador.show');
     Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
-    Route::put('/update/{id}', [FormadorsController::class, 'update'])->name('formador.update');
+    Route::post('/update/{id_user}/{id_professor}', [FormadorsController::class, 'update'])->name('formador.update');
     Route::delete('/destroy/{id}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
 
    Route::get('/verificar.formador', [FormadorsController::class, 'verificar'])->name('verificar.formador');
