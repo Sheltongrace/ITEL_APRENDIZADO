@@ -700,9 +700,9 @@
                         </div>
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
-                        </div>
+                        </div></br>
 
-                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                     </form>
 
                 </div>
