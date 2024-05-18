@@ -36,16 +36,12 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nome' => 'required',
-            'email' => 'required|email',
-            'mensagem' => 'required',
-            'assunto' => 'required',
-        ]);
-
         Contacto::create($request->all());
-        return redirect()->back();
+        return response()->json(['mensagem'=> 'cadastrado com sucesso'],200);
     }
+
+
+
 
     /**
      * Display the specified resource.

@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="csrf-token" content="{{csrf_token()}}">
   <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
+
+
 
   <!-- Favicons -->
   <link href="{{asset('site/assets/img/favicon.png')}}" rel="icon">
@@ -28,13 +31,13 @@
   <link href="{{asset('site/assets/css/main.css')}}" rel="stylesheet">
 
   <!-- ======================================================
-  
+
   ======================================================== -->
 </head>
 
 <body>
   @include('layout.site.header')
-  @yield('content')      
+  @yield('content')
   @include('layout.site.footer')
 </body>
 

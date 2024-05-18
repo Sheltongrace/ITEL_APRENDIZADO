@@ -684,26 +684,22 @@
                 </div>
 
                 <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
-
-                    <form action="{{route('mensagem.store')}}" method="post">
-                        @csrf
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="nome" class="form-control" id="Teu nome" placeholder="Nome" required>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="Teu Email" placeholder="Email" required>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required>
                         </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="assunto" id="Assunto" placeholder="Assunto" required>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                         </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
-                        </div></br>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="mensagem" rows="5" placeholder="Mensagem" required id="mensagem"></textarea>
+                    </div></br>
 
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    </form>
+                    <button onclick="submitMessage()" class="btn btn-primary">Enviar Mensagem</button>
 
                 </div>
 
@@ -712,4 +708,48 @@
         </div>
     </section><!-- End Contact Section -->
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        function submitMessage() {
+            const formData = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                assunto: document.getElementById('assunto').value,
+                mensagem: document.getElementById('mensagem').value
+            };
+
+            // Send POST request to the Laravel API using Axios
+            axios.post("{{route('mensagem.store')}}", formData)
+                .then(response => {
+                    $('#modalSucesso').modal('show');
+                })
+                .catch(error => {
+                    // Handle error response
+                    console.error('Erro ao enviar mensagem:', error);
+                    // You can also display an error message to the user
+                });
+        }
+
+        function fechar(){
+            $('#modalSucesso').modal('hide');
+        }
+    </script>
+
+
+    <div class="modal fade" id="modalSucesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Operação Concluída com Sucesso!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Sua ação foi realizada com sucesso!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="fechar()">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main><!-- End #main -->
