@@ -24,7 +24,7 @@ class LoginController extends Controller
         ->where("nivel_acesso", '1')
         ->get();
 
-        
+
 
 
         if(count($users)>0){

@@ -112,9 +112,9 @@ Route::group(['prefix' => 'aluno'], function () {
     Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
     Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
     Route::get('/show/{id}', [AlunosController::class, 'show'])->name('aluno.show');
-    Route::get('/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
-    Route::put('/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
-    Route::delete('/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
+    Route::get('/edit/{idUser}', [AlunosController::class, 'edit'])->name('aluno.edit');
+    Route::post('/update/{id_user}/{id_aluno}', [AlunosController::class, 'update'])->name('aluno.update');
+    Route::get('/destroy/{id_user}/{id_aluno}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
 });
 
 

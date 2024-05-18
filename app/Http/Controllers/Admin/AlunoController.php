@@ -26,6 +26,8 @@ class AlunoController extends Controller
 
         return view('admin.aluno.index',['data'=> $data],compact('alunos'));
     }
+
+    
     public function create(Request $request)
     {
         $data['nome'] = $request->session()->get('nome');
@@ -37,6 +39,8 @@ class AlunoController extends Controller
         $todosCurso = Curso::all();
         return view('admin.aluno.create', ['data'=> $data],compact('todosCurso'));
     }
+
+
     public function show($id)
     {
 

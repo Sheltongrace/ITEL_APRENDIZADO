@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-lg-10">
-                <form action="{{route('aluno.save')}}" method="post">
+                <form action="{{route('aluno.update',['id_user'=> $aluno->id_usuario, 'id_aluno'=>$aluno->id_aluno])}}" method="post">
                     @csrf
 
                     <ul id="stepList" class="my-5">
@@ -26,13 +26,8 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
-                                    @php
-                                        print_r(Auth::user())
-                                    @endphp
-
-
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Nome do Aluno</label>
-                                    <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" />
+                                    <input id="signup-name" name="user_name" type="text" class="form-control signup-name" placeholder="Nome" value="{{$aluno->user_name}}" />
                                 </div>
                             </div>
                             <input type="text" value="estudante" name="categoria" style="display: none;">
@@ -41,8 +36,9 @@
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Classe</label>
 
-                                    <select id="signup-tel" name="classe" class="form-control signup-email">
+                                    <select id="signup-tel" name="classe" class="form-control signup-email" required>
                                         <option value="">Escolha uma opção</option>
+                                        <option value="{{$aluno->classe}}" selected>{{$aluno->classe}}</option>
                                         <option value="10">10ª</option>
                                         <option value="11">11ª</option>
                                         <option value="12">12ª</option>
@@ -55,7 +51,7 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Número de Processo</label>
-                                    <input id="signup-email" name="processo" type="text" class="form-control" placeholder="Processo" />
+                                    <input id="signup-email" name="processo" type="text" class="form-control" placeholder="Processo" value="{{$aluno->processo}}" />
                                 </div>
                             </div>
 
@@ -66,7 +62,9 @@
                                     <select id="signup-tel" name="id_curso" class="form-control signup-email">
                                         <option value="">Escolha um curso</option>
                                         @foreach($todosCurso as $curso)
+                                        @if($curso->nome_curso!=null)
                                         <option value="{{$curso->id_curso}}">{{$curso->nome_curso}}</option>
+                                        @endif
                                         @endforeach
                                     </select>
                                 </div>
@@ -89,38 +87,38 @@
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Telefone</label>
-                                    <input id="signup-tel" name="N_telemovel" type="tel" class="form-control" placeholder="+244 xxxxxx"  maxlength="9" />
+                                    <input id="signup-tel" name="N_telemovel" type="tel" class="form-control" placeholder="+244 xxxxxx" maxlength="9" value="{{$aluno->N_telemovel}}" />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Morada</label>
-                                    <input id="signup-tel" name="morada" type="text" class="form-control" placeholder="Morada" />
+                                    <input id="signup-tel" name="morada" type="text" class="form-control" placeholder="Morada" value="{{$aluno->morada}}" />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">BI</label>
-                                    <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control" placeholder="BI ou Identificador Fiscal"  />
+                                    <input id="signup-tel" name="identificador_fiscal" type="text" class="form-control" placeholder="BI ou Identificador Fiscal" value="{{$aluno->identificador_fiscal}}" />
                                 </div>
                             </div>
 
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="email mb-3">
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Email</label>
-                                    <input id="signup-tel" name="email" type="text" class="form-control" placeholder="email@exemplo.com" />
+                                    <input id="signup-tel" name="email" type="text" class="form-control" placeholder="email@exemplo.com" value="{{$aluno->email}}" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                        <div>
-                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
-                      Voltar
-                    </button>
-                  </div>
+                            <div>
+                                <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
+                                    Voltar
+                                </button>
+                            </div>
                             <div>
                                 <button type="button" class="btn-primary btn nextBtn fw-bold" onclick="nextPrev(1)">
                                     Próximo
@@ -139,26 +137,18 @@
                                     <label class="form-label my-2 fw-semibold" for="signup-email">Género</label>
                                     <select id="signup-tel" name="genero" class="form-control">
                                         <option value="1">Escolha uma opção</option>
-                                        <option value="2">Mascolino</option>
-                                        <option value="3">Femenino</option>
+                                        <option value="{{$aluno->genero}}" selected>{{$aluno->genero}}</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <div class="email mb-3">
-                                    <label class="form-label my-2 fw-semibold" for="signup-email">Senha</label>
-                                    <input id="signup-tel" name="senha" type="password" class="form-control" placeholder="Password" required="required" />
-                                </div>
-                            </div>
-
-
                             <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div>
-                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
-                      Voltar
-                    </button>
-                  </div>
+                                <div>
+                                    <button type="button" class="btn-primary btn prevBtn fw-bold" onclick="nextPrev(-1)">
+                                        Voltar
+                                    </button>
+                                </div>
 
                                 <div>
                                     <button type="submit" class="btn-primary btn nextBtn fw-bold">
