@@ -35,7 +35,7 @@
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
                                         <div class="item-label"><strong>Nome</strong></div><br>
-                                        <div class="item-data">Usuaário.teste</div>
+                                        <div class="item-data">{{$contacto->nome}}</div>
                                     </div><!--//col-->
 
                                 </div><!--//row-->
@@ -44,7 +44,7 @@
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
                                         <div class="item-label"><strong>Email</strong></div><br>
-                                        <div class="item-data">teste@</div>
+                                        <div class="item-data">{{$contacto->email}}</div>
                                     </div><!--//col-->
                                 </div><!--//row-->
                             </div><!--//item-->
@@ -53,7 +53,7 @@
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
                                         <div class="item-label"><strong>Assunto</strong></div><br>
-                                        <div class="item-data">teste</div>
+                                        <div class="item-data">{{$contacto->assunto}}</div>
                                     </div><!--//col-->
                                 </div><!--//row-->
                             </div><!--//item-->
@@ -61,12 +61,12 @@
                                     <div class="col-auto">
                                         <div class="item-label"><strong>Mensagem</strong></div><br>
                                         <div style="text-align: justify;" class="item-data">
-                                            teste.teste
+                                        {{$contacto->mensagem}}
                                         </div>
                                     </div><!--//col-->
 
                                 </div><!--//row-->
-                           
+
                         </div><!--//app-card-body-->
 
                         <div class="app-card-footer p-4 mt-auto">

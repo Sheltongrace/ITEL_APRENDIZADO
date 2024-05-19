@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\CursosController;
 use App\Http\Controllers\Admin\DisciplinaController;
 use App\Http\Controllers\CursosController as ControllersCursosController;
 use App\Http\Controllers\DisciplinasController;
-use App\Models\Curso; 
+use App\Models\Curso;
 
 /*
 |--------------------------------------------------------------------------

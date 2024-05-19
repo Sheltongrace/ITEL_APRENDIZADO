@@ -49,8 +49,10 @@ class ContactoController extends Controller
      * @param  \App\Models\Contacto  $contacto
      * @return \Illuminate\Http\Response
      */
-    public function show(Contacto $contacto)
+    public function show($id)
     {
+       
+
        // return view('contactos.show', compact('contacto'));
     }
 
