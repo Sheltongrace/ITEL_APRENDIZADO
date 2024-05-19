@@ -15,6 +15,10 @@ class CaixaEntradaController extends Controller
         $contactos = Contacto::all();
         return view('admin.caixa_de_entrada.index',compact('contactos'));
     }
+    public function show($id)
+    {
+        return view('admin.caixa_de_entrada.detalhes');
+    }
 
 }
 
