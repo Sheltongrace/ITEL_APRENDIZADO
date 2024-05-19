@@ -44,14 +44,12 @@ class MarcacaoAulasController extends Controller
 
     public function store(Request $request)
     {
-        MarcacaoAula::create($request->all());
-        return redirect()->back();
         $aluno = Aluno::where('id_usuario',session('id'))->first();
         $marcacaoAula = new MarcacaoAula();
         $marcacaoAula->id_aluno=$aluno->id_aluno;
         $marcacaoAula->id_disciplina=$request->input('id_disciplina');
         $marcacaoAula->periodo=$request->input('periodo');
-        $marcacaoAula->estado=$request->input('estado');
+        $marcacaoAula->estado="pendente";
         $marcacaoAula->morada=$request->input('morada');
         $marcacaoAula->hora=$request->input('hora');
         $marcacaoAula->QuantoTempo=$request->input('QuantoTempo');

@@ -63,7 +63,7 @@
                                             <tr>
                                                 <td class="cell">{{ $aluno->user_name}}</td>
                                                 <td class="cell">{{$aluno->user_name}}</td>
-                                                <td class="cell">{{$aluno->user_name}}</td>
+                                                <td class="cell">{{$aluno->created_at}}</td>
                                                 <td class="cell"><a class="btn-sm app-btn-secondary" href="{{ route('admin.aluno.show', ['id'=>$aluno->id_usuario] ) }}">Ver</a></td>
                                             </tr>
                                         @endforeach

@@ -23,7 +23,6 @@ class LoginController extends Controller
         $users = DB::table('usuarios')
         ->where('email', $email)
         ->where('senha', $senha)
-        ->where("nivel_acesso", '1')
         ->get();
 
 
