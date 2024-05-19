@@ -43,7 +43,7 @@ class marcacaoAulaController extends Controller
             'usuarios.email',
             'usuarios.identificador_fiscal',
             'usuarios.nivel_acesso',
-         
+
             'usuarios.created_at as usuario_created_at',
             'usuarios.updated_at as usuario_updated_at',
             'usuarios.morada'

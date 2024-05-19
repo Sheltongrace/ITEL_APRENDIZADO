@@ -45,9 +45,9 @@
                                             <option value="3 semanas">3 semanas</option>
                                             <option value="1 Mês">1 Mês</option>
                                         </select>
-                                   </div>                            
+                                   </div>
                               </div>
-                                   
+
 
                              </div>
 
@@ -57,7 +57,7 @@
                                             Próximo
                                         </button>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
 
                             <!-- Step 2 -->
@@ -69,9 +69,9 @@
                                         <label class="form-label my-1 fw-semibold" for="signup-email">Periódo</label>
                                         <select id="signup-tel" name="periodo" class="form-control signup-email">
                                             <option value="">Define um peródo</option>
-                                            <option value="manha">Matinal</option>
-                                            <option value="tarde">Diúrno</option>
-                                            <option value="noite">Noturno</option>
+                                            <option value="Matinal">Matinal</option>
+                                            <option value="Diúrno">Diúrno</option>
+                                            <option value="Noturno">Noturno</option>
                                         </select>
                                     </div>
                                 </div>
@@ -79,16 +79,11 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <div class="email mb-3">
                                         <label class="form-label my-1 fw-semibold" for="signup-email">Hora</label>
-                                        <select id="signup-tel" name="Hora" class="form-control signup-email" >
-                                            <option value="">Hora</option>
-                                            <option value="manha">Escolhe uma</option>
-                                            <option value="tarde">##:##</option>
-                                            <option value="noite">##:##</option>
-                                        </select>
+                                        <input type="time" name="hora" class="form-control signup-email">
                                     </div>
                                 </div>
 
-                                
+
 
                              </div>
 
@@ -115,7 +110,7 @@
                                 <div  class="col-md-6">
                                         <div style="text-align: center;" class="password mb-3">
                                             <label class="form-label fw-semibold" for="signup-password">Localização</label>
-                                            <input id="signup-password" name="disciplina" type="text" class="form-control signup-password" placeholder="Morada" required="required">
+                                            <input id="signup-password" name="morada" type="text" class="form-control signup-password" placeholder="Morada" required="required">
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +129,7 @@
                                     </div>
                                 </div>
                             </div>
-                        
+
                     </form>
                 </div>
             </div>
@@ -157,7 +152,6 @@
 
 
 
-    
 
 
 
@@ -173,7 +167,8 @@
 
 
 
-                          
+
+
 
 
 

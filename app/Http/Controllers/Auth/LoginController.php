@@ -16,6 +16,8 @@ class LoginController extends Controller
     {
         $senha = md5($request->input("senha"));
 
+
+
         $email = $request->input("email");
 
         $users = DB::table('usuarios')

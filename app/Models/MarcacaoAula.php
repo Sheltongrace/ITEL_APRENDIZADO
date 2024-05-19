@@ -13,10 +13,11 @@ class MarcacaoAula extends Model
     protected $fillable = [
         'id_aluno',
         'id_disciplina',
-        'preco_disciplina',
         'periodo',
         'estado',
-        'QuantoTempo'
+        'morada',
+        'hora',
+        'QuantoTempo',
     ];
 
 
