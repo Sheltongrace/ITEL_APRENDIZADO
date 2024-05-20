@@ -10,7 +10,7 @@ use App\Http\Controllers\Site\SobreNosController;
 use App\Http\Controllers\Admin\PainelController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\ContactoController;
-use App\Http\Controllers\CaixaEntradasController;
+
 use App\Http\Controllers\MarcacaoAulasController;
 use App\Http\Controllers\Admin\AquisicaoController;
 use App\Http\Controllers\Admin\CaixaEntradaController;
@@ -81,6 +81,7 @@ Route::group(['prefix' => 'formador'], function () {
     Route::get('/edit/{id}', [FormadorsController::class, 'edit'])->name('formador.edit');
     Route::post('/update/{id_user}/{id_professor}', [FormadorsController::class, 'update'])->name('formador.update');
     Route::get('/destroy/{id_user}/{id_professor}', [FormadorsController::class, 'destroy'])->name('formador.destroy');
+
    Route::get('/verificar.formador', [FormadorsController::class, 'verificar'])->name('verificar.formador');
    Route::post('/login.geral', [FormadorsController::class, 'logar'])->name('login.geral');
 });
@@ -112,9 +113,9 @@ Route::group(['prefix' => 'aluno'], function () {
     Route::get('/aprovar/{id}', [AlunosController::class, 'aprovar'])->name('aluno.aprovar');
     Route::get('/reprovar/{id}', [AlunosController::class, 'reprovar'])->name('aluno.reprovar');
     Route::get('/show/{id}', [AlunosController::class, 'show'])->name('aluno.show');
-    Route::get('/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
-    Route::put('/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
-    Route::delete('/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
+    Route::get('/edit/{idUser}', [AlunosController::class, 'edit'])->name('aluno.edit');
+    Route::post('/update/{id_user}/{id_aluno}', [AlunosController::class, 'update'])->name('aluno.update');
+    Route::get('/destroy/{id_user}/{id_aluno}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
 });
 
 
@@ -130,7 +131,6 @@ Route::group(['prefix' => 'cursoAdmin'], function () {
 });
 
 
-Route::get('/show/{id}', [CaixaEntradaController::class, 'show'])->name('admin.show');
 
 
 /*//==============
@@ -165,6 +165,9 @@ Route::post('registrar', [RegisterController::class, 'register'])->name('auth.re
 Route::get('painel', [PainelController::class, 'index'])->name('painel');
 
 
+Route::get('/show/{id}', [CaixaEntradaController::class, 'show'])->name('admin.show');
+
+
 /*//==============
 NOVAS ROTAS PARA O ADMIN
 =================/*/
@@ -179,12 +182,15 @@ Route::prefix('admin')->group(function () {
     Route::get('aluno/registrar', [\App\Http\Controllers\Admin\AlunoController::class, 'create'])->name('admin.aluno.create');
     Route::get('curso/registrar', [\App\Http\Controllers\Admin\CursosController::class, 'create'])->name('admin.cursos.create');
     Route::get('disci/registrar', [\App\Http\Controllers\Admin\DisciplinaController::class, 'create'])->name('admin.disci.create');
+
     Route::get('disciplina/edit/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'edit'])->name('disciplina.edit');
+
     Route::get('aluno/detalhes/{id}', [\App\Http\Controllers\Admin\AlunoController::class, 'show'])->name('admin.aluno.show');
     Route::get('caixa/entrada', [\App\Http\Controllers\Admin\CaixaEntradaController::class, 'index'])->name('admin.caixa.entrada');
     Route::get('marcacao/aula', [\App\Http\Controllers\Admin\marcacaoAulaController::class, 'index'])->name('admin.macacao.aula');
     Route::get('cursos_admin', [\App\Http\Controllers\Admin\CursosController::class, 'index'])->name('admin.cursos');
     Route::get('disciplinas_admin', [\App\Http\Controllers\Admin\DisciplinaController::class, 'index'])->name('admin.disciplina');
+
     Route::post('admin/disciplina/update/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'update'])->name('admin.disciplina.update');
     Route::get('admin/disciplina/destroy/{id}', [\App\Http\Controllers\Admin\DisciplinaController::class, 'destroy'])->name('admin.disciplina.destroy');
 
@@ -192,3 +198,5 @@ Route::prefix('admin')->group(function () {
 
     /* novas rotas*/
 });
+
+
